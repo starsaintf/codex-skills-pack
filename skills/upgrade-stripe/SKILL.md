@@ -1,6 +1,6 @@
 ---
 name: upgrade-stripe
-description: Guide for upgrading Stripe API versions and SDKs
+description: Use when upgrading Stripe API versions, SDK versions, webhook versions, or integration patterns.
 ---
 
 The latest Stripe API version is 2026-02-25.clover - use this version when upgrading unless the user specifies a different target version.

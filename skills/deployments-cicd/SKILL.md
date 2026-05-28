@@ -1,6 +1,6 @@
 ---
 name: deployments-cicd
-description: Vercel deployment and CI/CD expert guidance. Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel.
+description: Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel.
 metadata:
   priority: 6
   docs:

@@ -1,6 +1,6 @@
 ---
 name: next-forge
-description: 'next-forge expert guidance — production-grade Turborepo monorepo SaaS starter by Vercel. Use when working in a next-forge project, scaffolding with `npx next-forge init`, or editing @repo/* workspace packages.'
+description: Use when working in a next-forge project, scaffolding with `npx next-forge init`, or editing @repo/* workspace packages.'
 metadata:
   priority: 6
   docs:

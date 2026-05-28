@@ -20,16 +20,16 @@
     {
       "name": "agent-browser",
       "path": "skills/agent-browser",
-      "description": "Browser automation CLI for AI agents. Use when the user needs to interact with websites, verify dev server output, test web apps, navigate pages, fill forms, click buttons, take screenshots, extract data, or automate any browser task. Also triggers when a dev server starts so you can verify it visually.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when the user needs to interact with websites, verify dev server output, test web apps, navigate pages, fill forms, click buttons, take screenshots, extract data, or automate any browser task. Also triggers when a dev server starts so you can verify it visually.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "agent-browser-verify",
       "path": "skills/agent-browser-verify",
-      "description": "Automated browser verification for dev servers. Triggers when a dev server starts to run a visual gut-check with agent-browser — verifies the page loads, checks for console errors, validates key UI elements, and reports pass/fail before continuing.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when a dev server needs browser verification, screenshots, console checks, or visual regression checks after frontend changes.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "agent-memory-context-efficiency",
@@ -41,219 +41,219 @@
     {
       "name": "ai-elements",
       "path": "skills/ai-elements",
-      "description": "AI Elements component library guidance — pre-built React components for AI interfaces built on shadcn/ui. Use when building chat UIs, message displays, tool call rendering, streaming responses, reasoning panels, or any AI-native interface with the AI SDK.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when building chat UIs, message displays, tool call rendering, streaming responses, reasoning panels, or any AI-native interface with the AI SDK.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "ai-gateway",
       "path": "skills/ai-gateway",
-      "description": "Vercel AI Gateway expert guidance. Use when configuring model routing, provider failover, cost tracking, or managing multiple AI providers through a unified API.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when configuring model routing, provider failover, cost tracking, or managing multiple AI providers through a unified API.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "ai-generation-persistence",
       "path": "skills/ai-generation-persistence",
-      "description": "AI generation persistence patterns — unique IDs, addressable URLs, database storage, and cost tracking for every LLM generation",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when AI generations need stable IDs, addressable URLs, database persistence, resumability, or cost tracking.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "ai-sdk",
       "path": "skills/ai-sdk",
-      "description": "Vercel AI SDK expert guidance. Use when building AI-powered features — chat interfaces, text generation, structured output, tool calling, agents, MCP integration, streaming, embeddings, reranking, image generation, or working with any LLM provider.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when building AI-powered features — chat interfaces, text generation, structured output, tool calling, agents, MCP integration, streaming, embeddings, reranking, image generation, or working with any LLM provider.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "algorithmic-art",
       "path": "skills/algorithmic-art",
-      "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
-      "license": "Apache-2.0, see skills/algorithmic-art/LICENSE.txt",
-      "source": "anthropics/skills example skill"
+      "description": "Use when creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "android-emulator-qa",
       "path": "skills/android-emulator-qa",
       "description": "Use when validating Android feature flows in an emulator with adb-driven launch, input, UI-tree inspection, screenshots, and logcat capture.",
-      "license": "MIT, from test-android-apps plugin metadata",
-      "source": "test-android-apps plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "android-performance",
       "path": "skills/android-performance",
-      "description": "Gather and interpret Android performance evidence on an adb target using Simpleperf CPU profiles, Perfetto or Compose traces, gfxinfo frame data, dumpsys meminfo snapshots, Java heap dumps, and native allocation traces. Use when asked to profile an Android app flow, find CPU-heavy functions, diagnose jank, capture startup or frame timing evidence, compare before/after performance, explain what code is taking time, or gather memory/leak profiling artifacts.",
-      "license": "MIT, from test-android-apps plugin metadata",
-      "source": "test-android-apps plugin backup promoted from temp"
+      "description": "Use when asked to profile an Android app flow, find CPU-heavy functions, diagnose jank, capture startup or frame timing evidence, compare before/after performance, explain what code is taking time, or gather memory/leak profiling artifacts.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "auth",
       "path": "skills/auth",
-      "description": "Authentication integration guidance — Clerk (native Vercel Marketplace), Descope, and Auth0 setup for Next.js applications. Covers middleware auth patterns, sign-in/sign-up flows, and Marketplace provisioning. Use when implementing user authentication.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when implementing user authentication.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "bootstrap",
       "path": "skills/bootstrap",
-      "description": "Project bootstrapping orchestrator for repos that depend on Vercel-linked resources (databases, auth, and managed integrations). Use when setting up or repairing a repository so linking, environment provisioning, env pulls, and first-run db/dev commands happen in the correct safe order.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when setting up or repairing a repository so linking, environment provisioning, env pulls, and first-run db/dev commands happen in the correct safe order.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "brainstorming",
       "path": "skills/brainstorming",
-      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
-      "license": "MIT, from superpowers plugin metadata",
-      "source": "superpowers plugin backup promoted from temp"
+      "description": "Use when starting creative or product work such as new features, components, functionality, designs, or behavior changes.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "brand-guidelines",
       "path": "skills/brand-guidelines",
-      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
-      "license": "Apache-2.0, see skills/brand-guidelines/LICENSE.txt",
-      "source": "anthropics/skills example skill"
+      "description": "Use when applying anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "building-native-ui",
       "path": "skills/building-native-ui",
-      "description": "Complete guide for building beautiful apps with Expo Router. Covers fundamentals, styling, components, navigation, animations, patterns, and native tabs.",
-      "license": "MIT, from expo plugin metadata",
-      "source": "expo plugin backup promoted from temp"
+      "description": "Use when building polished native app interfaces with Expo Router, React Native styling, navigation, animations, or platform UI patterns.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "canvas-design",
       "path": "skills/canvas-design",
-      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
-      "license": "Apache-2.0, see skills/canvas-design/LICENSE.txt",
-      "source": "anthropics/skills example skill"
+      "description": "Use when creating beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "chat-sdk",
       "path": "skills/chat-sdk",
-      "description": "Vercel Chat SDK expert guidance. Use when building multi-platform chat bots — Slack, Telegram, Microsoft Teams, Discord, Google Chat, GitHub, Linear — with a single codebase. Covers the Chat class, adapters, threads, messages, cards, modals, streaming, state management, and webhook setup.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when building multi-platform chat bots — Slack, Telegram, Microsoft Teams, Discord, Google Chat, GitHub, Linear — with a single codebase. Covers the Chat class, adapters, threads, messages, cards, modals, streaming, state management, and webhook setup.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "claude-api",
       "path": "skills/claude-api",
-      "description": "Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claude model versions (4.5 → 4.6, 4.6 → 4.7, retired-model replacements). TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks for the Claude API, Anthropic SDK, or Managed Agents; user adds/modifies/tunes a Claude feature (caching, thinking, compaction, tool use, batch, files, citations, memory) or model (Opus/Sonnet/Haiku) in a file; questions about prompt caching / cache hit rate in an Anthropic SDK project. SKIP: file imports `openai`/other-provider SDK, filename like `*-openai.py`/`*-generic.py`, provider-neutral code, general programming/ML.",
-      "license": "Apache-2.0, see skills/claude-api/LICENSE.txt",
-      "source": "anthropics/skills example skill"
+      "description": "Use when building, debugging, or optimizing Claude API and Anthropic SDK applications.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "cms",
       "path": "skills/cms",
-      "description": "Headless CMS integration guidance — Sanity (native Vercel Marketplace), Contentful, DatoCMS, Storyblok, and Builder.io. Covers studio setup, content modeling, preview mode, revalidation webhooks, and Visual Editing. Use when building content-driven sites with a headless CMS on Vercel.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when building content-driven sites with a headless CMS on Vercel.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "codex-expo-run-actions",
       "path": "skills/codex-expo-run-actions",
-      "description": "Wire Expo projects into the Codex app with project-local run scripts and .codex/environments/environment.toml actions. Use when the user wants the Codex app Run button, build/run actions, action buttons, or a stable Expo start/run workflow from Codex.",
-      "license": "MIT, from expo plugin metadata",
-      "source": "expo plugin backup promoted from temp"
+      "description": "Use when the user wants the Codex app Run button, build/run actions, action buttons, or a stable Expo start/run workflow from Codex.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "cron-jobs",
       "path": "skills/cron-jobs",
-      "description": "Vercel Cron Jobs configuration and best practices. Use when adding, editing, or debugging scheduled tasks in vercel.json.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when adding, editing, or debugging scheduled tasks in vercel.json.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "deployments-cicd",
       "path": "skills/deployments-cicd",
-      "description": "Vercel deployment and CI/CD expert guidance. Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "dispatching-parallel-agents",
       "path": "skills/dispatching-parallel-agents",
       "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
-      "license": "MIT, from superpowers plugin metadata",
-      "source": "superpowers plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "email",
       "path": "skills/email",
-      "description": "Email sending integration guidance — Resend (native Vercel Marketplace) with React Email templates. Covers API setup, transactional emails, domain verification, and template patterns. Use when sending emails from a Vercel-deployed application.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when sending emails from a Vercel-deployed application.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "env-vars",
       "path": "skills/env-vars",
-      "description": "Vercel environment variable expert guidance. Use when working with .env files, vercel env commands, OIDC tokens, or managing environment-specific configuration.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when working with .env files, vercel env commands, OIDC tokens, or managing environment-specific configuration.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "executing-plans",
       "path": "skills/executing-plans",
       "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
-      "license": "MIT, from superpowers plugin metadata",
-      "source": "superpowers plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "expo-api-routes",
       "path": "skills/expo-api-routes",
-      "description": "Guidelines for creating API routes in Expo Router with EAS Hosting",
-      "license": "MIT, from expo plugin metadata",
-      "source": "expo plugin backup promoted from temp"
+      "description": "Use when working on creating API routes in Expo Router with EAS Hosting",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "expo-cicd-workflows",
       "path": "skills/expo-cicd-workflows",
-      "description": "Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build pipelines or deployment automation.",
-      "license": "MIT, from expo plugin metadata",
-      "source": "expo plugin backup promoted from temp"
+      "description": "Use when working with expo cicd workflows: Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build pipelines or deployment automation.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "expo-deployment",
       "path": "skills/expo-deployment",
-      "description": "Deploying Expo apps to iOS App Store, Android Play Store, web hosting, and API routes",
-      "license": "MIT, from expo plugin metadata",
-      "source": "expo plugin backup promoted from temp"
+      "description": "Use when deploying Expo apps to the iOS App Store, Android Play Store, web hosting, or EAS API routes.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "expo-dev-client",
       "path": "skills/expo-dev-client",
-      "description": "Build and distribute Expo development clients locally or via TestFlight",
-      "license": "MIT, from expo plugin metadata",
-      "source": "expo plugin backup promoted from temp"
+      "description": "Use when building or distributing Expo development clients locally, with EAS, or through TestFlight.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "expo-module",
       "path": "skills/expo-module",
-      "description": "Guide for writing Expo native modules and views using the Expo Modules API (Swift, Kotlin, TypeScript). Covers module definition DSL, native views, shared objects, config plugins, lifecycle hooks, autolinking, and type system. Use when building or modifying native modules for Expo.",
-      "license": "MIT, from expo plugin metadata",
-      "source": "expo plugin backup promoted from temp"
+      "description": "Use when building or modifying native modules for Expo.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "expo-tailwind-setup",
       "path": "skills/expo-tailwind-setup",
-      "description": "Set up Tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling",
-      "license": "MIT, from expo plugin metadata",
-      "source": "expo plugin backup promoted from temp"
+      "description": "Use when setting up tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "expo-ui-jetpack-compose",
       "path": "skills/expo-ui-jetpack-compose",
-      "description": "`@expo/ui/jetpack-compose` package lets you use Jetpack Compose Views and modifiers in your app.",
-      "license": "MIT, from expo plugin metadata",
-      "source": "expo plugin backup promoted from temp"
+      "description": "Use when adding Jetpack Compose views or modifiers to Expo apps with @expo/ui/jetpack-compose.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "expo-ui-swift-ui",
       "path": "skills/expo-ui-swift-ui",
-      "description": "`@expo/ui/swift-ui` package lets you use SwiftUI Views and modifiers in your app.",
-      "license": "MIT, from expo plugin metadata",
-      "source": "expo plugin backup promoted from temp"
+      "description": "Use when adding SwiftUI views or modifiers to Expo apps with @expo/ui/swift-ui.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "external-design-skill-router",
@@ -266,589 +266,589 @@
       "name": "finishing-a-development-branch",
       "path": "skills/finishing-a-development-branch",
       "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup",
-      "license": "MIT, from superpowers plugin metadata",
-      "source": "superpowers plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "frontend-design",
       "path": "skills/frontend-design",
-      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
-      "license": "Apache-2.0, see skills/frontend-design/LICENSE.txt",
-      "source": "anthropics/skills example skill"
+      "description": "Use when creating distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "geist",
       "path": "skills/geist",
-      "description": "Expert guidance for Geist, Vercel's default typography system and font family for precise Next.js interfaces. Use when configuring Geist Sans, Geist Mono, or Geist Pixel, setting up font imports, or applying Vercel typography and aesthetic guidance.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when configuring Geist Sans, Geist Mono, or Geist Pixel, setting up font imports, or applying Vercel typography and aesthetic guidance.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "geistdocs",
       "path": "skills/geistdocs",
-      "description": "Expert guidance for Geistdocs, Vercel's documentation template built with Next.js and Fumadocs — MDX authoring, configuration, AI chat, i18n, feedback, deployment. Use when creating documentation sites, configuring geistdocs, writing MDX content, or setting up docs infrastructure.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when creating documentation sites, configuring geistdocs, writing MDX content, or setting up docs infrastructure.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "gh-address-comments",
       "path": "skills/gh-address-comments",
-      "description": "Address actionable GitHub pull request review feedback. Use when the user wants to inspect unresolved review threads, requested changes, or inline review comments on a PR, then implement selected fixes. Use the GitHub app for PR metadata and flat comment reads, and use the bundled GraphQL script via `gh` whenever thread-level state, resolution status, or inline review context matters.",
-      "license": "MIT, from github plugin metadata",
-      "source": "github plugin backup promoted from temp"
+      "description": "Use when the user wants to inspect unresolved review threads, requested changes, or inline review comments on a PR, then implement selected fixes. Use the GitHub app for PR metadata and flat comment reads, and use the bundled GraphQL script via `gh` whenever thread-level state, resolution status, or inline review context matters.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "gh-fix-ci",
       "path": "skills/gh-fix-ci",
       "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions. Use the GitHub app from this plugin for PR metadata and patch context, and use `gh` for Actions check and log inspection before implementing any approved fix.",
-      "license": "MIT, from github plugin metadata",
-      "source": "github plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "github",
       "path": "skills/github",
-      "description": "Triage and orient GitHub repository, pull request, and issue work through the connected GitHub app. Use when the user asks for general GitHub help, wants PR or issue summaries, or needs repository context before choosing a more specific GitHub workflow.",
-      "license": "MIT, from github plugin metadata",
-      "source": "github plugin backup promoted from temp"
+      "description": "Use when the user asks for general GitHub help, wants PR or issue summaries, or needs repository context before choosing a more specific GitHub workflow.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "internal-comms",
       "path": "skills/internal-comms",
-      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
-      "license": "Apache-2.0, see skills/internal-comms/LICENSE.txt",
-      "source": "anthropics/skills example skill"
+      "description": "Use when writing all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.)",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "investigation-mode",
       "path": "skills/investigation-mode",
-      "description": "Orchestrated debugging coordinator. Triggers on frustration signals (stuck, hung, broken, waiting) and systematically triages: runtime logs → workflow status → browser verify → deploy/env. Reports findings at every step.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when debugging stuck, hung, broken, flaky, or confusing behavior that needs systematic investigation.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "json-render",
       "path": "skills/json-render",
-      "description": "AI chat response rendering guidance — handling UIMessage parts, tool call displays, streaming states, and structured data presentation. Use when building custom chat UIs, rendering tool results, or troubleshooting AI response display issues.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when building custom chat UIs, rendering tool results, or troubleshooting AI response display issues.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "marketplace",
       "path": "skills/marketplace",
-      "description": "Vercel Marketplace expert guidance — discovering, installing, and building integrations, auto-provisioned environment variables, unified billing, and the vercel integration CLI. Use when consuming third-party services, building custom integrations, or managing marketplace resources on Vercel.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when consuming third-party services, building custom integrations, or managing marketplace resources on Vercel.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "mcp-builder",
       "path": "skills/mcp-builder",
-      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
-      "license": "Apache-2.0, see skills/mcp-builder/LICENSE.txt",
-      "source": "anthropics/skills example skill"
+      "description": "Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "micro",
       "path": "skills/micro",
-      "description": "Expert guidance for micro — asynchronous HTTP microservices framework by Vercel. Use when building lightweight HTTP servers, API endpoints, or microservices using the micro library.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when building lightweight HTTP servers, API endpoints, or microservices using the micro library.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "native-data-fetching",
       "path": "skills/native-data-fetching",
       "description": "Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, React Query, SWR, error handling, caching, offline support, and Expo Router data loaders (`useLoaderData`).",
-      "license": "MIT, from expo plugin metadata",
-      "source": "expo plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "ncc",
       "path": "skills/ncc",
-      "description": "Expert guidance for @vercel/ncc — a simple CLI for compiling Node.js modules into a single file with all dependencies included. Use when bundling serverless functions, CLI tools, or any Node.js project into a self-contained file.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when bundling serverless functions, CLI tools, or any Node.js project into a self-contained file.'",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "netlify-ai-gateway",
       "path": "skills/netlify-ai-gateway",
-      "description": "Guide for using Netlify AI Gateway to access AI models. Use when adding AI capabilities or selecting/changing AI models. Must be read before choosing a model. Covers supported providers (OpenAI, Anthropic, Google), SDK setup, environment variables, and the list of available models.",
-      "license": "MIT, from netlify plugin metadata",
-      "source": "netlify plugin backup promoted from temp"
+      "description": "Use when adding AI capabilities or selecting/changing AI models. Must be read before choosing a model. Covers supported providers (OpenAI, Anthropic, Google), SDK setup, environment variables, and the list of available models.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "netlify-blobs",
       "path": "skills/netlify-blobs",
-      "description": "Guide for using Netlify Blobs object storage. Use when storing files, images, documents, or simple key-value data without a full database. Covers getStore(), CRUD operations, metadata, listing, deploy-scoped vs site-scoped stores, and local development.",
-      "license": "MIT, from netlify plugin metadata",
-      "source": "netlify plugin backup promoted from temp"
+      "description": "Use when storing files, images, documents, or simple key-value data without a full database. Covers getStore(), CRUD operations, metadata, listing, deploy-scoped vs site-scoped stores, and local development.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "netlify-caching",
       "path": "skills/netlify-caching",
-      "description": "Guide for controlling caching on Netlify's CDN. Use when configuring cache headers, setting up stale-while-revalidate, implementing on-demand cache purge, or understanding Netlify's CDN caching behavior. Covers Cache-Control, Netlify-CDN-Cache-Control, cache tags, durable cache, and framework-specific caching patterns.",
-      "license": "MIT, from netlify plugin metadata",
-      "source": "netlify plugin backup promoted from temp"
+      "description": "Use when configuring cache headers, setting up stale-while-revalidate, implementing on-demand cache purge, or understanding Netlify's CDN caching behavior. Covers Cache-Control, Netlify-CDN-Cache-Control, cache tags, durable cache, and framework-specific caching patterns.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "netlify-cli-and-deploy",
       "path": "skills/netlify-cli-and-deploy",
-      "description": "Guide for using the Netlify CLI and deploying sites. Use when installing the CLI, linking sites, deploying (Git-based or manual), managing environment variables, or running local development. Covers netlify dev, netlify deploy, Git vs non-Git workflows, and environment variable management.",
-      "license": "MIT, from netlify plugin metadata",
-      "source": "netlify plugin backup promoted from temp"
+      "description": "Use when installing the CLI, linking sites, deploying (Git-based or manual), managing environment variables, or running local development. Covers netlify dev, netlify deploy, Git vs non-Git workflows, and environment variable management.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "netlify-config",
       "path": "skills/netlify-config",
-      "description": "Reference for netlify.toml configuration. Use when configuring build settings, redirects, rewrites, headers, deploy contexts, environment variables, or any site-level configuration. Covers the complete netlify.toml syntax including redirects with splats/conditions, headers, deploy contexts, functions config, and edge functions config.",
-      "license": "MIT, from netlify plugin metadata",
-      "source": "netlify plugin backup promoted from temp"
+      "description": "Use when configuring build settings, redirects, rewrites, headers, deploy contexts, environment variables, or any site-level configuration. Covers the complete netlify.toml syntax including redirects with splats/conditions, headers, deploy contexts, functions config, and edge functions config.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "netlify-deploy",
       "path": "skills/netlify-deploy",
-      "description": "Deploy projects to Netlify with the Netlify CLI. Use when the user wants to link a repo, validate deploy settings, run a deploy, or choose between preview and production flows.",
-      "license": "MIT, from netlify plugin metadata",
-      "source": "netlify plugin backup promoted from temp"
+      "description": "Use when the user wants to link a repo, validate deploy settings, run a deploy, or choose between preview and production flows.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "netlify-edge-functions",
       "path": "skills/netlify-edge-functions",
-      "description": "Guide for writing Netlify Edge Functions. Use when building middleware, geolocation-based logic, request/response manipulation, authentication checks, A/B testing, or any low-latency edge compute. Covers Deno runtime, context.next() middleware pattern, geolocation, and when to choose edge vs serverless.",
-      "license": "MIT, from netlify plugin metadata",
-      "source": "netlify plugin backup promoted from temp"
+      "description": "Use when building middleware, geolocation-based logic, request/response manipulation, authentication checks, A/B testing, or any low-latency edge compute. Covers Deno runtime, context.next() middleware pattern, geolocation, and when to choose edge vs serverless.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "netlify-forms",
       "path": "skills/netlify-forms",
-      "description": "Guide for using Netlify Forms for HTML form handling. Use when adding contact forms, feedback forms, file upload forms, or any form that should be collected by Netlify. Covers the data-netlify attribute, spam filtering, AJAX submissions, file uploads, notifications, and the submissions API.",
-      "license": "MIT, from netlify plugin metadata",
-      "source": "netlify plugin backup promoted from temp"
+      "description": "Use when adding contact forms, feedback forms, file upload forms, or any form that should be collected by Netlify. Covers the data-netlify attribute, spam filtering, AJAX submissions, file uploads, notifications, and the submissions API.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "netlify-frameworks",
       "path": "skills/netlify-frameworks",
-      "description": "Guide for deploying web frameworks on Netlify. Use when setting up a framework project (Vite/React, Astro, TanStack Start, Next.js, Nuxt, SvelteKit, Remix) for Netlify deployment, configuring adapters or plugins, or troubleshooting framework-specific Netlify integration. Covers what Netlify needs from each framework and how adapters handle server-side rendering.",
-      "license": "MIT, from netlify plugin metadata",
-      "source": "netlify plugin backup promoted from temp"
+      "description": "Use when setting up a framework project (Vite/React, Astro, TanStack Start, Next.js, Nuxt, SvelteKit, Remix) for Netlify deployment, configuring adapters or plugins, or troubleshooting framework-specific Netlify integration. Covers what Netlify needs from each framework and how adapters handle server-side rendering.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "netlify-functions",
       "path": "skills/netlify-functions",
-      "description": "Guide for writing Netlify serverless functions. Use when creating API endpoints, background processing, scheduled tasks, or any server-side logic using Netlify Functions. Covers modern syntax (default export + Config), TypeScript, path routing, background functions, scheduled functions, streaming, and method routing.",
-      "license": "MIT, from netlify plugin metadata",
-      "source": "netlify plugin backup promoted from temp"
+      "description": "Use when creating API endpoints, background processing, scheduled tasks, or any server-side logic using Netlify Functions. Covers modern syntax (default export + Config), TypeScript, path routing, background functions, scheduled functions, streaming, and method routing.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "netlify-identity",
       "path": "skills/netlify-identity",
       "description": "Use when the task involves authentication, user signups, logins, password recovery, OAuth providers, role-based access control, or protecting routes and functions. Always use `@netlify/identity`. Never use `netlify-identity-widget` or `gotrue-js` — they are deprecated.",
-      "license": "MIT, from netlify plugin metadata",
-      "source": "netlify plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "netlify-image-cdn",
       "path": "skills/netlify-image-cdn",
-      "description": "Guide for using Netlify Image CDN for image optimization and transformation. Use when serving optimized images, creating responsive image markup, setting up user-uploaded image pipelines, or configuring image transformations. Covers the /.netlify/images endpoint, query parameters, remote image allowlisting, clean URL rewrites, and composing uploads with Functions + Blobs.",
-      "license": "MIT, from netlify plugin metadata",
-      "source": "netlify plugin backup promoted from temp"
+      "description": "Use when serving optimized images, creating responsive image markup, setting up user-uploaded image pipelines, or configuring image transformations. Covers the /.netlify/images endpoint, query parameters, remote image allowlisting, clean URL rewrites, and composing uploads with Functions + Blobs.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "next-forge",
       "path": "skills/next-forge",
-      "description": "next-forge expert guidance — production-grade Turborepo monorepo SaaS starter by Vercel. Use when working in a next-forge project, scaffolding with `npx next-forge init`, or editing @repo/* workspace packages.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when working in a next-forge project, scaffolding with `npx next-forge init`, or editing @repo/* workspace packages.'",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "nextjs",
       "path": "skills/nextjs",
-      "description": "Next.js App Router expert guidance. Use when building, debugging, or architecting Next.js applications — routing, Server Components, Server Actions, Cache Components, layouts, middleware/proxy, data fetching, rendering strategies, and deployment on Vercel.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when building, debugging, or architecting Next.js applications — routing, Server Components, Server Actions, Cache Components, layouts, middleware/proxy, data fetching, rendering strategies, and deployment on Vercel.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "notion-knowledge-capture",
       "path": "skills/notion-knowledge-capture",
-      "description": "Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking.",
-      "license": "MIT, from notion plugin metadata",
-      "source": "notion plugin backup promoted from temp"
+      "description": "Use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "notion-meeting-intelligence",
       "path": "skills/notion-meeting-intelligence",
-      "description": "Prepare meeting materials with Notion context and Codex research; use when gathering context, drafting agendas/pre-reads, and tailoring materials to attendees.",
-      "license": "MIT, from notion plugin metadata",
-      "source": "notion plugin backup promoted from temp"
+      "description": "Use when gathering context, drafting agendas/pre-reads, and tailoring materials to attendees.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "notion-research-documentation",
       "path": "skills/notion-research-documentation",
-      "description": "Research across Notion and synthesize into structured documentation; use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations.",
-      "license": "MIT, from notion plugin metadata",
-      "source": "notion plugin backup promoted from temp"
+      "description": "Use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "notion-spec-to-implementation",
       "path": "skills/notion-spec-to-implementation",
-      "description": "Turn Notion specs into implementation plans, tasks, and progress tracking; use when implementing PRDs/feature specs and creating Notion plans + tasks from them.",
-      "license": "MIT, from notion plugin metadata",
-      "source": "notion plugin backup promoted from temp"
+      "description": "Use when implementing PRDs/feature specs and creating Notion plans + tasks from them.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "observability",
       "path": "skills/observability",
-      "description": "Vercel Observability expert guidance — Drains (logs, traces, speed insights, web analytics), Web Analytics, Speed Insights, runtime logs, custom events, OpenTelemetry integration, and monitoring dashboards. Use when instrumenting, debugging, or optimizing application performance and user experience on Vercel.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when instrumenting, debugging, or optimizing application performance and user experience on Vercel.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "payments",
       "path": "skills/payments",
-      "description": "Stripe payments integration guidance — native Vercel Marketplace setup, checkout sessions, webhook handling, subscription billing, and the Stripe SDK. Use when implementing payments, subscriptions, or processing transactions.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when implementing payments, subscriptions, or processing transactions.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "react-best-practices",
       "path": "skills/react-best-practices",
-      "description": "React best-practices reviewer for TSX files. Triggers after editing multiple TSX components to run a condensed quality checklist covering component structure, hooks usage, accessibility, performance, and TypeScript patterns.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when reviewing or editing multiple React TSX components for correctness, hooks usage, composition, rendering, or maintainability.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "receiving-code-review",
       "path": "skills/receiving-code-review",
       "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation",
-      "license": "MIT, from superpowers plugin metadata",
-      "source": "superpowers plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "render-debug",
       "path": "skills/render-debug",
-      "description": "Debug failed Render deployments by analyzing logs, metrics, and database state. Identifies errors (missing env vars, port binding, OOM, etc.) and suggests fixes. Use when deployments fail, services won't start, or users mention errors, logs, or debugging.",
-      "license": "MIT, from render plugin metadata",
-      "source": "render plugin backup promoted from temp"
+      "description": "Use when deployments fail, services won't start, or users mention errors, logs, or debugging.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "render-deploy",
       "path": "skills/render-deploy",
-      "description": "Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.",
-      "license": "MIT, from render plugin metadata",
-      "source": "render plugin backup promoted from temp"
+      "description": "Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "render-migrate-from-heroku",
       "path": "skills/render-migrate-from-heroku",
-      "description": "Migrate from Heroku to Render by reading local project files and generating equivalent Render services. Triggers: any mention of migrating from Heroku, moving off Heroku, Heroku to Render migration, or switching from Heroku. Reads Procfile, dependency files, and app config from the local repo. Optionally uses Heroku MCP to enrich with live config vars, add-on details, and dyno sizes. Uses Render MCP or Blueprint YAML to create services.",
-      "license": "MIT, from render plugin metadata",
-      "source": "render plugin backup promoted from temp"
+      "description": "Use when migrating from Heroku to Render by reading local project files and generating equivalent Render services. Triggers: any mention of migrating from Heroku, moving off Heroku, Heroku to Render migration, or switching from Heroku. Reads Procfile, dependency files, and app config from the local repo. Optionally uses Heroku MCP to enrich with live config vars, add-on details, and dyno sizes. Uses Render MCP or Blueprint YAML to create services",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "render-monitor",
       "path": "skills/render-monitor",
-      "description": "Monitor Render services in real-time. Check health, performance metrics, logs, and resource usage. Use when users want to check service status, view metrics, monitor performance, or verify deployments are healthy.",
-      "license": "MIT, from render plugin metadata",
-      "source": "render plugin backup promoted from temp"
+      "description": "Use when users want to check service status, view metrics, monitor performance, or verify deployments are healthy.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "render-workflows",
       "path": "skills/render-workflows",
-      "description": "Sets up, develops, tests, and deploys Render Workflows. Covers first-time scaffolding (via CLI or manual), SDK installation (Python or TypeScript), task patterns (retries, subtasks, fan-out), local development, Dashboard deployment, and troubleshooting. Use when a user wants to set up Render Workflows for the first time, scaffold a workflow service, add or modify workflow tasks, test workflows locally, or deploy workflows to Render.",
-      "license": "MIT, from render plugin metadata",
-      "source": "render plugin backup promoted from temp"
+      "description": "Use when a user wants to set up Render Workflows for the first time, scaffold a workflow service, add or modify workflow tasks, test workflows locally, or deploy workflows to Render.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "requesting-code-review",
       "path": "skills/requesting-code-review",
       "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
-      "license": "MIT, from superpowers plugin metadata",
-      "source": "superpowers plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "routing-middleware",
       "path": "skills/routing-middleware",
-      "description": "Vercel Routing Middleware guidance — request interception before cache, rewrites, redirects, personalization. Works with any framework. Supports Edge, Node.js, and Bun runtimes. Use when intercepting requests at the platform level.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when intercepting requests at the platform level.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "runtime-cache",
       "path": "skills/runtime-cache",
-      "description": "Vercel Runtime Cache API guidance — ephemeral per-region key-value cache with tag-based invalidation. Shared across Functions, Routing Middleware, and Builds. Use when implementing caching strategies beyond framework-level caching.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when implementing caching strategies beyond framework-level caching.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "satori",
       "path": "skills/satori",
-      "description": "Expert guidance for Satori — Vercel's library that converts HTML and CSS to SVG, commonly used to generate dynamic OG images for Next.js and other frameworks.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when working with Satori — Vercel's library that converts HTML and CSS to SVG, commonly used to generate dynamic OG images for Next.js and other frameworks.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "sentry",
       "path": "skills/sentry",
       "description": "Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry API; perform read-only queries with the bundled script and require `SENTRY_AUTH_TOKEN`.",
-      "license": "MIT, from sentry plugin metadata",
-      "source": "sentry plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "shadcn",
       "path": "skills/shadcn",
-      "description": "shadcn/ui expert guidance — CLI, component installation, composition patterns, custom registries, theming, Tailwind CSS integration, and high-quality interface design. Use when initializing shadcn, adding components, composing product UI, building custom registries, configuring themes, or troubleshooting component issues.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when initializing shadcn, adding components, composing product UI, building custom registries, configuring themes, or troubleshooting component issues.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "sign-in-with-vercel",
       "path": "skills/sign-in-with-vercel",
-      "description": "Sign in with Vercel guidance — OAuth 2.0/OIDC identity provider for user authentication via Vercel accounts. Use when implementing user login with Vercel as the identity provider.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when implementing user login with Vercel as the identity provider.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "slack-gif-creator",
       "path": "skills/slack-gif-creator",
-      "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.",
-      "license": "Apache-2.0, see skills/slack-gif-creator/LICENSE.txt",
-      "source": "anthropics/skills example skill"
+      "description": "Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "stripe-best-practices",
       "path": "skills/stripe-best-practices",
-      "description": "Guides Stripe integration decisions — API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), billing/subscriptions, Treasury financial accounts, integration surfaces (Checkout, Payment Element), and migrating from deprecated Stripe APIs. Use when building, modifying, or reviewing any Stripe integration — including accepting payments, building marketplaces, integrating Stripe, processing payments, setting up subscriptions, or creating connected accounts.",
-      "license": "MIT, from stripe plugin metadata",
-      "source": "stripe plugin backup promoted from temp"
+      "description": "Use when building, modifying, or reviewing any Stripe integration — including accepting payments, building marketplaces, integrating Stripe, processing payments, setting up subscriptions, or creating connected accounts.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "subagent-driven-development",
       "path": "skills/subagent-driven-development",
       "description": "Use when executing implementation plans with independent tasks in the current session",
-      "license": "MIT, from superpowers plugin metadata",
-      "source": "superpowers plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "supabase",
       "path": "skills/supabase",
       "description": "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, @supabase/ssr) in Next.js, React, SvelteKit, Astro, Remix; auth issues (login, logout, sessions, JWT, cookies, getSession, getUser, getClaims, RLS); Supabase CLI or MCP server; schema changes, migrations, security audits, Postgres extensions (pg_graphql, pg_cron, pg_vector).",
-      "license": "MIT, from supabase plugin metadata",
-      "source": "supabase plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "supabase-postgres-best-practices",
       "path": "skills/supabase-postgres-best-practices",
-      "description": "Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.",
-      "license": "MIT, from supabase plugin metadata",
-      "source": "supabase plugin backup promoted from temp"
+      "description": "Use when writing, reviewing, or optimizing Supabase Postgres queries, schemas, indexes, RLS policies, or database performance.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "swr",
       "path": "skills/swr",
-      "description": "SWR data-fetching expert guidance. Use when building React apps with client-side data fetching, caching, revalidation, mutations, optimistic UI, pagination, or infinite loading using the SWR library.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when building React apps with client-side data fetching, caching, revalidation, mutations, optimistic UI, pagination, or infinite loading using the SWR library.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "systematic-debugging",
       "path": "skills/systematic-debugging",
       "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
-      "license": "MIT, from superpowers plugin metadata",
-      "source": "superpowers plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "test-driven-development",
       "path": "skills/test-driven-development",
       "description": "Use when implementing any feature or bugfix, before writing implementation code",
-      "license": "MIT, from superpowers plugin metadata",
-      "source": "superpowers plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "theme-factory",
       "path": "skills/theme-factory",
-      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
-      "license": "Apache-2.0, see skills/theme-factory/LICENSE.txt",
-      "source": "anthropics/skills example skill"
+      "description": "Use when working on styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "turbopack",
       "path": "skills/turbopack",
-      "description": "Turbopack expert guidance. Use when configuring the Next.js bundler, optimizing HMR, debugging build issues, or understanding the Turbopack vs Webpack differences.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when configuring the Next.js bundler, optimizing HMR, debugging build issues, or understanding the Turbopack vs Webpack differences.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "turborepo",
       "path": "skills/turborepo",
-      "description": "Turborepo expert guidance. Use when setting up or optimizing monorepo builds, configuring task caching, remote caching, parallel execution, or the --affected flag for incremental CI.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when setting up or optimizing monorepo builds, configuring task caching, remote caching, parallel execution, or the --affected flag for incremental CI.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "upgrade-stripe",
       "path": "skills/upgrade-stripe",
-      "description": "Guide for upgrading Stripe API versions and SDKs",
-      "license": "MIT, from stripe plugin metadata",
-      "source": "stripe plugin backup promoted from temp"
+      "description": "Use when upgrading Stripe API versions, SDK versions, webhook versions, or integration patterns.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "upgrading-expo",
       "path": "skills/upgrading-expo",
-      "description": "Guidelines for upgrading Expo SDK versions and fixing dependency issues",
-      "license": "MIT, from expo plugin metadata",
-      "source": "expo plugin backup promoted from temp"
+      "description": "Use when working on upgrading Expo SDK versions and fixing dependency issues",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "use-dom",
       "path": "skills/use-dom",
-      "description": "Use Expo DOM components to run web code in a webview on native and as-is on web. Migrate web code to native incrementally.",
-      "license": "MIT, from expo plugin metadata",
-      "source": "expo plugin backup promoted from temp"
+      "description": "Use when migrating web code into Expo DOM components, embedding web experiences in native apps, or sharing web UI across native and web.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "using-git-worktrees",
       "path": "skills/using-git-worktrees",
       "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback",
-      "license": "MIT, from superpowers plugin metadata",
-      "source": "superpowers plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "using-superpowers",
       "path": "skills/using-superpowers",
       "description": "Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions",
-      "license": "MIT, from superpowers plugin metadata",
-      "source": "superpowers plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "v0-dev",
       "path": "skills/v0-dev",
-      "description": "v0 by Vercel expert guidance. Use when discussing AI code generation, generating UI components from prompts, v0 CLI usage, v0 SDK/API integration, or integrating v0 into development workflows with GitHub and Vercel deployment.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when discussing AI code generation, generating UI components from prompts, v0 CLI usage, v0 SDK/API integration, or integrating v0 into development workflows with GitHub and Vercel deployment.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "vercel-agent",
       "path": "skills/vercel-agent",
-      "description": "Vercel Agent guidance — AI-powered code review, incident investigation, and SDK installation. Automates PR analysis and anomaly debugging. Use when configuring or understanding Vercel's AI development tools.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when configuring or understanding Vercel's AI development tools.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "vercel-api",
       "path": "skills/vercel-api",
-      "description": "Vercel app and REST API expert guidance. Use when the agent needs live access to Vercel projects, deployments, environment variables, domains, logs, or documentation through the connected Vercel app or REST API.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when the agent needs live access to Vercel projects, deployments, environment variables, domains, logs, or documentation through the connected Vercel app or REST API.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "vercel-cli",
       "path": "skills/vercel-cli",
-      "description": "Vercel CLI expert guidance. Use when deploying, managing environment variables, linking projects, viewing logs, managing domains, or interacting with the Vercel platform from the command line.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when deploying, managing environment variables, linking projects, viewing logs, managing domains, or interacting with the Vercel platform from the command line.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "vercel-firewall",
       "path": "skills/vercel-firewall",
-      "description": "Vercel Firewall and security expert guidance. Use when configuring DDoS protection, WAF rules, rate limiting, bot filtering, IP allow/block lists, OWASP rulesets, Attack Challenge Mode, or any security configuration on the Vercel platform.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when configuring DDoS protection, WAF rules, rate limiting, bot filtering, IP allow/block lists, OWASP rulesets, Attack Challenge Mode, or any security configuration on the Vercel platform.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "vercel-flags",
       "path": "skills/vercel-flags",
-      "description": "Vercel Flags guidance — feature flags platform with unified dashboard, Flags Explorer, gradual rollouts, A/B testing, and provider adapters. Use when implementing feature flags, experimentation, or staged rollouts.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when implementing feature flags, experimentation, or staged rollouts.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "vercel-functions",
       "path": "skills/vercel-functions",
-      "description": "Vercel Functions expert guidance — Serverless Functions, Edge Functions, Fluid Compute, streaming, Cron Jobs, and runtime configuration. Use when configuring, debugging, or optimizing server-side code running on Vercel.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when configuring, debugging, or optimizing server-side code running on Vercel.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "vercel-queues",
       "path": "skills/vercel-queues",
-      "description": "Vercel Queues guidance (public beta) — durable event streaming with topics, consumer groups, retries, and delayed delivery. $0.60/1M ops. Powers Workflow DevKit. Use when building async processing, fan-out patterns, or event-driven architectures.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when building async processing, fan-out patterns, or event-driven architectures.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "vercel-sandbox",
       "path": "skills/vercel-sandbox",
-      "description": "Vercel Sandbox guidance — ephemeral Firecracker microVMs for running untrusted code safely. Supports AI agents, code generation, and experimentation. Use when executing user-generated or AI-generated code in isolation.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when executing user-generated or AI-generated code in isolation.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "vercel-services",
       "path": "skills/vercel-services",
-      "description": "Vercel Services — deploy multiple services within a single Vercel project. Use for monorepo layouts or when combining a backend (Python, Go) with a frontend (Next.js, Vite) in one deployment.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when working with Vercel Services — deploy multiple services within a single Vercel project. Use for monorepo layouts or when combining a backend (Python, Go) with a frontend (Next.js, Vite) in one deployment",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "vercel-storage",
       "path": "skills/vercel-storage",
-      "description": "Vercel storage expert guidance — Blob, Edge Config, and Marketplace storage (Neon Postgres, Upstash Redis). Use when choosing, configuring, or using data storage with Vercel applications.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when choosing, configuring, or using data storage with Vercel applications.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "verification",
       "path": "skills/verification",
-      "description": "Full-story verification — infers what the user is building, then verifies the complete flow end-to-end: browser → API → data → response. Triggers on dev server start and 'why isn't this working' signals.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when verifying the full user-facing flow end-to-end across browser, API, database, deployment, or telemetry layers.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "verification-before-completion",
       "path": "skills/verification-before-completion",
       "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
-      "license": "MIT, from superpowers plugin metadata",
-      "source": "superpowers plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "web-artifacts-builder",
       "path": "skills/web-artifacts-builder",
-      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
-      "license": "Apache-2.0, see skills/web-artifacts-builder/LICENSE.txt",
-      "source": "anthropics/skills example skill"
+      "description": "Use when creating elaborate multi-component HTML artifacts with modern frontend tooling, rich interactions, or generated visual experiences.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "webapp-testing",
       "path": "skills/webapp-testing",
-      "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
-      "license": "Apache-2.0, see skills/webapp-testing/LICENSE.txt",
-      "source": "anthropics/skills example skill"
+      "description": "Use when testing local web applications with Playwright, browser automation, screenshots, console logs, or interaction checks.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "workflow",
       "path": "skills/workflow",
-      "description": "Vercel Workflow DevKit (WDK) expert guidance. Use when building durable workflows, long-running tasks, API routes or agents that need pause/resume, retries, step-based execution, or crash-safe orchestration with Vercel Workflow.",
-      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
-      "source": "vercel/vercel-plugin skill"
+      "description": "Use when building durable workflows, long-running tasks, API routes or agents that need pause/resume, retries, step-based execution, or crash-safe orchestration with Vercel Workflow.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "writing-plans",
       "path": "skills/writing-plans",
       "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
-      "license": "MIT, from superpowers plugin metadata",
-      "source": "superpowers plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "writing-skills",
       "path": "skills/writing-skills",
       "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
-      "license": "MIT, from superpowers plugin metadata",
-      "source": "superpowers plugin backup promoted from temp"
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     },
     {
       "name": "yeet",
       "path": "skills/yeet",
-      "description": "Publish local changes to GitHub by confirming scope, committing intentionally, pushing the branch, and opening a draft PR through the GitHub app from this plugin, with `gh` used only as a fallback where connector coverage is insufficient.",
-      "license": "MIT, from github plugin metadata",
-      "source": "github plugin backup promoted from temp"
+      "description": "Use when publishing local changes to GitHub by checking scope, committing intentionally, pushing a branch, or opening a draft PR.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
     }
   ]
 }

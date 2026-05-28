@@ -1,6 +1,6 @@
 ---
 name: turbopack
-description: Turbopack expert guidance. Use when configuring the Next.js bundler, optimizing HMR, debugging build issues, or understanding the Turbopack vs Webpack differences.
+description: Use when configuring the Next.js bundler, optimizing HMR, debugging build issues, or understanding the Turbopack vs Webpack differences.
 metadata:
   priority: 4
   docs:

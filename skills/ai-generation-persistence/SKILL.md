@@ -1,6 +1,6 @@
 ---
 name: ai-generation-persistence
-description: "AI generation persistence patterns — unique IDs, addressable URLs, database storage, and cost tracking for every LLM generation"
+description: Use when AI generations need stable IDs, addressable URLs, database persistence, resumability, or cost tracking.
 metadata:
   priority: 6
   docs:

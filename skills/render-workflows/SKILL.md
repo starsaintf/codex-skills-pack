@@ -1,6 +1,6 @@
 ---
 name: render-workflows
-description: Sets up, develops, tests, and deploys Render Workflows. Covers first-time scaffolding (via CLI or manual), SDK installation (Python or TypeScript), task patterns (retries, subtasks, fan-out), local development, Dashboard deployment, and troubleshooting. Use when a user wants to set up Render Workflows for the first time, scaffold a workflow service, add or modify workflow tasks, test workflows locally, or deploy workflows to Render.
+description: Use when a user wants to set up Render Workflows for the first time, scaffold a workflow service, add or modify workflow tasks, test workflows locally, or deploy workflows to Render.
 license: MIT
 compatibility: Requires Render CLI 2.11.0+ for scaffolding and local development. Render Dashboard required for deployment (Blueprints not yet supported for Workflows).
 metadata:

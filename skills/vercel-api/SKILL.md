@@ -1,6 +1,6 @@
 ---
 name: vercel-api
-description: Vercel app and REST API expert guidance. Use when the agent needs live access to Vercel projects, deployments, environment variables, domains, logs, or documentation through the connected Vercel app or REST API.
+description: Use when the agent needs live access to Vercel projects, deployments, environment variables, domains, logs, or documentation through the connected Vercel app or REST API.
 metadata:
   priority: 7
   docs:

@@ -1,6 +1,6 @@
 ---
 name: expo-deployment
-description: Deploying Expo apps to iOS App Store, Android Play Store, web hosting, and API routes
+description: Use when deploying Expo apps to the iOS App Store, Android Play Store, web hosting, or EAS API routes.
 version: 1.0.0
 license: MIT
 ---

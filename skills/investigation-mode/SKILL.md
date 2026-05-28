@@ -1,6 +1,6 @@
 ---
 name: investigation-mode
-description: "Orchestrated debugging coordinator. Triggers on frustration signals (stuck, hung, broken, waiting) and systematically triages: runtime logs → workflow status → browser verify → deploy/env. Reports findings at every step."
+description: Use when debugging stuck, hung, broken, flaky, or confusing behavior that needs systematic investigation.
 metadata:
   priority: 8
   docs:

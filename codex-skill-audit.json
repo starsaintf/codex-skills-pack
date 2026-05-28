@@ -1,16 +1,16 @@
 {
   "codex_home": "C:\\Users\\Lambert\\.codex",
   "include_system": false,
-  "total_skill_md": 855,
+  "total_skill_md": 902,
   "counts_by_kind": {
     "plugin-skill": 51,
     "temp": 696,
-    "user-installed-skill": 73,
+    "user-installed-skill": 120,
     "vendor-import": 35
   },
   "unique_named_skills": 402,
   "duplicate_name_count": 327,
-  "installable_count": 124,
+  "installable_count": 171,
   "non_installable_count": 731,
   "missing_frontmatter_count": 0,
   "missing_name_count": 0,
@@ -22,6 +22,30 @@
       "kind": "user-installed-skill",
       "name": "actionable-pushback",
       "description": "Use when the user may be mistaken, the requested action is risky, evidence is weak or contradictory, requirements conflict, assumptions may be wrong, constraints are hidden, or Codex should respectfully disagree before acting.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/agent-browser/SKILL.md",
+      "dir": "skills/agent-browser",
+      "kind": "user-installed-skill",
+      "name": "agent-browser",
+      "description": "Use when the user needs to interact with websites, verify dev server output, test web apps, navigate pages, fill forms, click buttons, take screenshots, extract data, or automate any browser task. Also triggers when a dev server starts so you can verify it visually.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/agent-browser-verify/SKILL.md",
+      "dir": "skills/agent-browser-verify",
+      "kind": "user-installed-skill",
+      "name": "agent-browser-verify",
+      "description": "Use when a dev server needs browser verification, screenshots, console checks, or visual regression checks after frontend changes.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -41,11 +65,59 @@
       "likely_installable": true
     },
     {
+      "path": "skills/ai-elements/SKILL.md",
+      "dir": "skills/ai-elements",
+      "kind": "user-installed-skill",
+      "name": "ai-elements",
+      "description": "Use when building chat UIs, message displays, tool call rendering, streaming responses, reasoning panels, or any AI-native interface with the AI SDK.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/ai-gateway/SKILL.md",
+      "dir": "skills/ai-gateway",
+      "kind": "user-installed-skill",
+      "name": "ai-gateway",
+      "description": "Use when configuring model routing, provider failover, cost tracking, or managing multiple AI providers through a unified API.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/ai-generation-persistence/SKILL.md",
+      "dir": "skills/ai-generation-persistence",
+      "kind": "user-installed-skill",
+      "name": "ai-generation-persistence",
+      "description": "Use when AI generations need stable IDs, addressable URLs, database persistence, resumability, or cost tracking.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/ai-sdk/SKILL.md",
+      "dir": "skills/ai-sdk",
+      "kind": "user-installed-skill",
+      "name": "ai-sdk",
+      "description": "Use when building AI-powered features — chat interfaces, text generation, structured output, tool calling, agents, MCP integration, streaming, embeddings, reranking, image generation, or working with any LLM provider.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/algorithmic-art/SKILL.md",
       "dir": "skills/algorithmic-art",
       "kind": "user-installed-skill",
       "name": "algorithmic-art",
-      "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
+      "description": "Use when creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -69,7 +141,31 @@
       "dir": "skills/android-performance",
       "kind": "user-installed-skill",
       "name": "android-performance",
-      "description": "Gather and interpret Android performance evidence on an adb target using Simpleperf CPU profiles, Perfetto or Compose traces, gfxinfo frame data, dumpsys meminfo snapshots, Java heap dumps, and native allocation traces. Use when asked to profile an Android app flow, find CPU-heavy functions, diagnose jank, capture startup or frame timing evidence, compare before/after performance, explain what code is taking time, or gather memory/leak profiling artifacts.",
+      "description": "Use when asked to profile an Android app flow, find CPU-heavy functions, diagnose jank, capture startup or frame timing evidence, compare before/after performance, explain what code is taking time, or gather memory/leak profiling artifacts.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/auth/SKILL.md",
+      "dir": "skills/auth",
+      "kind": "user-installed-skill",
+      "name": "auth",
+      "description": "Use when implementing user authentication.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/bootstrap/SKILL.md",
+      "dir": "skills/bootstrap",
+      "kind": "user-installed-skill",
+      "name": "bootstrap",
+      "description": "Use when setting up or repairing a repository so linking, environment provisioning, env pulls, and first-run db/dev commands happen in the correct safe order.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -81,7 +177,7 @@
       "dir": "skills/brainstorming",
       "kind": "user-installed-skill",
       "name": "brainstorming",
-      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
+      "description": "Use when starting creative or product work such as new features, components, functionality, designs, or behavior changes.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -93,7 +189,7 @@
       "dir": "skills/brand-guidelines",
       "kind": "user-installed-skill",
       "name": "brand-guidelines",
-      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+      "description": "Use when applying anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -105,7 +201,7 @@
       "dir": "skills/building-native-ui",
       "kind": "user-installed-skill",
       "name": "building-native-ui",
-      "description": "Complete guide for building beautiful apps with Expo Router. Covers fundamentals, styling, components, navigation, animations, patterns, and native tabs.",
+      "description": "Use when building polished native app interfaces with Expo Router, React Native styling, navigation, animations, or platform UI patterns.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -117,11 +213,23 @@
       "dir": "skills/canvas-design",
       "kind": "user-installed-skill",
       "name": "canvas-design",
-      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "description": "Use when creating beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
       "has_license_file": true,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/chat-sdk/SKILL.md",
+      "dir": "skills/chat-sdk",
+      "kind": "user-installed-skill",
+      "name": "chat-sdk",
+      "description": "Use when building multi-platform chat bots — Slack, Telegram, Microsoft Teams, Discord, Google Chat, GitHub, Linear — with a single codebase. Covers the Chat class, adapters, threads, messages, cards, modals, streaming, state management, and webhook setup.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
       "likely_installable": true
     },
     {
@@ -129,7 +237,7 @@
       "dir": "skills/claude-api",
       "kind": "user-installed-skill",
       "name": "claude-api",
-      "description": "Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claude model versions (4.5 → 4.6, 4.6 → 4.7, retired-model replacements). TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks for the Claude API, Anthropic SDK, or Managed Agents; user adds/modifies/tunes a Claude feature (caching, thinking, compaction, tool use, batch, files, citations, memory) or model (Opus/Sonnet/Haiku) in a file; questions about prompt caching / cache hit rate in an Anthropic SDK project. SKIP: file imports `openai`/other-provider SDK, filename like `*-openai.py`/`*-generic.py`, provider-neutral code, general programming/ML.",
+      "description": "Use when building, debugging, or optimizing Claude API and Anthropic SDK applications.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -137,11 +245,47 @@
       "likely_installable": true
     },
     {
+      "path": "skills/cms/SKILL.md",
+      "dir": "skills/cms",
+      "kind": "user-installed-skill",
+      "name": "cms",
+      "description": "Use when building content-driven sites with a headless CMS on Vercel.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/codex-expo-run-actions/SKILL.md",
       "dir": "skills/codex-expo-run-actions",
       "kind": "user-installed-skill",
       "name": "codex-expo-run-actions",
-      "description": "Wire Expo projects into the Codex app with project-local run scripts and .codex/environments/environment.toml actions. Use when the user wants the Codex app Run button, build/run actions, action buttons, or a stable Expo start/run workflow from Codex.",
+      "description": "Use when the user wants the Codex app Run button, build/run actions, action buttons, or a stable Expo start/run workflow from Codex.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/cron-jobs/SKILL.md",
+      "dir": "skills/cron-jobs",
+      "kind": "user-installed-skill",
+      "name": "cron-jobs",
+      "description": "Use when adding, editing, or debugging scheduled tasks in vercel.json.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/deployments-cicd/SKILL.md",
+      "dir": "skills/deployments-cicd",
+      "kind": "user-installed-skill",
+      "name": "deployments-cicd",
+      "description": "Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -154,6 +298,30 @@
       "kind": "user-installed-skill",
       "name": "dispatching-parallel-agents",
       "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/email/SKILL.md",
+      "dir": "skills/email",
+      "kind": "user-installed-skill",
+      "name": "email",
+      "description": "Use when sending emails from a Vercel-deployed application.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/env-vars/SKILL.md",
+      "dir": "skills/env-vars",
+      "kind": "user-installed-skill",
+      "name": "env-vars",
+      "description": "Use when working with .env files, vercel env commands, OIDC tokens, or managing environment-specific configuration.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -177,7 +345,7 @@
       "dir": "skills/expo-api-routes",
       "kind": "user-installed-skill",
       "name": "expo-api-routes",
-      "description": "Guidelines for creating API routes in Expo Router with EAS Hosting",
+      "description": "Use when working on creating API routes in Expo Router with EAS Hosting",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -189,7 +357,7 @@
       "dir": "skills/expo-cicd-workflows",
       "kind": "user-installed-skill",
       "name": "expo-cicd-workflows",
-      "description": "Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build pipelines or deployment automation.",
+      "description": "Use when working with expo cicd workflows: Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build pipelines or deployment automation.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -201,7 +369,7 @@
       "dir": "skills/expo-deployment",
       "kind": "user-installed-skill",
       "name": "expo-deployment",
-      "description": "Deploying Expo apps to iOS App Store, Android Play Store, web hosting, and API routes",
+      "description": "Use when deploying Expo apps to the iOS App Store, Android Play Store, web hosting, or EAS API routes.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -213,7 +381,7 @@
       "dir": "skills/expo-dev-client",
       "kind": "user-installed-skill",
       "name": "expo-dev-client",
-      "description": "Build and distribute Expo development clients locally or via TestFlight",
+      "description": "Use when building or distributing Expo development clients locally, with EAS, or through TestFlight.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -225,7 +393,7 @@
       "dir": "skills/expo-module",
       "kind": "user-installed-skill",
       "name": "expo-module",
-      "description": "Guide for writing Expo native modules and views using the Expo Modules API (Swift, Kotlin, TypeScript). Covers module definition DSL, native views, shared objects, config plugins, lifecycle hooks, autolinking, and type system. Use when building or modifying native modules for Expo.",
+      "description": "Use when building or modifying native modules for Expo.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -237,7 +405,7 @@
       "dir": "skills/expo-tailwind-setup",
       "kind": "user-installed-skill",
       "name": "expo-tailwind-setup",
-      "description": "Set up Tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling",
+      "description": "Use when setting up tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -249,7 +417,7 @@
       "dir": "skills/expo-ui-jetpack-compose",
       "kind": "user-installed-skill",
       "name": "expo-ui-jetpack-compose",
-      "description": "`@expo/ui/jetpack-compose` package lets you use Jetpack Compose Views and modifiers in your app.",
+      "description": "Use when adding Jetpack Compose views or modifiers to Expo apps with @expo/ui/jetpack-compose.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -261,7 +429,7 @@
       "dir": "skills/expo-ui-swift-ui",
       "kind": "user-installed-skill",
       "name": "expo-ui-swift-ui",
-      "description": "`@expo/ui/swift-ui` package lets you use SwiftUI Views and modifiers in your app.",
+      "description": "Use when adding SwiftUI views or modifiers to Expo apps with @expo/ui/swift-ui.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -297,7 +465,7 @@
       "dir": "skills/frontend-design",
       "kind": "user-installed-skill",
       "name": "frontend-design",
-      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+      "description": "Use when creating distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -305,11 +473,35 @@
       "likely_installable": true
     },
     {
+      "path": "skills/geist/SKILL.md",
+      "dir": "skills/geist",
+      "kind": "user-installed-skill",
+      "name": "geist",
+      "description": "Use when configuring Geist Sans, Geist Mono, or Geist Pixel, setting up font imports, or applying Vercel typography and aesthetic guidance.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/geistdocs/SKILL.md",
+      "dir": "skills/geistdocs",
+      "kind": "user-installed-skill",
+      "name": "geistdocs",
+      "description": "Use when creating documentation sites, configuring geistdocs, writing MDX content, or setting up docs infrastructure.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/gh-address-comments/SKILL.md",
       "dir": "skills/gh-address-comments",
       "kind": "user-installed-skill",
       "name": "gh-address-comments",
-      "description": "Address actionable GitHub pull request review feedback. Use when the user wants to inspect unresolved review threads, requested changes, or inline review comments on a PR, then implement selected fixes. Use the GitHub app for PR metadata and flat comment reads, and use the bundled GraphQL script via `gh` whenever thread-level state, resolution status, or inline review context matters.",
+      "description": "Use when the user wants to inspect unresolved review threads, requested changes, or inline review comments on a PR, then implement selected fixes. Use the GitHub app for PR metadata and flat comment reads, and use the bundled GraphQL script via `gh` whenever thread-level state, resolution status, or inline review context matters.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -333,7 +525,7 @@
       "dir": "skills/github",
       "kind": "user-installed-skill",
       "name": "github",
-      "description": "Triage and orient GitHub repository, pull request, and issue work through the connected GitHub app. Use when the user asks for general GitHub help, wants PR or issue summaries, or needs repository context before choosing a more specific GitHub workflow.",
+      "description": "Use when the user asks for general GitHub help, wants PR or issue summaries, or needs repository context before choosing a more specific GitHub workflow.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -345,7 +537,7 @@
       "dir": "skills/internal-comms",
       "kind": "user-installed-skill",
       "name": "internal-comms",
-      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
+      "description": "Use when writing all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.)",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -353,15 +545,63 @@
       "likely_installable": true
     },
     {
+      "path": "skills/investigation-mode/SKILL.md",
+      "dir": "skills/investigation-mode",
+      "kind": "user-installed-skill",
+      "name": "investigation-mode",
+      "description": "Use when debugging stuck, hung, broken, flaky, or confusing behavior that needs systematic investigation.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/json-render/SKILL.md",
+      "dir": "skills/json-render",
+      "kind": "user-installed-skill",
+      "name": "json-render",
+      "description": "Use when building custom chat UIs, rendering tool results, or troubleshooting AI response display issues.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/marketplace/SKILL.md",
+      "dir": "skills/marketplace",
+      "kind": "user-installed-skill",
+      "name": "marketplace",
+      "description": "Use when consuming third-party services, building custom integrations, or managing marketplace resources on Vercel.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/mcp-builder/SKILL.md",
       "dir": "skills/mcp-builder",
       "kind": "user-installed-skill",
       "name": "mcp-builder",
-      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "description": "Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
       "has_license_file": true,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/micro/SKILL.md",
+      "dir": "skills/micro",
+      "kind": "user-installed-skill",
+      "name": "micro",
+      "description": "Use when building lightweight HTTP servers, API endpoints, or microservices using the micro library.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
       "likely_installable": true
     },
     {
@@ -377,11 +617,23 @@
       "likely_installable": true
     },
     {
+      "path": "skills/ncc/SKILL.md",
+      "dir": "skills/ncc",
+      "kind": "user-installed-skill",
+      "name": "ncc",
+      "description": "Use when bundling serverless functions, CLI tools, or any Node.js project into a self-contained file.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/netlify-ai-gateway/SKILL.md",
       "dir": "skills/netlify-ai-gateway",
       "kind": "user-installed-skill",
       "name": "netlify-ai-gateway",
-      "description": "Guide for using Netlify AI Gateway to access AI models. Use when adding AI capabilities or selecting/changing AI models. Must be read before choosing a model. Covers supported providers (OpenAI, Anthropic, Google), SDK setup, environment variables, and the list of available models.",
+      "description": "Use when adding AI capabilities or selecting/changing AI models. Must be read before choosing a model. Covers supported providers (OpenAI, Anthropic, Google), SDK setup, environment variables, and the list of available models.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -393,7 +645,7 @@
       "dir": "skills/netlify-blobs",
       "kind": "user-installed-skill",
       "name": "netlify-blobs",
-      "description": "Guide for using Netlify Blobs object storage. Use when storing files, images, documents, or simple key-value data without a full database. Covers getStore(), CRUD operations, metadata, listing, deploy-scoped vs site-scoped stores, and local development.",
+      "description": "Use when storing files, images, documents, or simple key-value data without a full database. Covers getStore(), CRUD operations, metadata, listing, deploy-scoped vs site-scoped stores, and local development.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -405,7 +657,7 @@
       "dir": "skills/netlify-caching",
       "kind": "user-installed-skill",
       "name": "netlify-caching",
-      "description": "Guide for controlling caching on Netlify's CDN. Use when configuring cache headers, setting up stale-while-revalidate, implementing on-demand cache purge, or understanding Netlify's CDN caching behavior. Covers Cache-Control, Netlify-CDN-Cache-Control, cache tags, durable cache, and framework-specific caching patterns.",
+      "description": "Use when configuring cache headers, setting up stale-while-revalidate, implementing on-demand cache purge, or understanding Netlify's CDN caching behavior. Covers Cache-Control, Netlify-CDN-Cache-Control, cache tags, durable cache, and framework-specific caching patterns.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -417,7 +669,7 @@
       "dir": "skills/netlify-cli-and-deploy",
       "kind": "user-installed-skill",
       "name": "netlify-cli-and-deploy",
-      "description": "Guide for using the Netlify CLI and deploying sites. Use when installing the CLI, linking sites, deploying (Git-based or manual), managing environment variables, or running local development. Covers netlify dev, netlify deploy, Git vs non-Git workflows, and environment variable management.",
+      "description": "Use when installing the CLI, linking sites, deploying (Git-based or manual), managing environment variables, or running local development. Covers netlify dev, netlify deploy, Git vs non-Git workflows, and environment variable management.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -429,7 +681,7 @@
       "dir": "skills/netlify-config",
       "kind": "user-installed-skill",
       "name": "netlify-config",
-      "description": "Reference for netlify.toml configuration. Use when configuring build settings, redirects, rewrites, headers, deploy contexts, environment variables, or any site-level configuration. Covers the complete netlify.toml syntax including redirects with splats/conditions, headers, deploy contexts, functions config, and edge functions config.",
+      "description": "Use when configuring build settings, redirects, rewrites, headers, deploy contexts, environment variables, or any site-level configuration. Covers the complete netlify.toml syntax including redirects with splats/conditions, headers, deploy contexts, functions config, and edge functions config.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -441,7 +693,7 @@
       "dir": "skills/netlify-deploy",
       "kind": "user-installed-skill",
       "name": "netlify-deploy",
-      "description": "Deploy projects to Netlify with the Netlify CLI. Use when the user wants to link a repo, validate deploy settings, run a deploy, or choose between preview and production flows.",
+      "description": "Use when the user wants to link a repo, validate deploy settings, run a deploy, or choose between preview and production flows.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -453,7 +705,7 @@
       "dir": "skills/netlify-edge-functions",
       "kind": "user-installed-skill",
       "name": "netlify-edge-functions",
-      "description": "Guide for writing Netlify Edge Functions. Use when building middleware, geolocation-based logic, request/response manipulation, authentication checks, A/B testing, or any low-latency edge compute. Covers Deno runtime, context.next() middleware pattern, geolocation, and when to choose edge vs serverless.",
+      "description": "Use when building middleware, geolocation-based logic, request/response manipulation, authentication checks, A/B testing, or any low-latency edge compute. Covers Deno runtime, context.next() middleware pattern, geolocation, and when to choose edge vs serverless.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -465,7 +717,7 @@
       "dir": "skills/netlify-forms",
       "kind": "user-installed-skill",
       "name": "netlify-forms",
-      "description": "Guide for using Netlify Forms for HTML form handling. Use when adding contact forms, feedback forms, file upload forms, or any form that should be collected by Netlify. Covers the data-netlify attribute, spam filtering, AJAX submissions, file uploads, notifications, and the submissions API.",
+      "description": "Use when adding contact forms, feedback forms, file upload forms, or any form that should be collected by Netlify. Covers the data-netlify attribute, spam filtering, AJAX submissions, file uploads, notifications, and the submissions API.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -477,7 +729,7 @@
       "dir": "skills/netlify-frameworks",
       "kind": "user-installed-skill",
       "name": "netlify-frameworks",
-      "description": "Guide for deploying web frameworks on Netlify. Use when setting up a framework project (Vite/React, Astro, TanStack Start, Next.js, Nuxt, SvelteKit, Remix) for Netlify deployment, configuring adapters or plugins, or troubleshooting framework-specific Netlify integration. Covers what Netlify needs from each framework and how adapters handle server-side rendering.",
+      "description": "Use when setting up a framework project (Vite/React, Astro, TanStack Start, Next.js, Nuxt, SvelteKit, Remix) for Netlify deployment, configuring adapters or plugins, or troubleshooting framework-specific Netlify integration. Covers what Netlify needs from each framework and how adapters handle server-side rendering.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -489,7 +741,7 @@
       "dir": "skills/netlify-functions",
       "kind": "user-installed-skill",
       "name": "netlify-functions",
-      "description": "Guide for writing Netlify serverless functions. Use when creating API endpoints, background processing, scheduled tasks, or any server-side logic using Netlify Functions. Covers modern syntax (default export + Config), TypeScript, path routing, background functions, scheduled functions, streaming, and method routing.",
+      "description": "Use when creating API endpoints, background processing, scheduled tasks, or any server-side logic using Netlify Functions. Covers modern syntax (default export + Config), TypeScript, path routing, background functions, scheduled functions, streaming, and method routing.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -513,7 +765,7 @@
       "dir": "skills/netlify-image-cdn",
       "kind": "user-installed-skill",
       "name": "netlify-image-cdn",
-      "description": "Guide for using Netlify Image CDN for image optimization and transformation. Use when serving optimized images, creating responsive image markup, setting up user-uploaded image pipelines, or configuring image transformations. Covers the /.netlify/images endpoint, query parameters, remote image allowlisting, clean URL rewrites, and composing uploads with Functions + Blobs.",
+      "description": "Use when serving optimized images, creating responsive image markup, setting up user-uploaded image pipelines, or configuring image transformations. Covers the /.netlify/images endpoint, query parameters, remote image allowlisting, clean URL rewrites, and composing uploads with Functions + Blobs.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -521,11 +773,35 @@
       "likely_installable": true
     },
     {
+      "path": "skills/next-forge/SKILL.md",
+      "dir": "skills/next-forge",
+      "kind": "user-installed-skill",
+      "name": "next-forge",
+      "description": "Use when working in a next-forge project, scaffolding with `npx next-forge init`, or editing @repo/* workspace packages.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/nextjs/SKILL.md",
+      "dir": "skills/nextjs",
+      "kind": "user-installed-skill",
+      "name": "nextjs",
+      "description": "Use when building, debugging, or architecting Next.js applications — routing, Server Components, Server Actions, Cache Components, layouts, middleware/proxy, data fetching, rendering strategies, and deployment on Vercel.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/notion-knowledge-capture/SKILL.md",
       "dir": "skills/notion-knowledge-capture",
       "kind": "user-installed-skill",
       "name": "notion-knowledge-capture",
-      "description": "Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking.",
+      "description": "Use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -537,7 +813,7 @@
       "dir": "skills/notion-meeting-intelligence",
       "kind": "user-installed-skill",
       "name": "notion-meeting-intelligence",
-      "description": "Prepare meeting materials with Notion context and Codex research; use when gathering context, drafting agendas/pre-reads, and tailoring materials to attendees.",
+      "description": "Use when gathering context, drafting agendas/pre-reads, and tailoring materials to attendees.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -549,7 +825,7 @@
       "dir": "skills/notion-research-documentation",
       "kind": "user-installed-skill",
       "name": "notion-research-documentation",
-      "description": "Research across Notion and synthesize into structured documentation; use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations.",
+      "description": "Use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -561,11 +837,47 @@
       "dir": "skills/notion-spec-to-implementation",
       "kind": "user-installed-skill",
       "name": "notion-spec-to-implementation",
-      "description": "Turn Notion specs into implementation plans, tasks, and progress tracking; use when implementing PRDs/feature specs and creating Notion plans + tasks from them.",
+      "description": "Use when implementing PRDs/feature specs and creating Notion plans + tasks from them.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
       "has_license_file": true,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/observability/SKILL.md",
+      "dir": "skills/observability",
+      "kind": "user-installed-skill",
+      "name": "observability",
+      "description": "Use when instrumenting, debugging, or optimizing application performance and user experience on Vercel.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/payments/SKILL.md",
+      "dir": "skills/payments",
+      "kind": "user-installed-skill",
+      "name": "payments",
+      "description": "Use when implementing payments, subscriptions, or processing transactions.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/react-best-practices/SKILL.md",
+      "dir": "skills/react-best-practices",
+      "kind": "user-installed-skill",
+      "name": "react-best-practices",
+      "description": "Use when reviewing or editing multiple React TSX components for correctness, hooks usage, composition, rendering, or maintainability.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
       "likely_installable": true
     },
     {
@@ -585,7 +897,7 @@
       "dir": "skills/render-debug",
       "kind": "user-installed-skill",
       "name": "render-debug",
-      "description": "Debug failed Render deployments by analyzing logs, metrics, and database state. Identifies errors (missing env vars, port binding, OOM, etc.) and suggests fixes. Use when deployments fail, services won't start, or users mention errors, logs, or debugging.",
+      "description": "Use when deployments fail, services won't start, or users mention errors, logs, or debugging.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -597,7 +909,7 @@
       "dir": "skills/render-deploy",
       "kind": "user-installed-skill",
       "name": "render-deploy",
-      "description": "Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.",
+      "description": "Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -609,7 +921,7 @@
       "dir": "skills/render-migrate-from-heroku",
       "kind": "user-installed-skill",
       "name": "render-migrate-from-heroku",
-      "description": "Migrate from Heroku to Render by reading local project files and generating equivalent Render services. Triggers: any mention of migrating from Heroku, moving off Heroku, Heroku to Render migration, or switching from Heroku. Reads Procfile, dependency files, and app config from the local repo. Optionally uses Heroku MCP to enrich with live config vars, add-on details, and dyno sizes. Uses Render MCP or Blueprint YAML to create services.",
+      "description": "Use when migrating from Heroku to Render by reading local project files and generating equivalent Render services. Triggers: any mention of migrating from Heroku, moving off Heroku, Heroku to Render migration, or switching from Heroku. Reads Procfile, dependency files, and app config from the local repo. Optionally uses Heroku MCP to enrich with live config vars, add-on details, and dyno sizes. Uses Render MCP or Blueprint YAML to create services",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -621,7 +933,7 @@
       "dir": "skills/render-monitor",
       "kind": "user-installed-skill",
       "name": "render-monitor",
-      "description": "Monitor Render services in real-time. Check health, performance metrics, logs, and resource usage. Use when users want to check service status, view metrics, monitor performance, or verify deployments are healthy.",
+      "description": "Use when users want to check service status, view metrics, monitor performance, or verify deployments are healthy.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -633,7 +945,7 @@
       "dir": "skills/render-workflows",
       "kind": "user-installed-skill",
       "name": "render-workflows",
-      "description": "Sets up, develops, tests, and deploys Render Workflows. Covers first-time scaffolding (via CLI or manual), SDK installation (Python or TypeScript), task patterns (retries, subtasks, fan-out), local development, Dashboard deployment, and troubleshooting. Use when a user wants to set up Render Workflows for the first time, scaffold a workflow service, add or modify workflow tasks, test workflows locally, or deploy workflows to Render.",
+      "description": "Use when a user wants to set up Render Workflows for the first time, scaffold a workflow service, add or modify workflow tasks, test workflows locally, or deploy workflows to Render.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -653,6 +965,42 @@
       "likely_installable": true
     },
     {
+      "path": "skills/routing-middleware/SKILL.md",
+      "dir": "skills/routing-middleware",
+      "kind": "user-installed-skill",
+      "name": "routing-middleware",
+      "description": "Use when intercepting requests at the platform level.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/runtime-cache/SKILL.md",
+      "dir": "skills/runtime-cache",
+      "kind": "user-installed-skill",
+      "name": "runtime-cache",
+      "description": "Use when implementing caching strategies beyond framework-level caching.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/satori/SKILL.md",
+      "dir": "skills/satori",
+      "kind": "user-installed-skill",
+      "name": "satori",
+      "description": "Use when working with Satori — Vercel's library that converts HTML and CSS to SVG, commonly used to generate dynamic OG images for Next.js and other frameworks.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/sentry/SKILL.md",
       "dir": "skills/sentry",
       "kind": "user-installed-skill",
@@ -665,11 +1013,35 @@
       "likely_installable": true
     },
     {
+      "path": "skills/shadcn/SKILL.md",
+      "dir": "skills/shadcn",
+      "kind": "user-installed-skill",
+      "name": "shadcn",
+      "description": "Use when initializing shadcn, adding components, composing product UI, building custom registries, configuring themes, or troubleshooting component issues.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/sign-in-with-vercel/SKILL.md",
+      "dir": "skills/sign-in-with-vercel",
+      "kind": "user-installed-skill",
+      "name": "sign-in-with-vercel",
+      "description": "Use when implementing user login with Vercel as the identity provider.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/slack-gif-creator/SKILL.md",
       "dir": "skills/slack-gif-creator",
       "kind": "user-installed-skill",
       "name": "slack-gif-creator",
-      "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.",
+      "description": "Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -681,7 +1053,7 @@
       "dir": "skills/stripe-best-practices",
       "kind": "user-installed-skill",
       "name": "stripe-best-practices",
-      "description": "Guides Stripe integration decisions — API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), billing/subscriptions, Treasury financial accounts, integration surfaces (Checkout, Payment Element), and migrating from deprecated Stripe APIs. Use when building, modifying, or reviewing any Stripe integration — including accepting payments, building marketplaces, integrating Stripe, processing payments, setting up subscriptions, or creating connected accounts.",
+      "description": "Use when building, modifying, or reviewing any Stripe integration — including accepting payments, building marketplaces, integrating Stripe, processing payments, setting up subscriptions, or creating connected accounts.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -717,7 +1089,19 @@
       "dir": "skills/supabase-postgres-best-practices",
       "kind": "user-installed-skill",
       "name": "supabase-postgres-best-practices",
-      "description": "Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.",
+      "description": "Use when writing, reviewing, or optimizing Supabase Postgres queries, schemas, indexes, RLS policies, or database performance.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/swr/SKILL.md",
+      "dir": "skills/swr",
+      "kind": "user-installed-skill",
+      "name": "swr",
+      "description": "Use when building React apps with client-side data fetching, caching, revalidation, mutations, optimistic UI, pagination, or infinite loading using the SWR library.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -753,7 +1137,7 @@
       "dir": "skills/theme-factory",
       "kind": "user-installed-skill",
       "name": "theme-factory",
-      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+      "description": "Use when working on styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -761,11 +1145,35 @@
       "likely_installable": true
     },
     {
+      "path": "skills/turbopack/SKILL.md",
+      "dir": "skills/turbopack",
+      "kind": "user-installed-skill",
+      "name": "turbopack",
+      "description": "Use when configuring the Next.js bundler, optimizing HMR, debugging build issues, or understanding the Turbopack vs Webpack differences.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/turborepo/SKILL.md",
+      "dir": "skills/turborepo",
+      "kind": "user-installed-skill",
+      "name": "turborepo",
+      "description": "Use when setting up or optimizing monorepo builds, configuring task caching, remote caching, parallel execution, or the --affected flag for incremental CI.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/upgrade-stripe/SKILL.md",
       "dir": "skills/upgrade-stripe",
       "kind": "user-installed-skill",
       "name": "upgrade-stripe",
-      "description": "Guide for upgrading Stripe API versions and SDKs",
+      "description": "Use when upgrading Stripe API versions, SDK versions, webhook versions, or integration patterns.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -777,7 +1185,7 @@
       "dir": "skills/upgrading-expo",
       "kind": "user-installed-skill",
       "name": "upgrading-expo",
-      "description": "Guidelines for upgrading Expo SDK versions and fixing dependency issues",
+      "description": "Use when working on upgrading Expo SDK versions and fixing dependency issues",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -789,7 +1197,7 @@
       "dir": "skills/use-dom",
       "kind": "user-installed-skill",
       "name": "use-dom",
-      "description": "Use Expo DOM components to run web code in a webview on native and as-is on web. Migrate web code to native incrementally.",
+      "description": "Use when migrating web code into Expo DOM components, embedding web experiences in native apps, or sharing web UI across native and web.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -821,6 +1229,150 @@
       "likely_installable": true
     },
     {
+      "path": "skills/v0-dev/SKILL.md",
+      "dir": "skills/v0-dev",
+      "kind": "user-installed-skill",
+      "name": "v0-dev",
+      "description": "Use when discussing AI code generation, generating UI components from prompts, v0 CLI usage, v0 SDK/API integration, or integrating v0 into development workflows with GitHub and Vercel deployment.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-agent/SKILL.md",
+      "dir": "skills/vercel-agent",
+      "kind": "user-installed-skill",
+      "name": "vercel-agent",
+      "description": "Use when configuring or understanding Vercel's AI development tools.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-api/SKILL.md",
+      "dir": "skills/vercel-api",
+      "kind": "user-installed-skill",
+      "name": "vercel-api",
+      "description": "Use when the agent needs live access to Vercel projects, deployments, environment variables, domains, logs, or documentation through the connected Vercel app or REST API.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-cli/SKILL.md",
+      "dir": "skills/vercel-cli",
+      "kind": "user-installed-skill",
+      "name": "vercel-cli",
+      "description": "Use when deploying, managing environment variables, linking projects, viewing logs, managing domains, or interacting with the Vercel platform from the command line.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-firewall/SKILL.md",
+      "dir": "skills/vercel-firewall",
+      "kind": "user-installed-skill",
+      "name": "vercel-firewall",
+      "description": "Use when configuring DDoS protection, WAF rules, rate limiting, bot filtering, IP allow/block lists, OWASP rulesets, Attack Challenge Mode, or any security configuration on the Vercel platform.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-flags/SKILL.md",
+      "dir": "skills/vercel-flags",
+      "kind": "user-installed-skill",
+      "name": "vercel-flags",
+      "description": "Use when implementing feature flags, experimentation, or staged rollouts.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-functions/SKILL.md",
+      "dir": "skills/vercel-functions",
+      "kind": "user-installed-skill",
+      "name": "vercel-functions",
+      "description": "Use when configuring, debugging, or optimizing server-side code running on Vercel.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-queues/SKILL.md",
+      "dir": "skills/vercel-queues",
+      "kind": "user-installed-skill",
+      "name": "vercel-queues",
+      "description": "Use when building async processing, fan-out patterns, or event-driven architectures.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-sandbox/SKILL.md",
+      "dir": "skills/vercel-sandbox",
+      "kind": "user-installed-skill",
+      "name": "vercel-sandbox",
+      "description": "Use when executing user-generated or AI-generated code in isolation.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-services/SKILL.md",
+      "dir": "skills/vercel-services",
+      "kind": "user-installed-skill",
+      "name": "vercel-services",
+      "description": "Use when working with Vercel Services — deploy multiple services within a single Vercel project. Use for monorepo layouts or when combining a backend (Python, Go) with a frontend (Next.js, Vite) in one deployment",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-storage/SKILL.md",
+      "dir": "skills/vercel-storage",
+      "kind": "user-installed-skill",
+      "name": "vercel-storage",
+      "description": "Use when choosing, configuring, or using data storage with Vercel applications.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/verification/SKILL.md",
+      "dir": "skills/verification",
+      "kind": "user-installed-skill",
+      "name": "verification",
+      "description": "Use when verifying the full user-facing flow end-to-end across browser, API, database, deployment, or telemetry layers.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/verification-before-completion/SKILL.md",
       "dir": "skills/verification-before-completion",
       "kind": "user-installed-skill",
@@ -837,7 +1389,7 @@
       "dir": "skills/web-artifacts-builder",
       "kind": "user-installed-skill",
       "name": "web-artifacts-builder",
-      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+      "description": "Use when creating elaborate multi-component HTML artifacts with modern frontend tooling, rich interactions, or generated visual experiences.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -849,11 +1401,23 @@
       "dir": "skills/webapp-testing",
       "kind": "user-installed-skill",
       "name": "webapp-testing",
-      "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+      "description": "Use when testing local web applications with Playwright, browser automation, screenshots, console logs, or interaction checks.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
       "has_license_file": true,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/workflow/SKILL.md",
+      "dir": "skills/workflow",
+      "kind": "user-installed-skill",
+      "name": "workflow",
+      "description": "Use when building durable workflows, long-running tasks, API routes or agents that need pause/resume, retries, step-based execution, or crash-safe orchestration with Vercel Workflow.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
       "likely_installable": true
     },
     {
@@ -885,7 +1449,7 @@
       "dir": "skills/yeet",
       "kind": "user-installed-skill",
       "name": "yeet",
-      "description": "Publish local changes to GitHub by confirming scope, committing intentionally, pushing the branch, and opening a draft PR through the GitHub app from this plugin, with `gh` used only as a fallback where connector coverage is insufficient.",
+      "description": "Use when publishing local changes to GitHub by checking scope, committing intentionally, pushing a branch, or opening a draft PR.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -3924,6 +4488,12 @@
     ],
     "agent-browser": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/agent-browser",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/agent-browser",
         "has_license_file": false,
@@ -3943,6 +4513,12 @@
       }
     ],
     "agent-browser-verify": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/agent-browser-verify",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/agent-browser-verify",
@@ -3984,6 +4560,12 @@
     ],
     "ai-elements": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/ai-elements",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/ai-elements",
         "has_license_file": false,
@@ -4003,6 +4585,12 @@
       }
     ],
     "ai-gateway": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/ai-gateway",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/ai-gateway",
@@ -4024,6 +4612,12 @@
     ],
     "ai-generation-persistence": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/ai-generation-persistence",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/ai-generation-persistence",
         "has_license_file": false,
@@ -4043,6 +4637,12 @@
       }
     ],
     "ai-sdk": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/ai-sdk",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/ai-sdk",
@@ -4145,6 +4745,12 @@
       }
     ],
     "auth": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/auth",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/auth",
@@ -4250,6 +4856,12 @@
     ],
     "bootstrap": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/bootstrap",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/bootstrap",
         "has_license_file": false,
@@ -4351,6 +4963,12 @@
       }
     ],
     "chat-sdk": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/chat-sdk",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/chat-sdk",
@@ -4470,6 +5088,12 @@
     ],
     "cms": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/cms",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/cms",
         "has_license_file": false,
@@ -4538,6 +5162,12 @@
     ],
     "cron-jobs": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/cron-jobs",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/cron-jobs",
         "has_license_file": false,
@@ -4557,6 +5187,12 @@
       }
     ],
     "deployments-cicd": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/deployments-cicd",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/deployments-cicd",
@@ -4626,6 +5262,12 @@
     ],
     "email": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/email",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/email",
         "has_license_file": false,
@@ -4673,6 +5315,12 @@
       }
     ],
     "env-vars": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/env-vars",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/env-vars",
@@ -5160,6 +5808,12 @@
     ],
     "geist": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/geist",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/geist",
         "has_license_file": false,
@@ -5179,6 +5833,12 @@
       }
     ],
     "geistdocs": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/geistdocs",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/geistdocs",
@@ -5836,6 +6496,12 @@
     ],
     "investigation-mode": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/investigation-mode",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/investigation-mode",
         "has_license_file": false,
@@ -5869,6 +6535,12 @@
       }
     ],
     "json-render": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/json-render",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/json-render",
@@ -5923,6 +6595,12 @@
       }
     ],
     "marketplace": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/marketplace",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/marketplace",
@@ -5985,6 +6663,12 @@
       }
     ],
     "micro": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/micro",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/micro",
@@ -6123,6 +6807,12 @@
       }
     ],
     "ncc": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/ncc",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/ncc",
@@ -6418,6 +7108,12 @@
     ],
     "next-forge": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/next-forge",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/next-forge",
         "has_license_file": false,
@@ -6437,6 +7133,12 @@
       }
     ],
     "nextjs": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/nextjs",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/nextjs",
@@ -6561,6 +7263,12 @@
       }
     ],
     "observability": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/observability",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/observability",
@@ -6792,6 +7500,12 @@
     ],
     "payments": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/payments",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/payments",
         "has_license_file": false,
@@ -6923,6 +7637,12 @@
       }
     ],
     "react-best-practices": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/react-best-practices",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/react-best-practices",
@@ -7180,6 +7900,12 @@
     ],
     "routing-middleware": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/routing-middleware",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/routing-middleware",
         "has_license_file": false,
@@ -7199,6 +7925,12 @@
       }
     ],
     "runtime-cache": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/runtime-cache",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/runtime-cache",
@@ -7233,6 +7965,12 @@
       }
     ],
     "satori": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/satori",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/satori",
@@ -7293,6 +8031,12 @@
       }
     ],
     "shadcn": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/shadcn",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/shadcn",
@@ -7417,6 +8161,12 @@
       }
     ],
     "sign-in-with-vercel": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/sign-in-with-vercel",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/sign-in-with-vercel",
@@ -7641,6 +8391,12 @@
       }
     ],
     "swr": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/swr",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/swr",
@@ -7870,6 +8626,12 @@
     ],
     "turbopack": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/turbopack",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/turbopack",
         "has_license_file": false,
@@ -7889,6 +8651,12 @@
       }
     ],
     "turborepo": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/turborepo",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/turborepo",
@@ -8794,6 +9562,12 @@
     ],
     "v0-dev": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/v0-dev",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/v0-dev",
         "has_license_file": false,
@@ -8828,6 +9602,12 @@
     ],
     "vercel-agent": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/vercel-agent",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/vercel-agent",
         "has_license_file": false,
@@ -8847,6 +9627,12 @@
       }
     ],
     "vercel-api": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/vercel-api",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/vercel-api",
@@ -8868,6 +9654,12 @@
     ],
     "vercel-cli": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/vercel-cli",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/vercel-cli",
         "has_license_file": false,
@@ -8887,6 +9679,12 @@
       }
     ],
     "vercel-firewall": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/vercel-firewall",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/vercel-firewall",
@@ -8908,6 +9706,12 @@
     ],
     "vercel-flags": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/vercel-flags",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/vercel-flags",
         "has_license_file": false,
@@ -8927,6 +9731,12 @@
       }
     ],
     "vercel-functions": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/vercel-functions",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/vercel-functions",
@@ -8948,6 +9758,12 @@
     ],
     "vercel-queues": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/vercel-queues",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/vercel-queues",
         "has_license_file": false,
@@ -8967,6 +9783,12 @@
       }
     ],
     "vercel-sandbox": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/vercel-sandbox",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/vercel-sandbox",
@@ -8988,6 +9810,12 @@
     ],
     "vercel-services": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/vercel-services",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/vercel-services",
         "has_license_file": false,
@@ -9008,6 +9836,12 @@
     ],
     "vercel-storage": [
       {
+        "kind": "user-installed-skill",
+        "dir": "skills/vercel-storage",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/vercel-storage",
         "has_license_file": false,
@@ -9027,6 +9861,12 @@
       }
     ],
     "verification": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/verification",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/verification",
@@ -9137,6 +9977,12 @@
       }
     ],
     "workflow": [
+      {
+        "kind": "user-installed-skill",
+        "dir": "skills/workflow",
+        "has_license_file": false,
+        "likely_installable": true
+      },
       {
         "kind": "plugin-skill",
         "dir": "plugins/cache/openai-curated/vercel/d947469e/skills/workflow",
@@ -9677,6 +10523,30 @@
       "likely_installable": true
     },
     {
+      "path": "skills/agent-browser/SKILL.md",
+      "dir": "skills/agent-browser",
+      "kind": "user-installed-skill",
+      "name": "agent-browser",
+      "description": "Use when the user needs to interact with websites, verify dev server output, test web apps, navigate pages, fill forms, click buttons, take screenshots, extract data, or automate any browser task. Also triggers when a dev server starts so you can verify it visually.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/agent-browser-verify/SKILL.md",
+      "dir": "skills/agent-browser-verify",
+      "kind": "user-installed-skill",
+      "name": "agent-browser-verify",
+      "description": "Use when a dev server needs browser verification, screenshots, console checks, or visual regression checks after frontend changes.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/agent-memory-context-efficiency/SKILL.md",
       "dir": "skills/agent-memory-context-efficiency",
       "kind": "user-installed-skill",
@@ -9689,11 +10559,59 @@
       "likely_installable": true
     },
     {
+      "path": "skills/ai-elements/SKILL.md",
+      "dir": "skills/ai-elements",
+      "kind": "user-installed-skill",
+      "name": "ai-elements",
+      "description": "Use when building chat UIs, message displays, tool call rendering, streaming responses, reasoning panels, or any AI-native interface with the AI SDK.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/ai-gateway/SKILL.md",
+      "dir": "skills/ai-gateway",
+      "kind": "user-installed-skill",
+      "name": "ai-gateway",
+      "description": "Use when configuring model routing, provider failover, cost tracking, or managing multiple AI providers through a unified API.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/ai-generation-persistence/SKILL.md",
+      "dir": "skills/ai-generation-persistence",
+      "kind": "user-installed-skill",
+      "name": "ai-generation-persistence",
+      "description": "Use when AI generations need stable IDs, addressable URLs, database persistence, resumability, or cost tracking.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/ai-sdk/SKILL.md",
+      "dir": "skills/ai-sdk",
+      "kind": "user-installed-skill",
+      "name": "ai-sdk",
+      "description": "Use when building AI-powered features — chat interfaces, text generation, structured output, tool calling, agents, MCP integration, streaming, embeddings, reranking, image generation, or working with any LLM provider.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/algorithmic-art/SKILL.md",
       "dir": "skills/algorithmic-art",
       "kind": "user-installed-skill",
       "name": "algorithmic-art",
-      "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
+      "description": "Use when creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9717,7 +10635,31 @@
       "dir": "skills/android-performance",
       "kind": "user-installed-skill",
       "name": "android-performance",
-      "description": "Gather and interpret Android performance evidence on an adb target using Simpleperf CPU profiles, Perfetto or Compose traces, gfxinfo frame data, dumpsys meminfo snapshots, Java heap dumps, and native allocation traces. Use when asked to profile an Android app flow, find CPU-heavy functions, diagnose jank, capture startup or frame timing evidence, compare before/after performance, explain what code is taking time, or gather memory/leak profiling artifacts.",
+      "description": "Use when asked to profile an Android app flow, find CPU-heavy functions, diagnose jank, capture startup or frame timing evidence, compare before/after performance, explain what code is taking time, or gather memory/leak profiling artifacts.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/auth/SKILL.md",
+      "dir": "skills/auth",
+      "kind": "user-installed-skill",
+      "name": "auth",
+      "description": "Use when implementing user authentication.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/bootstrap/SKILL.md",
+      "dir": "skills/bootstrap",
+      "kind": "user-installed-skill",
+      "name": "bootstrap",
+      "description": "Use when setting up or repairing a repository so linking, environment provisioning, env pulls, and first-run db/dev commands happen in the correct safe order.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9729,7 +10671,7 @@
       "dir": "skills/brainstorming",
       "kind": "user-installed-skill",
       "name": "brainstorming",
-      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
+      "description": "Use when starting creative or product work such as new features, components, functionality, designs, or behavior changes.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9741,7 +10683,7 @@
       "dir": "skills/brand-guidelines",
       "kind": "user-installed-skill",
       "name": "brand-guidelines",
-      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+      "description": "Use when applying anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9753,7 +10695,7 @@
       "dir": "skills/building-native-ui",
       "kind": "user-installed-skill",
       "name": "building-native-ui",
-      "description": "Complete guide for building beautiful apps with Expo Router. Covers fundamentals, styling, components, navigation, animations, patterns, and native tabs.",
+      "description": "Use when building polished native app interfaces with Expo Router, React Native styling, navigation, animations, or platform UI patterns.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9765,11 +10707,23 @@
       "dir": "skills/canvas-design",
       "kind": "user-installed-skill",
       "name": "canvas-design",
-      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "description": "Use when creating beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
       "has_license_file": true,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/chat-sdk/SKILL.md",
+      "dir": "skills/chat-sdk",
+      "kind": "user-installed-skill",
+      "name": "chat-sdk",
+      "description": "Use when building multi-platform chat bots — Slack, Telegram, Microsoft Teams, Discord, Google Chat, GitHub, Linear — with a single codebase. Covers the Chat class, adapters, threads, messages, cards, modals, streaming, state management, and webhook setup.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
       "likely_installable": true
     },
     {
@@ -9777,7 +10731,7 @@
       "dir": "skills/claude-api",
       "kind": "user-installed-skill",
       "name": "claude-api",
-      "description": "Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claude model versions (4.5 → 4.6, 4.6 → 4.7, retired-model replacements). TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks for the Claude API, Anthropic SDK, or Managed Agents; user adds/modifies/tunes a Claude feature (caching, thinking, compaction, tool use, batch, files, citations, memory) or model (Opus/Sonnet/Haiku) in a file; questions about prompt caching / cache hit rate in an Anthropic SDK project. SKIP: file imports `openai`/other-provider SDK, filename like `*-openai.py`/`*-generic.py`, provider-neutral code, general programming/ML.",
+      "description": "Use when building, debugging, or optimizing Claude API and Anthropic SDK applications.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9785,11 +10739,47 @@
       "likely_installable": true
     },
     {
+      "path": "skills/cms/SKILL.md",
+      "dir": "skills/cms",
+      "kind": "user-installed-skill",
+      "name": "cms",
+      "description": "Use when building content-driven sites with a headless CMS on Vercel.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/codex-expo-run-actions/SKILL.md",
       "dir": "skills/codex-expo-run-actions",
       "kind": "user-installed-skill",
       "name": "codex-expo-run-actions",
-      "description": "Wire Expo projects into the Codex app with project-local run scripts and .codex/environments/environment.toml actions. Use when the user wants the Codex app Run button, build/run actions, action buttons, or a stable Expo start/run workflow from Codex.",
+      "description": "Use when the user wants the Codex app Run button, build/run actions, action buttons, or a stable Expo start/run workflow from Codex.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/cron-jobs/SKILL.md",
+      "dir": "skills/cron-jobs",
+      "kind": "user-installed-skill",
+      "name": "cron-jobs",
+      "description": "Use when adding, editing, or debugging scheduled tasks in vercel.json.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/deployments-cicd/SKILL.md",
+      "dir": "skills/deployments-cicd",
+      "kind": "user-installed-skill",
+      "name": "deployments-cicd",
+      "description": "Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9802,6 +10792,30 @@
       "kind": "user-installed-skill",
       "name": "dispatching-parallel-agents",
       "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/email/SKILL.md",
+      "dir": "skills/email",
+      "kind": "user-installed-skill",
+      "name": "email",
+      "description": "Use when sending emails from a Vercel-deployed application.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/env-vars/SKILL.md",
+      "dir": "skills/env-vars",
+      "kind": "user-installed-skill",
+      "name": "env-vars",
+      "description": "Use when working with .env files, vercel env commands, OIDC tokens, or managing environment-specific configuration.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9825,7 +10839,7 @@
       "dir": "skills/expo-api-routes",
       "kind": "user-installed-skill",
       "name": "expo-api-routes",
-      "description": "Guidelines for creating API routes in Expo Router with EAS Hosting",
+      "description": "Use when working on creating API routes in Expo Router with EAS Hosting",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9837,7 +10851,7 @@
       "dir": "skills/expo-cicd-workflows",
       "kind": "user-installed-skill",
       "name": "expo-cicd-workflows",
-      "description": "Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build pipelines or deployment automation.",
+      "description": "Use when working with expo cicd workflows: Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build pipelines or deployment automation.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9849,7 +10863,7 @@
       "dir": "skills/expo-deployment",
       "kind": "user-installed-skill",
       "name": "expo-deployment",
-      "description": "Deploying Expo apps to iOS App Store, Android Play Store, web hosting, and API routes",
+      "description": "Use when deploying Expo apps to the iOS App Store, Android Play Store, web hosting, or EAS API routes.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9861,7 +10875,7 @@
       "dir": "skills/expo-dev-client",
       "kind": "user-installed-skill",
       "name": "expo-dev-client",
-      "description": "Build and distribute Expo development clients locally or via TestFlight",
+      "description": "Use when building or distributing Expo development clients locally, with EAS, or through TestFlight.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9873,7 +10887,7 @@
       "dir": "skills/expo-module",
       "kind": "user-installed-skill",
       "name": "expo-module",
-      "description": "Guide for writing Expo native modules and views using the Expo Modules API (Swift, Kotlin, TypeScript). Covers module definition DSL, native views, shared objects, config plugins, lifecycle hooks, autolinking, and type system. Use when building or modifying native modules for Expo.",
+      "description": "Use when building or modifying native modules for Expo.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9885,7 +10899,7 @@
       "dir": "skills/expo-tailwind-setup",
       "kind": "user-installed-skill",
       "name": "expo-tailwind-setup",
-      "description": "Set up Tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling",
+      "description": "Use when setting up tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9897,7 +10911,7 @@
       "dir": "skills/expo-ui-jetpack-compose",
       "kind": "user-installed-skill",
       "name": "expo-ui-jetpack-compose",
-      "description": "`@expo/ui/jetpack-compose` package lets you use Jetpack Compose Views and modifiers in your app.",
+      "description": "Use when adding Jetpack Compose views or modifiers to Expo apps with @expo/ui/jetpack-compose.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9909,7 +10923,7 @@
       "dir": "skills/expo-ui-swift-ui",
       "kind": "user-installed-skill",
       "name": "expo-ui-swift-ui",
-      "description": "`@expo/ui/swift-ui` package lets you use SwiftUI Views and modifiers in your app.",
+      "description": "Use when adding SwiftUI views or modifiers to Expo apps with @expo/ui/swift-ui.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9945,7 +10959,7 @@
       "dir": "skills/frontend-design",
       "kind": "user-installed-skill",
       "name": "frontend-design",
-      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+      "description": "Use when creating distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9953,11 +10967,35 @@
       "likely_installable": true
     },
     {
+      "path": "skills/geist/SKILL.md",
+      "dir": "skills/geist",
+      "kind": "user-installed-skill",
+      "name": "geist",
+      "description": "Use when configuring Geist Sans, Geist Mono, or Geist Pixel, setting up font imports, or applying Vercel typography and aesthetic guidance.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/geistdocs/SKILL.md",
+      "dir": "skills/geistdocs",
+      "kind": "user-installed-skill",
+      "name": "geistdocs",
+      "description": "Use when creating documentation sites, configuring geistdocs, writing MDX content, or setting up docs infrastructure.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/gh-address-comments/SKILL.md",
       "dir": "skills/gh-address-comments",
       "kind": "user-installed-skill",
       "name": "gh-address-comments",
-      "description": "Address actionable GitHub pull request review feedback. Use when the user wants to inspect unresolved review threads, requested changes, or inline review comments on a PR, then implement selected fixes. Use the GitHub app for PR metadata and flat comment reads, and use the bundled GraphQL script via `gh` whenever thread-level state, resolution status, or inline review context matters.",
+      "description": "Use when the user wants to inspect unresolved review threads, requested changes, or inline review comments on a PR, then implement selected fixes. Use the GitHub app for PR metadata and flat comment reads, and use the bundled GraphQL script via `gh` whenever thread-level state, resolution status, or inline review context matters.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9981,7 +11019,7 @@
       "dir": "skills/github",
       "kind": "user-installed-skill",
       "name": "github",
-      "description": "Triage and orient GitHub repository, pull request, and issue work through the connected GitHub app. Use when the user asks for general GitHub help, wants PR or issue summaries, or needs repository context before choosing a more specific GitHub workflow.",
+      "description": "Use when the user asks for general GitHub help, wants PR or issue summaries, or needs repository context before choosing a more specific GitHub workflow.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -9993,7 +11031,7 @@
       "dir": "skills/internal-comms",
       "kind": "user-installed-skill",
       "name": "internal-comms",
-      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
+      "description": "Use when writing all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.)",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10001,15 +11039,63 @@
       "likely_installable": true
     },
     {
+      "path": "skills/investigation-mode/SKILL.md",
+      "dir": "skills/investigation-mode",
+      "kind": "user-installed-skill",
+      "name": "investigation-mode",
+      "description": "Use when debugging stuck, hung, broken, flaky, or confusing behavior that needs systematic investigation.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/json-render/SKILL.md",
+      "dir": "skills/json-render",
+      "kind": "user-installed-skill",
+      "name": "json-render",
+      "description": "Use when building custom chat UIs, rendering tool results, or troubleshooting AI response display issues.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/marketplace/SKILL.md",
+      "dir": "skills/marketplace",
+      "kind": "user-installed-skill",
+      "name": "marketplace",
+      "description": "Use when consuming third-party services, building custom integrations, or managing marketplace resources on Vercel.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/mcp-builder/SKILL.md",
       "dir": "skills/mcp-builder",
       "kind": "user-installed-skill",
       "name": "mcp-builder",
-      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "description": "Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
       "has_license_file": true,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/micro/SKILL.md",
+      "dir": "skills/micro",
+      "kind": "user-installed-skill",
+      "name": "micro",
+      "description": "Use when building lightweight HTTP servers, API endpoints, or microservices using the micro library.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
       "likely_installable": true
     },
     {
@@ -10025,11 +11111,23 @@
       "likely_installable": true
     },
     {
+      "path": "skills/ncc/SKILL.md",
+      "dir": "skills/ncc",
+      "kind": "user-installed-skill",
+      "name": "ncc",
+      "description": "Use when bundling serverless functions, CLI tools, or any Node.js project into a self-contained file.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/netlify-ai-gateway/SKILL.md",
       "dir": "skills/netlify-ai-gateway",
       "kind": "user-installed-skill",
       "name": "netlify-ai-gateway",
-      "description": "Guide for using Netlify AI Gateway to access AI models. Use when adding AI capabilities or selecting/changing AI models. Must be read before choosing a model. Covers supported providers (OpenAI, Anthropic, Google), SDK setup, environment variables, and the list of available models.",
+      "description": "Use when adding AI capabilities or selecting/changing AI models. Must be read before choosing a model. Covers supported providers (OpenAI, Anthropic, Google), SDK setup, environment variables, and the list of available models.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10041,7 +11139,7 @@
       "dir": "skills/netlify-blobs",
       "kind": "user-installed-skill",
       "name": "netlify-blobs",
-      "description": "Guide for using Netlify Blobs object storage. Use when storing files, images, documents, or simple key-value data without a full database. Covers getStore(), CRUD operations, metadata, listing, deploy-scoped vs site-scoped stores, and local development.",
+      "description": "Use when storing files, images, documents, or simple key-value data without a full database. Covers getStore(), CRUD operations, metadata, listing, deploy-scoped vs site-scoped stores, and local development.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10053,7 +11151,7 @@
       "dir": "skills/netlify-caching",
       "kind": "user-installed-skill",
       "name": "netlify-caching",
-      "description": "Guide for controlling caching on Netlify's CDN. Use when configuring cache headers, setting up stale-while-revalidate, implementing on-demand cache purge, or understanding Netlify's CDN caching behavior. Covers Cache-Control, Netlify-CDN-Cache-Control, cache tags, durable cache, and framework-specific caching patterns.",
+      "description": "Use when configuring cache headers, setting up stale-while-revalidate, implementing on-demand cache purge, or understanding Netlify's CDN caching behavior. Covers Cache-Control, Netlify-CDN-Cache-Control, cache tags, durable cache, and framework-specific caching patterns.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10065,7 +11163,7 @@
       "dir": "skills/netlify-cli-and-deploy",
       "kind": "user-installed-skill",
       "name": "netlify-cli-and-deploy",
-      "description": "Guide for using the Netlify CLI and deploying sites. Use when installing the CLI, linking sites, deploying (Git-based or manual), managing environment variables, or running local development. Covers netlify dev, netlify deploy, Git vs non-Git workflows, and environment variable management.",
+      "description": "Use when installing the CLI, linking sites, deploying (Git-based or manual), managing environment variables, or running local development. Covers netlify dev, netlify deploy, Git vs non-Git workflows, and environment variable management.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10077,7 +11175,7 @@
       "dir": "skills/netlify-config",
       "kind": "user-installed-skill",
       "name": "netlify-config",
-      "description": "Reference for netlify.toml configuration. Use when configuring build settings, redirects, rewrites, headers, deploy contexts, environment variables, or any site-level configuration. Covers the complete netlify.toml syntax including redirects with splats/conditions, headers, deploy contexts, functions config, and edge functions config.",
+      "description": "Use when configuring build settings, redirects, rewrites, headers, deploy contexts, environment variables, or any site-level configuration. Covers the complete netlify.toml syntax including redirects with splats/conditions, headers, deploy contexts, functions config, and edge functions config.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10089,7 +11187,7 @@
       "dir": "skills/netlify-deploy",
       "kind": "user-installed-skill",
       "name": "netlify-deploy",
-      "description": "Deploy projects to Netlify with the Netlify CLI. Use when the user wants to link a repo, validate deploy settings, run a deploy, or choose between preview and production flows.",
+      "description": "Use when the user wants to link a repo, validate deploy settings, run a deploy, or choose between preview and production flows.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10101,7 +11199,7 @@
       "dir": "skills/netlify-edge-functions",
       "kind": "user-installed-skill",
       "name": "netlify-edge-functions",
-      "description": "Guide for writing Netlify Edge Functions. Use when building middleware, geolocation-based logic, request/response manipulation, authentication checks, A/B testing, or any low-latency edge compute. Covers Deno runtime, context.next() middleware pattern, geolocation, and when to choose edge vs serverless.",
+      "description": "Use when building middleware, geolocation-based logic, request/response manipulation, authentication checks, A/B testing, or any low-latency edge compute. Covers Deno runtime, context.next() middleware pattern, geolocation, and when to choose edge vs serverless.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10113,7 +11211,7 @@
       "dir": "skills/netlify-forms",
       "kind": "user-installed-skill",
       "name": "netlify-forms",
-      "description": "Guide for using Netlify Forms for HTML form handling. Use when adding contact forms, feedback forms, file upload forms, or any form that should be collected by Netlify. Covers the data-netlify attribute, spam filtering, AJAX submissions, file uploads, notifications, and the submissions API.",
+      "description": "Use when adding contact forms, feedback forms, file upload forms, or any form that should be collected by Netlify. Covers the data-netlify attribute, spam filtering, AJAX submissions, file uploads, notifications, and the submissions API.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10125,7 +11223,7 @@
       "dir": "skills/netlify-frameworks",
       "kind": "user-installed-skill",
       "name": "netlify-frameworks",
-      "description": "Guide for deploying web frameworks on Netlify. Use when setting up a framework project (Vite/React, Astro, TanStack Start, Next.js, Nuxt, SvelteKit, Remix) for Netlify deployment, configuring adapters or plugins, or troubleshooting framework-specific Netlify integration. Covers what Netlify needs from each framework and how adapters handle server-side rendering.",
+      "description": "Use when setting up a framework project (Vite/React, Astro, TanStack Start, Next.js, Nuxt, SvelteKit, Remix) for Netlify deployment, configuring adapters or plugins, or troubleshooting framework-specific Netlify integration. Covers what Netlify needs from each framework and how adapters handle server-side rendering.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10137,7 +11235,7 @@
       "dir": "skills/netlify-functions",
       "kind": "user-installed-skill",
       "name": "netlify-functions",
-      "description": "Guide for writing Netlify serverless functions. Use when creating API endpoints, background processing, scheduled tasks, or any server-side logic using Netlify Functions. Covers modern syntax (default export + Config), TypeScript, path routing, background functions, scheduled functions, streaming, and method routing.",
+      "description": "Use when creating API endpoints, background processing, scheduled tasks, or any server-side logic using Netlify Functions. Covers modern syntax (default export + Config), TypeScript, path routing, background functions, scheduled functions, streaming, and method routing.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10161,7 +11259,7 @@
       "dir": "skills/netlify-image-cdn",
       "kind": "user-installed-skill",
       "name": "netlify-image-cdn",
-      "description": "Guide for using Netlify Image CDN for image optimization and transformation. Use when serving optimized images, creating responsive image markup, setting up user-uploaded image pipelines, or configuring image transformations. Covers the /.netlify/images endpoint, query parameters, remote image allowlisting, clean URL rewrites, and composing uploads with Functions + Blobs.",
+      "description": "Use when serving optimized images, creating responsive image markup, setting up user-uploaded image pipelines, or configuring image transformations. Covers the /.netlify/images endpoint, query parameters, remote image allowlisting, clean URL rewrites, and composing uploads with Functions + Blobs.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10169,11 +11267,35 @@
       "likely_installable": true
     },
     {
+      "path": "skills/next-forge/SKILL.md",
+      "dir": "skills/next-forge",
+      "kind": "user-installed-skill",
+      "name": "next-forge",
+      "description": "Use when working in a next-forge project, scaffolding with `npx next-forge init`, or editing @repo/* workspace packages.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/nextjs/SKILL.md",
+      "dir": "skills/nextjs",
+      "kind": "user-installed-skill",
+      "name": "nextjs",
+      "description": "Use when building, debugging, or architecting Next.js applications — routing, Server Components, Server Actions, Cache Components, layouts, middleware/proxy, data fetching, rendering strategies, and deployment on Vercel.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/notion-knowledge-capture/SKILL.md",
       "dir": "skills/notion-knowledge-capture",
       "kind": "user-installed-skill",
       "name": "notion-knowledge-capture",
-      "description": "Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking.",
+      "description": "Use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10185,7 +11307,7 @@
       "dir": "skills/notion-meeting-intelligence",
       "kind": "user-installed-skill",
       "name": "notion-meeting-intelligence",
-      "description": "Prepare meeting materials with Notion context and Codex research; use when gathering context, drafting agendas/pre-reads, and tailoring materials to attendees.",
+      "description": "Use when gathering context, drafting agendas/pre-reads, and tailoring materials to attendees.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10197,7 +11319,7 @@
       "dir": "skills/notion-research-documentation",
       "kind": "user-installed-skill",
       "name": "notion-research-documentation",
-      "description": "Research across Notion and synthesize into structured documentation; use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations.",
+      "description": "Use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10209,11 +11331,47 @@
       "dir": "skills/notion-spec-to-implementation",
       "kind": "user-installed-skill",
       "name": "notion-spec-to-implementation",
-      "description": "Turn Notion specs into implementation plans, tasks, and progress tracking; use when implementing PRDs/feature specs and creating Notion plans + tasks from them.",
+      "description": "Use when implementing PRDs/feature specs and creating Notion plans + tasks from them.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
       "has_license_file": true,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/observability/SKILL.md",
+      "dir": "skills/observability",
+      "kind": "user-installed-skill",
+      "name": "observability",
+      "description": "Use when instrumenting, debugging, or optimizing application performance and user experience on Vercel.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/payments/SKILL.md",
+      "dir": "skills/payments",
+      "kind": "user-installed-skill",
+      "name": "payments",
+      "description": "Use when implementing payments, subscriptions, or processing transactions.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/react-best-practices/SKILL.md",
+      "dir": "skills/react-best-practices",
+      "kind": "user-installed-skill",
+      "name": "react-best-practices",
+      "description": "Use when reviewing or editing multiple React TSX components for correctness, hooks usage, composition, rendering, or maintainability.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
       "likely_installable": true
     },
     {
@@ -10233,7 +11391,7 @@
       "dir": "skills/render-debug",
       "kind": "user-installed-skill",
       "name": "render-debug",
-      "description": "Debug failed Render deployments by analyzing logs, metrics, and database state. Identifies errors (missing env vars, port binding, OOM, etc.) and suggests fixes. Use when deployments fail, services won't start, or users mention errors, logs, or debugging.",
+      "description": "Use when deployments fail, services won't start, or users mention errors, logs, or debugging.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10245,7 +11403,7 @@
       "dir": "skills/render-deploy",
       "kind": "user-installed-skill",
       "name": "render-deploy",
-      "description": "Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.",
+      "description": "Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10257,7 +11415,7 @@
       "dir": "skills/render-migrate-from-heroku",
       "kind": "user-installed-skill",
       "name": "render-migrate-from-heroku",
-      "description": "Migrate from Heroku to Render by reading local project files and generating equivalent Render services. Triggers: any mention of migrating from Heroku, moving off Heroku, Heroku to Render migration, or switching from Heroku. Reads Procfile, dependency files, and app config from the local repo. Optionally uses Heroku MCP to enrich with live config vars, add-on details, and dyno sizes. Uses Render MCP or Blueprint YAML to create services.",
+      "description": "Use when migrating from Heroku to Render by reading local project files and generating equivalent Render services. Triggers: any mention of migrating from Heroku, moving off Heroku, Heroku to Render migration, or switching from Heroku. Reads Procfile, dependency files, and app config from the local repo. Optionally uses Heroku MCP to enrich with live config vars, add-on details, and dyno sizes. Uses Render MCP or Blueprint YAML to create services",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10269,7 +11427,7 @@
       "dir": "skills/render-monitor",
       "kind": "user-installed-skill",
       "name": "render-monitor",
-      "description": "Monitor Render services in real-time. Check health, performance metrics, logs, and resource usage. Use when users want to check service status, view metrics, monitor performance, or verify deployments are healthy.",
+      "description": "Use when users want to check service status, view metrics, monitor performance, or verify deployments are healthy.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10281,7 +11439,7 @@
       "dir": "skills/render-workflows",
       "kind": "user-installed-skill",
       "name": "render-workflows",
-      "description": "Sets up, develops, tests, and deploys Render Workflows. Covers first-time scaffolding (via CLI or manual), SDK installation (Python or TypeScript), task patterns (retries, subtasks, fan-out), local development, Dashboard deployment, and troubleshooting. Use when a user wants to set up Render Workflows for the first time, scaffold a workflow service, add or modify workflow tasks, test workflows locally, or deploy workflows to Render.",
+      "description": "Use when a user wants to set up Render Workflows for the first time, scaffold a workflow service, add or modify workflow tasks, test workflows locally, or deploy workflows to Render.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10301,6 +11459,42 @@
       "likely_installable": true
     },
     {
+      "path": "skills/routing-middleware/SKILL.md",
+      "dir": "skills/routing-middleware",
+      "kind": "user-installed-skill",
+      "name": "routing-middleware",
+      "description": "Use when intercepting requests at the platform level.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/runtime-cache/SKILL.md",
+      "dir": "skills/runtime-cache",
+      "kind": "user-installed-skill",
+      "name": "runtime-cache",
+      "description": "Use when implementing caching strategies beyond framework-level caching.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/satori/SKILL.md",
+      "dir": "skills/satori",
+      "kind": "user-installed-skill",
+      "name": "satori",
+      "description": "Use when working with Satori — Vercel's library that converts HTML and CSS to SVG, commonly used to generate dynamic OG images for Next.js and other frameworks.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/sentry/SKILL.md",
       "dir": "skills/sentry",
       "kind": "user-installed-skill",
@@ -10313,11 +11507,35 @@
       "likely_installable": true
     },
     {
+      "path": "skills/shadcn/SKILL.md",
+      "dir": "skills/shadcn",
+      "kind": "user-installed-skill",
+      "name": "shadcn",
+      "description": "Use when initializing shadcn, adding components, composing product UI, building custom registries, configuring themes, or troubleshooting component issues.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/sign-in-with-vercel/SKILL.md",
+      "dir": "skills/sign-in-with-vercel",
+      "kind": "user-installed-skill",
+      "name": "sign-in-with-vercel",
+      "description": "Use when implementing user login with Vercel as the identity provider.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/slack-gif-creator/SKILL.md",
       "dir": "skills/slack-gif-creator",
       "kind": "user-installed-skill",
       "name": "slack-gif-creator",
-      "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.",
+      "description": "Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10329,7 +11547,7 @@
       "dir": "skills/stripe-best-practices",
       "kind": "user-installed-skill",
       "name": "stripe-best-practices",
-      "description": "Guides Stripe integration decisions — API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), billing/subscriptions, Treasury financial accounts, integration surfaces (Checkout, Payment Element), and migrating from deprecated Stripe APIs. Use when building, modifying, or reviewing any Stripe integration — including accepting payments, building marketplaces, integrating Stripe, processing payments, setting up subscriptions, or creating connected accounts.",
+      "description": "Use when building, modifying, or reviewing any Stripe integration — including accepting payments, building marketplaces, integrating Stripe, processing payments, setting up subscriptions, or creating connected accounts.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10365,7 +11583,19 @@
       "dir": "skills/supabase-postgres-best-practices",
       "kind": "user-installed-skill",
       "name": "supabase-postgres-best-practices",
-      "description": "Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.",
+      "description": "Use when writing, reviewing, or optimizing Supabase Postgres queries, schemas, indexes, RLS policies, or database performance.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/swr/SKILL.md",
+      "dir": "skills/swr",
+      "kind": "user-installed-skill",
+      "name": "swr",
+      "description": "Use when building React apps with client-side data fetching, caching, revalidation, mutations, optimistic UI, pagination, or infinite loading using the SWR library.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10401,7 +11631,7 @@
       "dir": "skills/theme-factory",
       "kind": "user-installed-skill",
       "name": "theme-factory",
-      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+      "description": "Use when working on styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10409,11 +11639,35 @@
       "likely_installable": true
     },
     {
+      "path": "skills/turbopack/SKILL.md",
+      "dir": "skills/turbopack",
+      "kind": "user-installed-skill",
+      "name": "turbopack",
+      "description": "Use when configuring the Next.js bundler, optimizing HMR, debugging build issues, or understanding the Turbopack vs Webpack differences.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/turborepo/SKILL.md",
+      "dir": "skills/turborepo",
+      "kind": "user-installed-skill",
+      "name": "turborepo",
+      "description": "Use when setting up or optimizing monorepo builds, configuring task caching, remote caching, parallel execution, or the --affected flag for incremental CI.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/upgrade-stripe/SKILL.md",
       "dir": "skills/upgrade-stripe",
       "kind": "user-installed-skill",
       "name": "upgrade-stripe",
-      "description": "Guide for upgrading Stripe API versions and SDKs",
+      "description": "Use when upgrading Stripe API versions, SDK versions, webhook versions, or integration patterns.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10425,7 +11679,7 @@
       "dir": "skills/upgrading-expo",
       "kind": "user-installed-skill",
       "name": "upgrading-expo",
-      "description": "Guidelines for upgrading Expo SDK versions and fixing dependency issues",
+      "description": "Use when working on upgrading Expo SDK versions and fixing dependency issues",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10437,7 +11691,7 @@
       "dir": "skills/use-dom",
       "kind": "user-installed-skill",
       "name": "use-dom",
-      "description": "Use Expo DOM components to run web code in a webview on native and as-is on web. Migrate web code to native incrementally.",
+      "description": "Use when migrating web code into Expo DOM components, embedding web experiences in native apps, or sharing web UI across native and web.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10469,6 +11723,150 @@
       "likely_installable": true
     },
     {
+      "path": "skills/v0-dev/SKILL.md",
+      "dir": "skills/v0-dev",
+      "kind": "user-installed-skill",
+      "name": "v0-dev",
+      "description": "Use when discussing AI code generation, generating UI components from prompts, v0 CLI usage, v0 SDK/API integration, or integrating v0 into development workflows with GitHub and Vercel deployment.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-agent/SKILL.md",
+      "dir": "skills/vercel-agent",
+      "kind": "user-installed-skill",
+      "name": "vercel-agent",
+      "description": "Use when configuring or understanding Vercel's AI development tools.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-api/SKILL.md",
+      "dir": "skills/vercel-api",
+      "kind": "user-installed-skill",
+      "name": "vercel-api",
+      "description": "Use when the agent needs live access to Vercel projects, deployments, environment variables, domains, logs, or documentation through the connected Vercel app or REST API.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-cli/SKILL.md",
+      "dir": "skills/vercel-cli",
+      "kind": "user-installed-skill",
+      "name": "vercel-cli",
+      "description": "Use when deploying, managing environment variables, linking projects, viewing logs, managing domains, or interacting with the Vercel platform from the command line.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-firewall/SKILL.md",
+      "dir": "skills/vercel-firewall",
+      "kind": "user-installed-skill",
+      "name": "vercel-firewall",
+      "description": "Use when configuring DDoS protection, WAF rules, rate limiting, bot filtering, IP allow/block lists, OWASP rulesets, Attack Challenge Mode, or any security configuration on the Vercel platform.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-flags/SKILL.md",
+      "dir": "skills/vercel-flags",
+      "kind": "user-installed-skill",
+      "name": "vercel-flags",
+      "description": "Use when implementing feature flags, experimentation, or staged rollouts.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-functions/SKILL.md",
+      "dir": "skills/vercel-functions",
+      "kind": "user-installed-skill",
+      "name": "vercel-functions",
+      "description": "Use when configuring, debugging, or optimizing server-side code running on Vercel.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-queues/SKILL.md",
+      "dir": "skills/vercel-queues",
+      "kind": "user-installed-skill",
+      "name": "vercel-queues",
+      "description": "Use when building async processing, fan-out patterns, or event-driven architectures.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-sandbox/SKILL.md",
+      "dir": "skills/vercel-sandbox",
+      "kind": "user-installed-skill",
+      "name": "vercel-sandbox",
+      "description": "Use when executing user-generated or AI-generated code in isolation.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-services/SKILL.md",
+      "dir": "skills/vercel-services",
+      "kind": "user-installed-skill",
+      "name": "vercel-services",
+      "description": "Use when working with Vercel Services — deploy multiple services within a single Vercel project. Use for monorepo layouts or when combining a backend (Python, Go) with a frontend (Next.js, Vite) in one deployment",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/vercel-storage/SKILL.md",
+      "dir": "skills/vercel-storage",
+      "kind": "user-installed-skill",
+      "name": "vercel-storage",
+      "description": "Use when choosing, configuring, or using data storage with Vercel applications.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/verification/SKILL.md",
+      "dir": "skills/verification",
+      "kind": "user-installed-skill",
+      "name": "verification",
+      "description": "Use when verifying the full user-facing flow end-to-end across browser, API, database, deployment, or telemetry layers.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
       "path": "skills/verification-before-completion/SKILL.md",
       "dir": "skills/verification-before-completion",
       "kind": "user-installed-skill",
@@ -10485,7 +11883,7 @@
       "dir": "skills/web-artifacts-builder",
       "kind": "user-installed-skill",
       "name": "web-artifacts-builder",
-      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+      "description": "Use when creating elaborate multi-component HTML artifacts with modern frontend tooling, rich interactions, or generated visual experiences.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
@@ -10497,11 +11895,23 @@
       "dir": "skills/webapp-testing",
       "kind": "user-installed-skill",
       "name": "webapp-testing",
-      "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+      "description": "Use when testing local web applications with Playwright, browser automation, screenshots, console logs, or interaction checks.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
       "has_license_file": true,
+      "likely_installable": true
+    },
+    {
+      "path": "skills/workflow/SKILL.md",
+      "dir": "skills/workflow",
+      "kind": "user-installed-skill",
+      "name": "workflow",
+      "description": "Use when building durable workflows, long-running tasks, API routes or agents that need pause/resume, retries, step-based execution, or crash-safe orchestration with Vercel Workflow.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
       "likely_installable": true
     },
     {
@@ -10533,7 +11943,7 @@
       "dir": "skills/yeet",
       "kind": "user-installed-skill",
       "name": "yeet",
-      "description": "Publish local changes to GitHub by confirming scope, committing intentionally, pushing the branch, and opening a draft PR through the GitHub app from this plugin, with `gh` used only as a fallback where connector coverage is insufficient.",
+      "description": "Use when publishing local changes to GitHub by checking scope, committing intentionally, pushing a branch, or opening a draft PR.",
       "has_frontmatter": true,
       "has_name": true,
       "has_description": true,
