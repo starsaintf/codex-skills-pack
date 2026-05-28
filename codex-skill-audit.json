@@ -1,21 +1,33 @@
 {
   "codex_home": "C:\\Users\\Lambert\\.codex",
   "include_system": false,
-  "total_skill_md": 850,
+  "total_skill_md": 855,
   "counts_by_kind": {
-    "plugin-skill": 47,
+    "plugin-skill": 51,
     "temp": 696,
-    "user-installed-skill": 72,
+    "user-installed-skill": 73,
     "vendor-import": 35
   },
-  "unique_named_skills": 401,
+  "unique_named_skills": 402,
   "duplicate_name_count": 327,
-  "installable_count": 119,
+  "installable_count": 124,
   "non_installable_count": 731,
   "missing_frontmatter_count": 0,
   "missing_name_count": 0,
   "missing_description_count": 0,
   "installable": [
+    {
+      "path": "skills/actionable-pushback/SKILL.md",
+      "dir": "skills/actionable-pushback",
+      "kind": "user-installed-skill",
+      "name": "actionable-pushback",
+      "description": "Use when the user may be mistaken, the requested action is risky, evidence is weak or contradictory, requirements conflict, assumptions may be wrong, constraints are hidden, or Codex should respectfully disagree before acting.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
     {
       "path": "skills/agent-memory-context-efficiency/SKILL.md",
       "dir": "skills/agent-memory-context-efficiency",
@@ -1442,6 +1454,54 @@
       "has_name": true,
       "has_description": true,
       "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "plugins/cache/openai-curated/github/d947469e/skills/gh-address-comments/SKILL.md",
+      "dir": "plugins/cache/openai-curated/github/d947469e/skills/gh-address-comments",
+      "kind": "plugin-skill",
+      "name": "gh-address-comments",
+      "description": "Address actionable GitHub pull request review feedback. Use when the user wants to inspect unresolved review threads, requested changes, or inline review comments on a PR, then implement selected fixes. Use the GitHub app for PR metadata and flat comment reads, and use the bundled GraphQL script via `gh` whenever thread-level state, resolution status, or inline review context matters.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": true,
+      "likely_installable": true
+    },
+    {
+      "path": "plugins/cache/openai-curated/github/d947469e/skills/gh-fix-ci/SKILL.md",
+      "dir": "plugins/cache/openai-curated/github/d947469e/skills/gh-fix-ci",
+      "kind": "plugin-skill",
+      "name": "gh-fix-ci",
+      "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions. Use the GitHub app from this plugin for PR metadata and patch context, and use `gh` for Actions check and log inspection before implementing any approved fix.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": true,
+      "likely_installable": true
+    },
+    {
+      "path": "plugins/cache/openai-curated/github/d947469e/skills/github/SKILL.md",
+      "dir": "plugins/cache/openai-curated/github/d947469e/skills/github",
+      "kind": "plugin-skill",
+      "name": "github",
+      "description": "Triage and orient GitHub repository, pull request, and issue work through the connected GitHub app. Use when the user asks for general GitHub help, wants PR or issue summaries, or needs repository context before choosing a more specific GitHub workflow.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "plugins/cache/openai-curated/github/d947469e/skills/yeet/SKILL.md",
+      "dir": "plugins/cache/openai-curated/github/d947469e/skills/yeet",
+      "kind": "plugin-skill",
+      "name": "yeet",
+      "description": "Publish local changes to GitHub by confirming scope, committing intentionally, pushing the branch, and opening a draft PR through the GitHub app from this plugin, with `gh` used only as a fallback where connector coverage is insufficient.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": true,
       "likely_installable": true
     }
   ],
@@ -5166,6 +5226,12 @@
         "likely_installable": true
       },
       {
+        "kind": "plugin-skill",
+        "dir": "plugins/cache/openai-curated/github/d947469e/skills/gh-address-comments",
+        "has_license_file": true,
+        "likely_installable": true
+      },
+      {
         "kind": "temp",
         "dir": ".tmp/plugins-backup-A3dKVF/repo/plugins/github/skills/gh-address-comments",
         "has_license_file": true,
@@ -5192,6 +5258,12 @@
         "likely_installable": true
       },
       {
+        "kind": "plugin-skill",
+        "dir": "plugins/cache/openai-curated/github/d947469e/skills/gh-fix-ci",
+        "has_license_file": true,
+        "likely_installable": true
+      },
+      {
         "kind": "temp",
         "dir": ".tmp/plugins-backup-A3dKVF/repo/plugins/github/skills/gh-fix-ci",
         "has_license_file": true,
@@ -5208,6 +5280,12 @@
       {
         "kind": "user-installed-skill",
         "dir": "skills/github",
+        "has_license_file": false,
+        "likely_installable": true
+      },
+      {
+        "kind": "plugin-skill",
+        "dir": "plugins/cache/openai-curated/github/d947469e/skills/github",
         "has_license_file": false,
         "likely_installable": true
       },
@@ -9146,6 +9224,12 @@
         "likely_installable": true
       },
       {
+        "kind": "plugin-skill",
+        "dir": "plugins/cache/openai-curated/github/d947469e/skills/yeet",
+        "has_license_file": true,
+        "likely_installable": true
+      },
+      {
         "kind": "temp",
         "dir": ".tmp/plugins-backup-A3dKVF/repo/plugins/github/skills/yeet",
         "has_license_file": true,
@@ -9579,6 +9663,18 @@
       "has_description": true,
       "has_license_file": true,
       "likely_installable": false
+    },
+    {
+      "path": "skills/actionable-pushback/SKILL.md",
+      "dir": "skills/actionable-pushback",
+      "kind": "user-installed-skill",
+      "name": "actionable-pushback",
+      "description": "Use when the user may be mistaken, the requested action is risky, evidence is weak or contradictory, requirements conflict, assumptions may be wrong, constraints are hidden, or Codex should respectfully disagree before acting.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
     },
     {
       "path": "skills/agent-memory-context-efficiency/SKILL.md",
@@ -11006,6 +11102,54 @@
       "has_name": true,
       "has_description": true,
       "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "plugins/cache/openai-curated/github/d947469e/skills/gh-address-comments/SKILL.md",
+      "dir": "plugins/cache/openai-curated/github/d947469e/skills/gh-address-comments",
+      "kind": "plugin-skill",
+      "name": "gh-address-comments",
+      "description": "Address actionable GitHub pull request review feedback. Use when the user wants to inspect unresolved review threads, requested changes, or inline review comments on a PR, then implement selected fixes. Use the GitHub app for PR metadata and flat comment reads, and use the bundled GraphQL script via `gh` whenever thread-level state, resolution status, or inline review context matters.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": true,
+      "likely_installable": true
+    },
+    {
+      "path": "plugins/cache/openai-curated/github/d947469e/skills/gh-fix-ci/SKILL.md",
+      "dir": "plugins/cache/openai-curated/github/d947469e/skills/gh-fix-ci",
+      "kind": "plugin-skill",
+      "name": "gh-fix-ci",
+      "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions. Use the GitHub app from this plugin for PR metadata and patch context, and use `gh` for Actions check and log inspection before implementing any approved fix.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": true,
+      "likely_installable": true
+    },
+    {
+      "path": "plugins/cache/openai-curated/github/d947469e/skills/github/SKILL.md",
+      "dir": "plugins/cache/openai-curated/github/d947469e/skills/github",
+      "kind": "plugin-skill",
+      "name": "github",
+      "description": "Triage and orient GitHub repository, pull request, and issue work through the connected GitHub app. Use when the user asks for general GitHub help, wants PR or issue summaries, or needs repository context before choosing a more specific GitHub workflow.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": false,
+      "likely_installable": true
+    },
+    {
+      "path": "plugins/cache/openai-curated/github/d947469e/skills/yeet/SKILL.md",
+      "dir": "plugins/cache/openai-curated/github/d947469e/skills/yeet",
+      "kind": "plugin-skill",
+      "name": "yeet",
+      "description": "Publish local changes to GitHub by confirming scope, committing intentionally, pushing the branch, and opening a draft PR through the GitHub app from this plugin, with `gh` used only as a fallback where connector coverage is insufficient.",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_license_file": true,
       "likely_installable": true
     },
     {

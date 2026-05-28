@@ -11,6 +11,13 @@
   ],
   "skills": [
     {
+      "name": "actionable-pushback",
+      "path": "skills/actionable-pushback",
+      "description": "Use when the user may be mistaken, the requested action is risky, evidence is weak or contradictory, requirements conflict, assumptions may be wrong, constraints are hidden, or Codex should respectfully disagree before acting.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
+    },
+    {
       "name": "agent-browser",
       "path": "skills/agent-browser",
       "description": "Browser automation CLI for AI agents. Use when the user needs to interact with websites, verify dev server output, test web apps, navigate pages, fill forms, click buttons, take screenshots, extract data, or automate any browser task. Also triggers when a dev server starts so you can verify it visually.",

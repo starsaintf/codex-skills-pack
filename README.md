@@ -24,8 +24,9 @@ Restart Codex after installation so the new skills are discovered.
 
 ## Included Skills
 
-This pack includes 119 non-system skills:
+This pack includes 120 non-system skills:
 
+- `actionable-pushback`
 - `agent-browser`
 - `agent-browser-verify`
 - `agent-memory-context-efficiency`

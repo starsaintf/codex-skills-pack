@@ -5,9 +5,9 @@ System skills included: `False`
 
 ## Summary
 
-- Total `SKILL.md` files audited: 850
-- Unique named skills: 401
-- Likely concrete installable skills: 119
+- Total `SKILL.md` files audited: 855
+- Unique named skills: 402
+- Likely concrete installable skills: 124
 - Non-installable/cache/vendor/session artifacts: 731
 - Duplicate skill names: 327
 - Missing frontmatter: 0
@@ -16,726 +16,756 @@ System skills included: `False`
 
 ## Counts By Kind
 
-- `plugin-skill`: 47
+- `plugin-skill`: 51
 - `temp`: 696
-- `user-installed-skill`: 72
+- `user-installed-skill`: 73
 - `vendor-import`: 35
 
 ## Likely Concrete Installable Skills
 
-1. `agent-memory-context-efficiency`
+1. `actionable-pushback`
+   - Kind: `user-installed-skill`
+   - Path: `skills/actionable-pushback`
+   - License file: `False`
+   - Description: Use when the user may be mistaken, the requested action is risky, evidence is weak or contradictory, requirements conflict, ass...
+
+2. `agent-memory-context-efficiency`
    - Kind: `user-installed-skill`
    - Path: `skills/agent-memory-context-efficiency`
    - License file: `False`
    - Description: Use when improving Luna memory, context retrieval, token usage, command-output handling, shell summaries, long-running agent tr...
 
-2. `algorithmic-art`
+3. `algorithmic-art`
    - Kind: `user-installed-skill`
    - Path: `skills/algorithmic-art`
    - License file: `True`
    - Description: Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request ...
 
-3. `android-emulator-qa`
+4. `android-emulator-qa`
    - Kind: `user-installed-skill`
    - Path: `skills/android-emulator-qa`
    - License file: `True`
    - Description: Use when validating Android feature flows in an emulator with adb-driven launch, input, UI-tree inspection, screenshots, and lo...
 
-4. `android-performance`
+5. `android-performance`
    - Kind: `user-installed-skill`
    - Path: `skills/android-performance`
    - License file: `False`
    - Description: Gather and interpret Android performance evidence on an adb target using Simpleperf CPU profiles, Perfetto or Compose traces, g...
 
-5. `brainstorming`
+6. `brainstorming`
    - Kind: `user-installed-skill`
    - Path: `skills/brainstorming`
    - License file: `False`
    - Description: You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavio...
 
-6. `brand-guidelines`
+7. `brand-guidelines`
    - Kind: `user-installed-skill`
    - Path: `skills/brand-guidelines`
    - License file: `True`
    - Description: Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-...
 
-7. `building-native-ui`
+8. `building-native-ui`
    - Kind: `user-installed-skill`
    - Path: `skills/building-native-ui`
    - License file: `False`
    - Description: Complete guide for building beautiful apps with Expo Router. Covers fundamentals, styling, components, navigation, animations, ...
 
-8. `canvas-design`
+9. `canvas-design`
    - Kind: `user-installed-skill`
    - Path: `skills/canvas-design`
    - License file: `True`
    - Description: Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to...
 
-9. `claude-api`
+10. `claude-api`
    - Kind: `user-installed-skill`
    - Path: `skills/claude-api`
    - License file: `True`
    - Description: Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also hand...
 
-10. `codex-expo-run-actions`
+11. `codex-expo-run-actions`
    - Kind: `user-installed-skill`
    - Path: `skills/codex-expo-run-actions`
    - License file: `False`
    - Description: Wire Expo projects into the Codex app with project-local run scripts and .codex/environments/environment.toml actions. Use when...
 
-11. `dispatching-parallel-agents`
+12. `dispatching-parallel-agents`
    - Kind: `user-installed-skill`
    - Path: `skills/dispatching-parallel-agents`
    - License file: `False`
    - Description: Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies
 
-12. `executing-plans`
+13. `executing-plans`
    - Kind: `user-installed-skill`
    - Path: `skills/executing-plans`
    - License file: `False`
    - Description: Use when you have a written implementation plan to execute in a separate session with review checkpoints
 
-13. `expo-api-routes`
+14. `expo-api-routes`
    - Kind: `user-installed-skill`
    - Path: `skills/expo-api-routes`
    - License file: `False`
    - Description: Guidelines for creating API routes in Expo Router with EAS Hosting
 
-14. `expo-cicd-workflows`
+15. `expo-cicd-workflows`
    - Kind: `user-installed-skill`
    - Path: `skills/expo-cicd-workflows`
    - License file: `False`
    - Description: Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflow...
 
-15. `expo-deployment`
+16. `expo-deployment`
    - Kind: `user-installed-skill`
    - Path: `skills/expo-deployment`
    - License file: `False`
    - Description: Deploying Expo apps to iOS App Store, Android Play Store, web hosting, and API routes
 
-16. `expo-dev-client`
+17. `expo-dev-client`
    - Kind: `user-installed-skill`
    - Path: `skills/expo-dev-client`
    - License file: `False`
    - Description: Build and distribute Expo development clients locally or via TestFlight
 
-17. `expo-module`
+18. `expo-module`
    - Kind: `user-installed-skill`
    - Path: `skills/expo-module`
    - License file: `False`
    - Description: Guide for writing Expo native modules and views using the Expo Modules API (Swift, Kotlin, TypeScript). Covers module definitio...
 
-18. `expo-tailwind-setup`
+19. `expo-tailwind-setup`
    - Kind: `user-installed-skill`
    - Path: `skills/expo-tailwind-setup`
    - License file: `False`
    - Description: Set up Tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling
 
-19. `expo-ui-jetpack-compose`
+20. `expo-ui-jetpack-compose`
    - Kind: `user-installed-skill`
    - Path: `skills/expo-ui-jetpack-compose`
    - License file: `False`
    - Description: `@expo/ui/jetpack-compose` package lets you use Jetpack Compose Views and modifiers in your app.
 
-20. `expo-ui-swift-ui`
+21. `expo-ui-swift-ui`
    - Kind: `user-installed-skill`
    - Path: `skills/expo-ui-swift-ui`
    - License file: `False`
    - Description: `@expo/ui/swift-ui` package lets you use SwiftUI Views and modifiers in your app.
 
-21. `external-design-skill-router`
+22. `external-design-skill-router`
    - Kind: `user-installed-skill`
    - Path: `skills/external-design-skill-router`
    - License file: `False`
    - Description: Use when working on Luna UI, dashboards, chat interfaces, component quality, visual consistency, style extraction, or frontend ...
 
-22. `finishing-a-development-branch`
+23. `finishing-a-development-branch`
    - Kind: `user-installed-skill`
    - Path: `skills/finishing-a-development-branch`
    - License file: `False`
    - Description: Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of de...
 
-23. `frontend-design`
+24. `frontend-design`
    - Kind: `user-installed-skill`
    - Path: `skills/frontend-design`
    - License file: `True`
    - Description: Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build w...
 
-24. `gh-address-comments`
+25. `gh-address-comments`
    - Kind: `user-installed-skill`
    - Path: `skills/gh-address-comments`
    - License file: `True`
    - Description: Address actionable GitHub pull request review feedback. Use when the user wants to inspect unresolved review threads, requested...
 
-25. `gh-fix-ci`
+26. `gh-fix-ci`
    - Kind: `user-installed-skill`
    - Path: `skills/gh-fix-ci`
    - License file: `True`
    - Description: Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions. Use the GitHub app from this plugin f...
 
-26. `github`
+27. `github`
    - Kind: `user-installed-skill`
    - Path: `skills/github`
    - License file: `False`
    - Description: Triage and orient GitHub repository, pull request, and issue work through the connected GitHub app. Use when the user asks for ...
 
-27. `internal-comms`
+28. `internal-comms`
    - Kind: `user-installed-skill`
    - Path: `skills/internal-comms`
    - License file: `True`
    - Description: A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claud...
 
-28. `mcp-builder`
+29. `mcp-builder`
    - Kind: `user-installed-skill`
    - Path: `skills/mcp-builder`
    - License file: `True`
    - Description: Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services throug...
 
-29. `native-data-fetching`
+30. `native-data-fetching`
    - Kind: `user-installed-skill`
    - Path: `skills/native-data-fetching`
    - License file: `False`
    - Description: Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, React Query, SWR, error h...
 
-30. `netlify-ai-gateway`
+31. `netlify-ai-gateway`
    - Kind: `user-installed-skill`
    - Path: `skills/netlify-ai-gateway`
    - License file: `True`
    - Description: Guide for using Netlify AI Gateway to access AI models. Use when adding AI capabilities or selecting/changing AI models. Must b...
 
-31. `netlify-blobs`
+32. `netlify-blobs`
    - Kind: `user-installed-skill`
    - Path: `skills/netlify-blobs`
    - License file: `True`
    - Description: Guide for using Netlify Blobs object storage. Use when storing files, images, documents, or simple key-value data without a ful...
 
-32. `netlify-caching`
+33. `netlify-caching`
    - Kind: `user-installed-skill`
    - Path: `skills/netlify-caching`
    - License file: `True`
    - Description: Guide for controlling caching on Netlify's CDN. Use when configuring cache headers, setting up stale-while-revalidate, implemen...
 
-33. `netlify-cli-and-deploy`
+34. `netlify-cli-and-deploy`
    - Kind: `user-installed-skill`
    - Path: `skills/netlify-cli-and-deploy`
    - License file: `True`
    - Description: Guide for using the Netlify CLI and deploying sites. Use when installing the CLI, linking sites, deploying (Git-based or manual...
 
-34. `netlify-config`
+35. `netlify-config`
    - Kind: `user-installed-skill`
    - Path: `skills/netlify-config`
    - License file: `True`
    - Description: Reference for netlify.toml configuration. Use when configuring build settings, redirects, rewrites, headers, deploy contexts, e...
 
-35. `netlify-deploy`
+36. `netlify-deploy`
    - Kind: `user-installed-skill`
    - Path: `skills/netlify-deploy`
    - License file: `True`
    - Description: Deploy projects to Netlify with the Netlify CLI. Use when the user wants to link a repo, validate deploy settings, run a deploy...
 
-36. `netlify-edge-functions`
+37. `netlify-edge-functions`
    - Kind: `user-installed-skill`
    - Path: `skills/netlify-edge-functions`
    - License file: `True`
    - Description: Guide for writing Netlify Edge Functions. Use when building middleware, geolocation-based logic, request/response manipulation,...
 
-37. `netlify-forms`
+38. `netlify-forms`
    - Kind: `user-installed-skill`
    - Path: `skills/netlify-forms`
    - License file: `True`
    - Description: Guide for using Netlify Forms for HTML form handling. Use when adding contact forms, feedback forms, file upload forms, or any ...
 
-38. `netlify-frameworks`
+39. `netlify-frameworks`
    - Kind: `user-installed-skill`
    - Path: `skills/netlify-frameworks`
    - License file: `True`
    - Description: Guide for deploying web frameworks on Netlify. Use when setting up a framework project (Vite/React, Astro, TanStack Start, Next...
 
-39. `netlify-functions`
+40. `netlify-functions`
    - Kind: `user-installed-skill`
    - Path: `skills/netlify-functions`
    - License file: `True`
    - Description: Guide for writing Netlify serverless functions. Use when creating API endpoints, background processing, scheduled tasks, or any...
 
-40. `netlify-identity`
+41. `netlify-identity`
    - Kind: `user-installed-skill`
    - Path: `skills/netlify-identity`
    - License file: `True`
    - Description: Use when the task involves authentication, user signups, logins, password recovery, OAuth providers, role-based access control,...
 
-41. `netlify-image-cdn`
+42. `netlify-image-cdn`
    - Kind: `user-installed-skill`
    - Path: `skills/netlify-image-cdn`
    - License file: `True`
    - Description: Guide for using Netlify Image CDN for image optimization and transformation. Use when serving optimized images, creating respon...
 
-42. `notion-knowledge-capture`
+43. `notion-knowledge-capture`
    - Kind: `user-installed-skill`
    - Path: `skills/notion-knowledge-capture`
    - License file: `True`
    - Description: Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, deci...
 
-43. `notion-meeting-intelligence`
+44. `notion-meeting-intelligence`
    - Kind: `user-installed-skill`
    - Path: `skills/notion-meeting-intelligence`
    - License file: `True`
    - Description: Prepare meeting materials with Notion context and Codex research; use when gathering context, drafting agendas/pre-reads, and t...
 
-44. `notion-research-documentation`
+45. `notion-research-documentation`
    - Kind: `user-installed-skill`
    - Path: `skills/notion-research-documentation`
    - License file: `True`
    - Description: Research across Notion and synthesize into structured documentation; use when gathering info from multiple Notion sources to pr...
 
-45. `notion-spec-to-implementation`
+46. `notion-spec-to-implementation`
    - Kind: `user-installed-skill`
    - Path: `skills/notion-spec-to-implementation`
    - License file: `True`
    - Description: Turn Notion specs into implementation plans, tasks, and progress tracking; use when implementing PRDs/feature specs and creatin...
 
-46. `receiving-code-review`
+47. `receiving-code-review`
    - Kind: `user-installed-skill`
    - Path: `skills/receiving-code-review`
    - License file: `False`
    - Description: Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically q...
 
-47. `render-debug`
+48. `render-debug`
    - Kind: `user-installed-skill`
    - Path: `skills/render-debug`
    - License file: `False`
    - Description: Debug failed Render deployments by analyzing logs, metrics, and database state. Identifies errors (missing env vars, port bindi...
 
-48. `render-deploy`
+49. `render-deploy`
    - Kind: `user-installed-skill`
    - Path: `skills/render-deploy`
    - License file: `False`
    - Description: Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use...
 
-49. `render-migrate-from-heroku`
+50. `render-migrate-from-heroku`
    - Kind: `user-installed-skill`
    - Path: `skills/render-migrate-from-heroku`
    - License file: `False`
    - Description: Migrate from Heroku to Render by reading local project files and generating equivalent Render services. Triggers: any mention o...
 
-50. `render-monitor`
+51. `render-monitor`
    - Kind: `user-installed-skill`
    - Path: `skills/render-monitor`
    - License file: `False`
    - Description: Monitor Render services in real-time. Check health, performance metrics, logs, and resource usage. Use when users want to check...
 
-51. `render-workflows`
+52. `render-workflows`
    - Kind: `user-installed-skill`
    - Path: `skills/render-workflows`
    - License file: `False`
    - Description: Sets up, develops, tests, and deploys Render Workflows. Covers first-time scaffolding (via CLI or manual), SDK installation (Py...
 
-52. `requesting-code-review`
+53. `requesting-code-review`
    - Kind: `user-installed-skill`
    - Path: `skills/requesting-code-review`
    - License file: `False`
    - Description: Use when completing tasks, implementing major features, or before merging to verify work meets requirements
 
-53. `sentry`
+54. `sentry`
    - Kind: `user-installed-skill`
    - Path: `skills/sentry`
    - License file: `True`
    - Description: Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data...
 
-54. `slack-gif-creator`
+55. `slack-gif-creator`
    - Kind: `user-installed-skill`
    - Path: `skills/slack-gif-creator`
    - License file: `True`
    - Description: Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation c...
 
-55. `stripe-best-practices`
+56. `stripe-best-practices`
    - Kind: `user-installed-skill`
    - Path: `skills/stripe-best-practices`
    - License file: `False`
    - Description: Guides Stripe integration decisions — API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2,...
 
-56. `subagent-driven-development`
+57. `subagent-driven-development`
    - Kind: `user-installed-skill`
    - Path: `skills/subagent-driven-development`
    - License file: `False`
    - Description: Use when executing implementation plans with independent tasks in the current session
 
-57. `supabase`
+58. `supabase`
    - Kind: `user-installed-skill`
    - Path: `skills/supabase`
    - License file: `False`
    - Description: Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vec...
 
-58. `supabase-postgres-best-practices`
+59. `supabase-postgres-best-practices`
    - Kind: `user-installed-skill`
    - Path: `skills/supabase-postgres-best-practices`
    - License file: `False`
    - Description: Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postg...
 
-59. `systematic-debugging`
+60. `systematic-debugging`
    - Kind: `user-installed-skill`
    - Path: `skills/systematic-debugging`
    - License file: `False`
    - Description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
 
-60. `test-driven-development`
+61. `test-driven-development`
    - Kind: `user-installed-skill`
    - Path: `skills/test-driven-development`
    - License file: `False`
    - Description: Use when implementing any feature or bugfix, before writing implementation code
 
-61. `theme-factory`
+62. `theme-factory`
    - Kind: `user-installed-skill`
    - Path: `skills/theme-factory`
    - License file: `True`
    - Description: Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are...
 
-62. `upgrade-stripe`
+63. `upgrade-stripe`
    - Kind: `user-installed-skill`
    - Path: `skills/upgrade-stripe`
    - License file: `False`
    - Description: Guide for upgrading Stripe API versions and SDKs
 
-63. `upgrading-expo`
+64. `upgrading-expo`
    - Kind: `user-installed-skill`
    - Path: `skills/upgrading-expo`
    - License file: `False`
    - Description: Guidelines for upgrading Expo SDK versions and fixing dependency issues
 
-64. `use-dom`
+65. `use-dom`
    - Kind: `user-installed-skill`
    - Path: `skills/use-dom`
    - License file: `False`
    - Description: Use Expo DOM components to run web code in a webview on native and as-is on web. Migrate web code to native incrementally.
 
-65. `using-git-worktrees`
+66. `using-git-worktrees`
    - Kind: `user-installed-skill`
    - Path: `skills/using-git-worktrees`
    - License file: `False`
    - Description: Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures a...
 
-66. `using-superpowers`
+67. `using-superpowers`
    - Kind: `user-installed-skill`
    - Path: `skills/using-superpowers`
    - License file: `False`
    - Description: Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY respons...
 
-67. `verification-before-completion`
+68. `verification-before-completion`
    - Kind: `user-installed-skill`
    - Path: `skills/verification-before-completion`
    - License file: `False`
    - Description: Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification ...
 
-68. `web-artifacts-builder`
+69. `web-artifacts-builder`
    - Kind: `user-installed-skill`
    - Path: `skills/web-artifacts-builder`
    - License file: `True`
    - Description: Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, ...
 
-69. `webapp-testing`
+70. `webapp-testing`
    - Kind: `user-installed-skill`
    - Path: `skills/webapp-testing`
    - License file: `True`
    - Description: Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, de...
 
-70. `writing-plans`
+71. `writing-plans`
    - Kind: `user-installed-skill`
    - Path: `skills/writing-plans`
    - License file: `False`
    - Description: Use when you have a spec or requirements for a multi-step task, before touching code
 
-71. `writing-skills`
+72. `writing-skills`
    - Kind: `user-installed-skill`
    - Path: `skills/writing-skills`
    - License file: `False`
    - Description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
 
-72. `yeet`
+73. `yeet`
    - Kind: `user-installed-skill`
    - Path: `skills/yeet`
    - License file: `True`
    - Description: Publish local changes to GitHub by confirming scope, committing intentionally, pushing the branch, and opening a draft PR throu...
 
-73. `agent-browser`
+74. `agent-browser`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/agent-browser`
    - License file: `False`
    - Description: Browser automation CLI for AI agents. Use when the user needs to interact with websites, verify dev server output, test web app...
 
-74. `agent-browser-verify`
+75. `agent-browser-verify`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/agent-browser-verify`
    - License file: `False`
    - Description: Automated browser verification for dev servers. Triggers when a dev server starts to run a visual gut-check with agent-browser ...
 
-75. `ai-elements`
+76. `ai-elements`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/ai-elements`
    - License file: `False`
    - Description: AI Elements component library guidance — pre-built React components for AI interfaces built on shadcn/ui. Use when building cha...
 
-76. `ai-gateway`
+77. `ai-gateway`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/ai-gateway`
    - License file: `False`
    - Description: Vercel AI Gateway expert guidance. Use when configuring model routing, provider failover, cost tracking, or managing multiple A...
 
-77. `ai-generation-persistence`
+78. `ai-generation-persistence`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/ai-generation-persistence`
    - License file: `False`
    - Description: AI generation persistence patterns — unique IDs, addressable URLs, database storage, and cost tracking for every LLM generation
 
-78. `ai-sdk`
+79. `ai-sdk`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/ai-sdk`
    - License file: `False`
    - Description: Vercel AI SDK expert guidance. Use when building AI-powered features — chat interfaces, text generation, structured output, too...
 
-79. `auth`
+80. `auth`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/auth`
    - License file: `False`
    - Description: Authentication integration guidance — Clerk (native Vercel Marketplace), Descope, and Auth0 setup for Next.js applications. Cov...
 
-80. `bootstrap`
+81. `bootstrap`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/bootstrap`
    - License file: `False`
    - Description: Project bootstrapping orchestrator for repos that depend on Vercel-linked resources (databases, auth, and managed integrations)...
 
-81. `chat-sdk`
+82. `chat-sdk`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/chat-sdk`
    - License file: `False`
    - Description: Vercel Chat SDK expert guidance. Use when building multi-platform chat bots — Slack, Telegram, Microsoft Teams, Discord, Google...
 
-82. `cms`
+83. `cms`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/cms`
    - License file: `False`
    - Description: Headless CMS integration guidance — Sanity (native Vercel Marketplace), Contentful, DatoCMS, Storyblok, and Builder.io. Covers ...
 
-83. `cron-jobs`
+84. `cron-jobs`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/cron-jobs`
    - License file: `False`
    - Description: Vercel Cron Jobs configuration and best practices. Use when adding, editing, or debugging scheduled tasks in vercel.json.
 
-84. `deployments-cicd`
+85. `deployments-cicd`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/deployments-cicd`
    - License file: `False`
    - Description: Vercel deployment and CI/CD expert guidance. Use when deploying, promoting, rolling back, inspecting deployments, building with...
 
-85. `email`
+86. `email`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/email`
    - License file: `False`
    - Description: Email sending integration guidance — Resend (native Vercel Marketplace) with React Email templates. Covers API setup, transacti...
 
-86. `env-vars`
+87. `env-vars`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/env-vars`
    - License file: `False`
    - Description: Vercel environment variable expert guidance. Use when working with .env files, vercel env commands, OIDC tokens, or managing en...
 
-87. `geist`
+88. `geist`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/geist`
    - License file: `False`
    - Description: Expert guidance for Geist, Vercel's default typography system and font family for precise Next.js interfaces. Use when configur...
 
-88. `geistdocs`
+89. `geistdocs`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/geistdocs`
    - License file: `False`
    - Description: Expert guidance for Geistdocs, Vercel's documentation template built with Next.js and Fumadocs — MDX authoring, configuration, ...
 
-89. `investigation-mode`
+90. `investigation-mode`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/investigation-mode`
    - License file: `False`
    - Description: Orchestrated debugging coordinator. Triggers on frustration signals (stuck, hung, broken, waiting) and systematically triages: ...
 
-90. `json-render`
+91. `json-render`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/json-render`
    - License file: `False`
    - Description: AI chat response rendering guidance — handling UIMessage parts, tool call displays, streaming states, and structured data prese...
 
-91. `marketplace`
+92. `marketplace`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/marketplace`
    - License file: `False`
    - Description: Vercel Marketplace expert guidance — discovering, installing, and building integrations, auto-provisioned environment variables...
 
-92. `micro`
+93. `micro`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/micro`
    - License file: `False`
    - Description: Expert guidance for micro — asynchronous HTTP microservices framework by Vercel. Use when building lightweight HTTP servers, AP...
 
-93. `ncc`
+94. `ncc`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/ncc`
    - License file: `False`
    - Description: Expert guidance for @vercel/ncc — a simple CLI for compiling Node.js modules into a single file with all dependencies included....
 
-94. `next-forge`
+95. `next-forge`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/next-forge`
    - License file: `False`
    - Description: next-forge expert guidance — production-grade Turborepo monorepo SaaS starter by Vercel. Use when working in a next-forge proje...
 
-95. `nextjs`
+96. `nextjs`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/nextjs`
    - License file: `False`
    - Description: Next.js App Router expert guidance. Use when building, debugging, or architecting Next.js applications — routing, Server Compon...
 
-96. `observability`
+97. `observability`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/observability`
    - License file: `False`
    - Description: Vercel Observability expert guidance — Drains (logs, traces, speed insights, web analytics), Web Analytics, Speed Insights, run...
 
-97. `payments`
+98. `payments`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/payments`
    - License file: `False`
    - Description: Stripe payments integration guidance — native Vercel Marketplace setup, checkout sessions, webhook handling, subscription billi...
 
-98. `react-best-practices`
+99. `react-best-practices`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/react-best-practices`
    - License file: `False`
    - Description: React best-practices reviewer for TSX files. Triggers after editing multiple TSX components to run a condensed quality checklis...
 
-99. `routing-middleware`
+100. `routing-middleware`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/routing-middleware`
    - License file: `False`
    - Description: Vercel Routing Middleware guidance — request interception before cache, rewrites, redirects, personalization. Works with any fr...
 
-100. `runtime-cache`
+101. `runtime-cache`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/runtime-cache`
    - License file: `False`
    - Description: Vercel Runtime Cache API guidance — ephemeral per-region key-value cache with tag-based invalidation. Shared across Functions, ...
 
-101. `satori`
+102. `satori`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/satori`
    - License file: `False`
    - Description: Expert guidance for Satori — Vercel's library that converts HTML and CSS to SVG, commonly used to generate dynamic OG images fo...
 
-102. `shadcn`
+103. `shadcn`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/shadcn`
    - License file: `False`
    - Description: shadcn/ui expert guidance — CLI, component installation, composition patterns, custom registries, theming, Tailwind CSS integra...
 
-103. `sign-in-with-vercel`
+104. `sign-in-with-vercel`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/sign-in-with-vercel`
    - License file: `False`
    - Description: Sign in with Vercel guidance — OAuth 2.0/OIDC identity provider for user authentication via Vercel accounts. Use when implement...
 
-104. `swr`
+105. `swr`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/swr`
    - License file: `False`
    - Description: SWR data-fetching expert guidance. Use when building React apps with client-side data fetching, caching, revalidation, mutation...
 
-105. `turbopack`
+106. `turbopack`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/turbopack`
    - License file: `False`
    - Description: Turbopack expert guidance. Use when configuring the Next.js bundler, optimizing HMR, debugging build issues, or understanding t...
 
-106. `turborepo`
+107. `turborepo`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/turborepo`
    - License file: `False`
    - Description: Turborepo expert guidance. Use when setting up or optimizing monorepo builds, configuring task caching, remote caching, paralle...
 
-107. `v0-dev`
+108. `v0-dev`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/v0-dev`
    - License file: `False`
    - Description: v0 by Vercel expert guidance. Use when discussing AI code generation, generating UI components from prompts, v0 CLI usage, v0 S...
 
-108. `vercel-agent`
+109. `vercel-agent`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/vercel-agent`
    - License file: `False`
    - Description: Vercel Agent guidance — AI-powered code review, incident investigation, and SDK installation. Automates PR analysis and anomaly...
 
-109. `vercel-api`
+110. `vercel-api`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/vercel-api`
    - License file: `False`
    - Description: Vercel app and REST API expert guidance. Use when the agent needs live access to Vercel projects, deployments, environment vari...
 
-110. `vercel-cli`
+111. `vercel-cli`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/vercel-cli`
    - License file: `False`
    - Description: Vercel CLI expert guidance. Use when deploying, managing environment variables, linking projects, viewing logs, managing domain...
 
-111. `vercel-firewall`
+112. `vercel-firewall`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/vercel-firewall`
    - License file: `False`
    - Description: Vercel Firewall and security expert guidance. Use when configuring DDoS protection, WAF rules, rate limiting, bot filtering, IP...
 
-112. `vercel-flags`
+113. `vercel-flags`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/vercel-flags`
    - License file: `False`
    - Description: Vercel Flags guidance — feature flags platform with unified dashboard, Flags Explorer, gradual rollouts, A/B testing, and provi...
 
-113. `vercel-functions`
+114. `vercel-functions`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/vercel-functions`
    - License file: `False`
    - Description: Vercel Functions expert guidance — Serverless Functions, Edge Functions, Fluid Compute, streaming, Cron Jobs, and runtime confi...
 
-114. `vercel-queues`
+115. `vercel-queues`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/vercel-queues`
    - License file: `False`
    - Description: Vercel Queues guidance (public beta) — durable event streaming with topics, consumer groups, retries, and delayed delivery. $0....
 
-115. `vercel-sandbox`
+116. `vercel-sandbox`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/vercel-sandbox`
    - License file: `False`
    - Description: Vercel Sandbox guidance — ephemeral Firecracker microVMs for running untrusted code safely. Supports AI agents, code generation...
 
-116. `vercel-services`
+117. `vercel-services`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/vercel-services`
    - License file: `False`
    - Description: Vercel Services — deploy multiple services within a single Vercel project. Use for monorepo layouts or when combining a backend...
 
-117. `vercel-storage`
+118. `vercel-storage`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/vercel-storage`
    - License file: `False`
    - Description: Vercel storage expert guidance — Blob, Edge Config, and Marketplace storage (Neon Postgres, Upstash Redis). Use when choosing, ...
 
-118. `verification`
+119. `verification`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/verification`
    - License file: `False`
    - Description: Full-story verification — infers what the user is building, then verifies the complete flow end-to-end: browser → API → data → ...
 
-119. `workflow`
+120. `workflow`
    - Kind: `plugin-skill`
    - Path: `plugins/cache/openai-curated/vercel/d947469e/skills/workflow`
    - License file: `False`
    - Description: Vercel Workflow DevKit (WDK) expert guidance. Use when building durable workflows, long-running tasks, API routes or agents tha...
+
+121. `gh-address-comments`
+   - Kind: `plugin-skill`
+   - Path: `plugins/cache/openai-curated/github/d947469e/skills/gh-address-comments`
+   - License file: `True`
+   - Description: Address actionable GitHub pull request review feedback. Use when the user wants to inspect unresolved review threads, requested...
+
+122. `gh-fix-ci`
+   - Kind: `plugin-skill`
+   - Path: `plugins/cache/openai-curated/github/d947469e/skills/gh-fix-ci`
+   - License file: `True`
+   - Description: Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions. Use the GitHub app from this plugin f...
+
+123. `github`
+   - Kind: `plugin-skill`
+   - Path: `plugins/cache/openai-curated/github/d947469e/skills/github`
+   - License file: `False`
+   - Description: Triage and orient GitHub repository, pull request, and issue work through the connected GitHub app. Use when the user asks for ...
+
+124. `yeet`
+   - Kind: `plugin-skill`
+   - Path: `plugins/cache/openai-curated/github/d947469e/skills/yeet`
+   - License file: `True`
+   - Description: Publish local changes to GitHub by confirming scope, committing intentionally, pushing the branch, and opening a draft PR throu...
 
 
 ## Duplicate Names
@@ -1010,18 +1040,21 @@ System skills included: `False`
 - `genebass-gene-burden-skill`: 2 copies
   - `temp` `.tmp/plugins-backup-A3dKVF/repo/plugins/life-science-research/skills/genebass-gene-burden-skill`
   - `temp` `.tmp/plugins/plugins/life-science-research/skills/genebass-gene-burden-skill`
-- `gh-address-comments`: 4 copies
+- `gh-address-comments`: 5 copies
   - `vendor-import` `vendor_imports/skills/skills/.curated/gh-address-comments`
   - `user-installed-skill` `skills/gh-address-comments`
+  - `plugin-skill` `plugins/cache/openai-curated/github/d947469e/skills/gh-address-comments`
   - `temp` `.tmp/plugins-backup-A3dKVF/repo/plugins/github/skills/gh-address-comments`
   - `temp` `.tmp/plugins/plugins/github/skills/gh-address-comments`
-- `gh-fix-ci`: 4 copies
+- `gh-fix-ci`: 5 copies
   - `vendor-import` `vendor_imports/skills/skills/.curated/gh-fix-ci`
   - `user-installed-skill` `skills/gh-fix-ci`
+  - `plugin-skill` `plugins/cache/openai-curated/github/d947469e/skills/gh-fix-ci`
   - `temp` `.tmp/plugins-backup-A3dKVF/repo/plugins/github/skills/gh-fix-ci`
   - `temp` `.tmp/plugins/plugins/github/skills/gh-fix-ci`
-- `github`: 3 copies
+- `github`: 4 copies
   - `user-installed-skill` `skills/github`
+  - `plugin-skill` `plugins/cache/openai-curated/github/d947469e/skills/github`
   - `temp` `.tmp/plugins-backup-A3dKVF/repo/plugins/github/skills/github`
   - `temp` `.tmp/plugins/plugins/github/skills/github`
 - `gmail`: 2 copies
@@ -1838,9 +1871,10 @@ System skills included: `False`
   - `user-installed-skill` `skills/writing-skills`
   - `temp` `.tmp/plugins-backup-A3dKVF/repo/plugins/superpowers/skills/writing-skills`
   - `temp` `.tmp/plugins/plugins/superpowers/skills/writing-skills`
-- `yeet`: 4 copies
+- `yeet`: 5 copies
   - `vendor-import` `vendor_imports/skills/skills/.curated/yeet`
   - `user-installed-skill` `skills/yeet`
+  - `plugin-skill` `plugins/cache/openai-curated/github/d947469e/skills/yeet`
   - `temp` `.tmp/plugins-backup-A3dKVF/repo/plugins/github/skills/yeet`
   - `temp` `.tmp/plugins/plugins/github/skills/yeet`
 
