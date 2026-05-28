@@ -9,3 +9,7 @@ The restricted/source-available Anthropic document skills (`docx`, `pdf`, `pptx`
 Codex system skills from `~/.codex/skills/.system` are intentionally not included.
 
 This skill pack also includes skills copied from the local OpenAI-curated Vercel plugin cache for `vercel/vercel-plugin` version `0.21.0`. The plugin metadata identifies that upstream package as Apache-2.0.
+
+Additional installable skills were promoted from local plugin-backup temp folders after checking plugin metadata. These promoted skills come from MIT-licensed plugin metadata for GitHub, Notion, Netlify, Render, Sentry, Supabase, Stripe, Expo, Test Android Apps, and Superpowers. See `manifest.json` and `SKILLS.md` for per-skill source metadata.
+
+The proprietary OpenAI Developers temp plugin and large Twilio temp plugin were not included in this promotion batch.

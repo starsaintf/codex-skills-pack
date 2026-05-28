@@ -24,7 +24,7 @@ Restart Codex after installation so the new skills are discovered.
 
 ## Included Skills
 
-This pack includes 60 non-system skills:
+This pack includes 119 non-system skills:
 
 - `agent-browser`
 - `agent-browser-verify`
@@ -34,43 +34,98 @@ This pack includes 60 non-system skills:
 - `ai-generation-persistence`
 - `ai-sdk`
 - `algorithmic-art`
+- `android-emulator-qa`
+- `android-performance`
 - `auth`
 - `bootstrap`
+- `brainstorming`
 - `brand-guidelines`
+- `building-native-ui`
 - `canvas-design`
 - `chat-sdk`
 - `claude-api`
 - `cms`
+- `codex-expo-run-actions`
 - `cron-jobs`
 - `deployments-cicd`
+- `dispatching-parallel-agents`
 - `email`
 - `env-vars`
+- `executing-plans`
+- `expo-api-routes`
+- `expo-cicd-workflows`
+- `expo-deployment`
+- `expo-dev-client`
+- `expo-module`
+- `expo-tailwind-setup`
+- `expo-ui-jetpack-compose`
+- `expo-ui-swift-ui`
 - `external-design-skill-router`
+- `finishing-a-development-branch`
 - `frontend-design`
 - `geist`
 - `geistdocs`
+- `gh-address-comments`
+- `gh-fix-ci`
+- `github`
 - `internal-comms`
 - `investigation-mode`
 - `json-render`
 - `marketplace`
 - `mcp-builder`
 - `micro`
+- `native-data-fetching`
 - `ncc`
+- `netlify-ai-gateway`
+- `netlify-blobs`
+- `netlify-caching`
+- `netlify-cli-and-deploy`
+- `netlify-config`
+- `netlify-deploy`
+- `netlify-edge-functions`
+- `netlify-forms`
+- `netlify-frameworks`
+- `netlify-functions`
+- `netlify-identity`
+- `netlify-image-cdn`
 - `next-forge`
 - `nextjs`
+- `notion-knowledge-capture`
+- `notion-meeting-intelligence`
+- `notion-research-documentation`
+- `notion-spec-to-implementation`
 - `observability`
 - `payments`
 - `react-best-practices`
+- `receiving-code-review`
+- `render-debug`
+- `render-deploy`
+- `render-migrate-from-heroku`
+- `render-monitor`
+- `render-workflows`
+- `requesting-code-review`
 - `routing-middleware`
 - `runtime-cache`
 - `satori`
+- `sentry`
 - `shadcn`
 - `sign-in-with-vercel`
 - `slack-gif-creator`
+- `stripe-best-practices`
+- `subagent-driven-development`
+- `supabase`
+- `supabase-postgres-best-practices`
 - `swr`
+- `systematic-debugging`
+- `test-driven-development`
 - `theme-factory`
 - `turbopack`
 - `turborepo`
+- `upgrade-stripe`
+- `upgrading-expo`
+- `use-dom`
+- `using-git-worktrees`
+- `using-superpowers`
 - `v0-dev`
 - `vercel-agent`
 - `vercel-api`
@@ -83,9 +138,13 @@ This pack includes 60 non-system skills:
 - `vercel-services`
 - `vercel-storage`
 - `verification`
+- `verification-before-completion`
 - `web-artifacts-builder`
 - `webapp-testing`
 - `workflow`
+- `writing-plans`
+- `writing-skills`
+- `yeet`
 
 Codex system skills are intentionally excluded.
 
