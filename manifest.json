@@ -1,0 +1,433 @@
+{
+  "name": "codex-skills-pack",
+  "description": "Open-source Codex skill pack with interactive one-command installers for macOS, Linux, Windows, and other Python-capable systems.",
+  "owner": "starsaintf",
+  "repository": "https://github.com/starsaintf/codex-skills-pack",
+  "default_install_dir": "$CODEX_HOME/skills or ~/.codex/skills",
+  "excludes": [
+    "Codex system skills from ~/.codex/skills/.system",
+    "restricted/source-available Anthropic document skills"
+  ],
+  "skills": [
+    {
+      "name": "agent-browser",
+      "path": "skills/agent-browser",
+      "description": "Browser automation CLI for AI agents. Use when the user needs to interact with websites, verify dev server output, test web apps, navigate pages, fill forms, click buttons, take screenshots, extract data, or automate any browser task. Also triggers when a dev server starts so you can verify it visually.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "agent-browser-verify",
+      "path": "skills/agent-browser-verify",
+      "description": "Automated browser verification for dev servers. Triggers when a dev server starts to run a visual gut-check with agent-browser — verifies the page loads, checks for console errors, validates key UI elements, and reports pass/fail before continuing.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "agent-memory-context-efficiency",
+      "path": "skills/agent-memory-context-efficiency",
+      "description": "Use when improving Luna memory, context retrieval, token usage, command-output handling, shell summaries, long-running agent traces, or comparing Hermes-style memory and ztk-style token compression patterns.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
+    },
+    {
+      "name": "ai-elements",
+      "path": "skills/ai-elements",
+      "description": "AI Elements component library guidance — pre-built React components for AI interfaces built on shadcn/ui. Use when building chat UIs, message displays, tool call rendering, streaming responses, reasoning panels, or any AI-native interface with the AI SDK.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "ai-gateway",
+      "path": "skills/ai-gateway",
+      "description": "Vercel AI Gateway expert guidance. Use when configuring model routing, provider failover, cost tracking, or managing multiple AI providers through a unified API.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "ai-generation-persistence",
+      "path": "skills/ai-generation-persistence",
+      "description": "AI generation persistence patterns — unique IDs, addressable URLs, database storage, and cost tracking for every LLM generation",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "ai-sdk",
+      "path": "skills/ai-sdk",
+      "description": "Vercel AI SDK expert guidance. Use when building AI-powered features — chat interfaces, text generation, structured output, tool calling, agents, MCP integration, streaming, embeddings, reranking, image generation, or working with any LLM provider.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "algorithmic-art",
+      "path": "skills/algorithmic-art",
+      "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
+      "license": "Apache-2.0, see skills/algorithmic-art/LICENSE.txt",
+      "source": "anthropics/skills example skill"
+    },
+    {
+      "name": "auth",
+      "path": "skills/auth",
+      "description": "Authentication integration guidance — Clerk (native Vercel Marketplace), Descope, and Auth0 setup for Next.js applications. Covers middleware auth patterns, sign-in/sign-up flows, and Marketplace provisioning. Use when implementing user authentication.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "bootstrap",
+      "path": "skills/bootstrap",
+      "description": "Project bootstrapping orchestrator for repos that depend on Vercel-linked resources (databases, auth, and managed integrations). Use when setting up or repairing a repository so linking, environment provisioning, env pulls, and first-run db/dev commands happen in the correct safe order.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "brand-guidelines",
+      "path": "skills/brand-guidelines",
+      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+      "license": "Apache-2.0, see skills/brand-guidelines/LICENSE.txt",
+      "source": "anthropics/skills example skill"
+    },
+    {
+      "name": "canvas-design",
+      "path": "skills/canvas-design",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "license": "Apache-2.0, see skills/canvas-design/LICENSE.txt",
+      "source": "anthropics/skills example skill"
+    },
+    {
+      "name": "chat-sdk",
+      "path": "skills/chat-sdk",
+      "description": "Vercel Chat SDK expert guidance. Use when building multi-platform chat bots — Slack, Telegram, Microsoft Teams, Discord, Google Chat, GitHub, Linear — with a single codebase. Covers the Chat class, adapters, threads, messages, cards, modals, streaming, state management, and webhook setup.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "claude-api",
+      "path": "skills/claude-api",
+      "description": "Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claude model versions (4.5 → 4.6, 4.6 → 4.7, retired-model replacements). TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks for the Claude API, Anthropic SDK, or Managed Agents; user adds/modifies/tunes a Claude feature (caching, thinking, compaction, tool use, batch, files, citations, memory) or model (Opus/Sonnet/Haiku) in a file; questions about prompt caching / cache hit rate in an Anthropic SDK project. SKIP: file imports `openai`/other-provider SDK, filename like `*-openai.py`/`*-generic.py`, provider-neutral code, general programming/ML.",
+      "license": "Apache-2.0, see skills/claude-api/LICENSE.txt",
+      "source": "anthropics/skills example skill"
+    },
+    {
+      "name": "cms",
+      "path": "skills/cms",
+      "description": "Headless CMS integration guidance — Sanity (native Vercel Marketplace), Contentful, DatoCMS, Storyblok, and Builder.io. Covers studio setup, content modeling, preview mode, revalidation webhooks, and Visual Editing. Use when building content-driven sites with a headless CMS on Vercel.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "cron-jobs",
+      "path": "skills/cron-jobs",
+      "description": "Vercel Cron Jobs configuration and best practices. Use when adding, editing, or debugging scheduled tasks in vercel.json.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "deployments-cicd",
+      "path": "skills/deployments-cicd",
+      "description": "Vercel deployment and CI/CD expert guidance. Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "email",
+      "path": "skills/email",
+      "description": "Email sending integration guidance — Resend (native Vercel Marketplace) with React Email templates. Covers API setup, transactional emails, domain verification, and template patterns. Use when sending emails from a Vercel-deployed application.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "env-vars",
+      "path": "skills/env-vars",
+      "description": "Vercel environment variable expert guidance. Use when working with .env files, vercel env commands, OIDC tokens, or managing environment-specific configuration.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "external-design-skill-router",
+      "path": "skills/external-design-skill-router",
+      "description": "Use when working on Luna UI, dashboards, chat interfaces, component quality, visual consistency, style extraction, or frontend polish and you need patterns from Refero, UI Skills, or Impeccable without loading the full catalog into context.",
+      "license": "MIT",
+      "source": "local-codex-user-skill"
+    },
+    {
+      "name": "frontend-design",
+      "path": "skills/frontend-design",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+      "license": "Apache-2.0, see skills/frontend-design/LICENSE.txt",
+      "source": "anthropics/skills example skill"
+    },
+    {
+      "name": "geist",
+      "path": "skills/geist",
+      "description": "Expert guidance for Geist, Vercel's default typography system and font family for precise Next.js interfaces. Use when configuring Geist Sans, Geist Mono, or Geist Pixel, setting up font imports, or applying Vercel typography and aesthetic guidance.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "geistdocs",
+      "path": "skills/geistdocs",
+      "description": "Expert guidance for Geistdocs, Vercel's documentation template built with Next.js and Fumadocs — MDX authoring, configuration, AI chat, i18n, feedback, deployment. Use when creating documentation sites, configuring geistdocs, writing MDX content, or setting up docs infrastructure.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "internal-comms",
+      "path": "skills/internal-comms",
+      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
+      "license": "Apache-2.0, see skills/internal-comms/LICENSE.txt",
+      "source": "anthropics/skills example skill"
+    },
+    {
+      "name": "investigation-mode",
+      "path": "skills/investigation-mode",
+      "description": "Orchestrated debugging coordinator. Triggers on frustration signals (stuck, hung, broken, waiting) and systematically triages: runtime logs → workflow status → browser verify → deploy/env. Reports findings at every step.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "json-render",
+      "path": "skills/json-render",
+      "description": "AI chat response rendering guidance — handling UIMessage parts, tool call displays, streaming states, and structured data presentation. Use when building custom chat UIs, rendering tool results, or troubleshooting AI response display issues.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "marketplace",
+      "path": "skills/marketplace",
+      "description": "Vercel Marketplace expert guidance — discovering, installing, and building integrations, auto-provisioned environment variables, unified billing, and the vercel integration CLI. Use when consuming third-party services, building custom integrations, or managing marketplace resources on Vercel.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "mcp-builder",
+      "path": "skills/mcp-builder",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "license": "Apache-2.0, see skills/mcp-builder/LICENSE.txt",
+      "source": "anthropics/skills example skill"
+    },
+    {
+      "name": "micro",
+      "path": "skills/micro",
+      "description": "Expert guidance for micro — asynchronous HTTP microservices framework by Vercel. Use when building lightweight HTTP servers, API endpoints, or microservices using the micro library.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "ncc",
+      "path": "skills/ncc",
+      "description": "Expert guidance for @vercel/ncc — a simple CLI for compiling Node.js modules into a single file with all dependencies included. Use when bundling serverless functions, CLI tools, or any Node.js project into a self-contained file.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "next-forge",
+      "path": "skills/next-forge",
+      "description": "next-forge expert guidance — production-grade Turborepo monorepo SaaS starter by Vercel. Use when working in a next-forge project, scaffolding with `npx next-forge init`, or editing @repo/* workspace packages.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "nextjs",
+      "path": "skills/nextjs",
+      "description": "Next.js App Router expert guidance. Use when building, debugging, or architecting Next.js applications — routing, Server Components, Server Actions, Cache Components, layouts, middleware/proxy, data fetching, rendering strategies, and deployment on Vercel.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "observability",
+      "path": "skills/observability",
+      "description": "Vercel Observability expert guidance — Drains (logs, traces, speed insights, web analytics), Web Analytics, Speed Insights, runtime logs, custom events, OpenTelemetry integration, and monitoring dashboards. Use when instrumenting, debugging, or optimizing application performance and user experience on Vercel.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "payments",
+      "path": "skills/payments",
+      "description": "Stripe payments integration guidance — native Vercel Marketplace setup, checkout sessions, webhook handling, subscription billing, and the Stripe SDK. Use when implementing payments, subscriptions, or processing transactions.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "react-best-practices",
+      "path": "skills/react-best-practices",
+      "description": "React best-practices reviewer for TSX files. Triggers after editing multiple TSX components to run a condensed quality checklist covering component structure, hooks usage, accessibility, performance, and TypeScript patterns.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "routing-middleware",
+      "path": "skills/routing-middleware",
+      "description": "Vercel Routing Middleware guidance — request interception before cache, rewrites, redirects, personalization. Works with any framework. Supports Edge, Node.js, and Bun runtimes. Use when intercepting requests at the platform level.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "runtime-cache",
+      "path": "skills/runtime-cache",
+      "description": "Vercel Runtime Cache API guidance — ephemeral per-region key-value cache with tag-based invalidation. Shared across Functions, Routing Middleware, and Builds. Use when implementing caching strategies beyond framework-level caching.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "satori",
+      "path": "skills/satori",
+      "description": "Expert guidance for Satori — Vercel's library that converts HTML and CSS to SVG, commonly used to generate dynamic OG images for Next.js and other frameworks.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "shadcn",
+      "path": "skills/shadcn",
+      "description": "shadcn/ui expert guidance — CLI, component installation, composition patterns, custom registries, theming, Tailwind CSS integration, and high-quality interface design. Use when initializing shadcn, adding components, composing product UI, building custom registries, configuring themes, or troubleshooting component issues.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "sign-in-with-vercel",
+      "path": "skills/sign-in-with-vercel",
+      "description": "Sign in with Vercel guidance — OAuth 2.0/OIDC identity provider for user authentication via Vercel accounts. Use when implementing user login with Vercel as the identity provider.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "slack-gif-creator",
+      "path": "skills/slack-gif-creator",
+      "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.",
+      "license": "Apache-2.0, see skills/slack-gif-creator/LICENSE.txt",
+      "source": "anthropics/skills example skill"
+    },
+    {
+      "name": "swr",
+      "path": "skills/swr",
+      "description": "SWR data-fetching expert guidance. Use when building React apps with client-side data fetching, caching, revalidation, mutations, optimistic UI, pagination, or infinite loading using the SWR library.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "theme-factory",
+      "path": "skills/theme-factory",
+      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+      "license": "Apache-2.0, see skills/theme-factory/LICENSE.txt",
+      "source": "anthropics/skills example skill"
+    },
+    {
+      "name": "turbopack",
+      "path": "skills/turbopack",
+      "description": "Turbopack expert guidance. Use when configuring the Next.js bundler, optimizing HMR, debugging build issues, or understanding the Turbopack vs Webpack differences.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "turborepo",
+      "path": "skills/turborepo",
+      "description": "Turborepo expert guidance. Use when setting up or optimizing monorepo builds, configuring task caching, remote caching, parallel execution, or the --affected flag for incremental CI.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "v0-dev",
+      "path": "skills/v0-dev",
+      "description": "v0 by Vercel expert guidance. Use when discussing AI code generation, generating UI components from prompts, v0 CLI usage, v0 SDK/API integration, or integrating v0 into development workflows with GitHub and Vercel deployment.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "vercel-agent",
+      "path": "skills/vercel-agent",
+      "description": "Vercel Agent guidance — AI-powered code review, incident investigation, and SDK installation. Automates PR analysis and anomaly debugging. Use when configuring or understanding Vercel's AI development tools.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "vercel-api",
+      "path": "skills/vercel-api",
+      "description": "Vercel app and REST API expert guidance. Use when the agent needs live access to Vercel projects, deployments, environment variables, domains, logs, or documentation through the connected Vercel app or REST API.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "vercel-cli",
+      "path": "skills/vercel-cli",
+      "description": "Vercel CLI expert guidance. Use when deploying, managing environment variables, linking projects, viewing logs, managing domains, or interacting with the Vercel platform from the command line.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "vercel-firewall",
+      "path": "skills/vercel-firewall",
+      "description": "Vercel Firewall and security expert guidance. Use when configuring DDoS protection, WAF rules, rate limiting, bot filtering, IP allow/block lists, OWASP rulesets, Attack Challenge Mode, or any security configuration on the Vercel platform.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "vercel-flags",
+      "path": "skills/vercel-flags",
+      "description": "Vercel Flags guidance — feature flags platform with unified dashboard, Flags Explorer, gradual rollouts, A/B testing, and provider adapters. Use when implementing feature flags, experimentation, or staged rollouts.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "vercel-functions",
+      "path": "skills/vercel-functions",
+      "description": "Vercel Functions expert guidance — Serverless Functions, Edge Functions, Fluid Compute, streaming, Cron Jobs, and runtime configuration. Use when configuring, debugging, or optimizing server-side code running on Vercel.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "vercel-queues",
+      "path": "skills/vercel-queues",
+      "description": "Vercel Queues guidance (public beta) — durable event streaming with topics, consumer groups, retries, and delayed delivery. $0.60/1M ops. Powers Workflow DevKit. Use when building async processing, fan-out patterns, or event-driven architectures.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "vercel-sandbox",
+      "path": "skills/vercel-sandbox",
+      "description": "Vercel Sandbox guidance — ephemeral Firecracker microVMs for running untrusted code safely. Supports AI agents, code generation, and experimentation. Use when executing user-generated or AI-generated code in isolation.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "vercel-services",
+      "path": "skills/vercel-services",
+      "description": "Vercel Services — deploy multiple services within a single Vercel project. Use for monorepo layouts or when combining a backend (Python, Go) with a frontend (Next.js, Vite) in one deployment.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "vercel-storage",
+      "path": "skills/vercel-storage",
+      "description": "Vercel storage expert guidance — Blob, Edge Config, and Marketplace storage (Neon Postgres, Upstash Redis). Use when choosing, configuring, or using data storage with Vercel applications.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "verification",
+      "path": "skills/verification",
+      "description": "Full-story verification — infers what the user is building, then verifies the complete flow end-to-end: browser → API → data → response. Triggers on dev server start and 'why isn't this working' signals.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    },
+    {
+      "name": "web-artifacts-builder",
+      "path": "skills/web-artifacts-builder",
+      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+      "license": "Apache-2.0, see skills/web-artifacts-builder/LICENSE.txt",
+      "source": "anthropics/skills example skill"
+    },
+    {
+      "name": "webapp-testing",
+      "path": "skills/webapp-testing",
+      "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+      "license": "Apache-2.0, see skills/webapp-testing/LICENSE.txt",
+      "source": "anthropics/skills example skill"
+    },
+    {
+      "name": "workflow",
+      "path": "skills/workflow",
+      "description": "Vercel Workflow DevKit (WDK) expert guidance. Use when building durable workflows, long-running tasks, API routes or agents that need pause/resume, retries, step-based execution, or crash-safe orchestration with Vercel Workflow.",
+      "license": "Apache-2.0, from vercel/vercel-plugin metadata",
+      "source": "vercel/vercel-plugin skill"
+    }
+  ]
+}
