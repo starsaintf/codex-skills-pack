@@ -4,13 +4,18 @@ An open-source pack of Codex skills collected from this machine and packaged so 
 
 ## Install
 
-macOS, Linux, or any OS with Python:
+Users run the installer file for their platform; they do not run individual skill files directly.
+
+- macOS, Linux, or any OS with Python: run `install.py`
+- Windows PowerShell: run `install.ps1`
+
+One-line install for macOS, Linux, or any OS with Python:
 
 ```sh
 python3 -c "import urllib.request; exec(urllib.request.urlopen('https://raw.githubusercontent.com/starsaintf/codex-skills-pack/main/install.py').read().decode())"
 ```
 
-Windows PowerShell:
+One-line install for Windows PowerShell:
 
 ```powershell
 irm https://raw.githubusercontent.com/starsaintf/codex-skills-pack/main/install.ps1 | iex
