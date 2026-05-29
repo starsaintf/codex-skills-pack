@@ -218,10 +218,14 @@ If you publish under a different account or repository name, update `REPO_ZIP_UR
 
 ## Licensing
 
-This repository is MIT licensed except where an individual skill contains its own `LICENSE.txt`.
+This repository's packaging, installers, generated inventories, and local-only skills are MIT licensed under the root `LICENSE`.
 
-Several included skills were imported from Anthropic's public `anthropics/skills` repository and retain their Apache-2.0 license files. The root license covers the packaging, installer, manifest, and local skills without their own embedded license.
+Individual skills may carry their own license. When a skill directory contains `LICENSE.txt`, that file travels with the skill and controls that skill's redistribution terms.
 
-Vercel plugin skills were imported from the Apache-2.0 `vercel/vercel-plugin` package metadata and are identified in `manifest.json`.
+Several included skills were imported from Anthropic's public `anthropics/skills` repository and retain Apache-2.0 license files. The restricted/source-available Anthropic document skills (`docx`, `pdf`, `pptx`, and `xlsx`) are intentionally excluded.
+
+Vercel plugin skills were imported from the Apache-2.0 `vercel/vercel-plugin` package metadata and now include per-skill Apache-2.0 `LICENSE.txt` files so selected installs preserve the license.
+
+`manifest.json` and `SKILLS.md` include per-skill `source`, `license`, `license_evidence`, `origin_url`, `origin_ref`, and `audit_status` fields. Treat entries marked `metadata-only-needs-upstream-license-file` as provenance-tracked but still needing stronger upstream license-file evidence before broad redistribution.
 
 Codex system skills from `~/.codex/skills/.system` are not included.

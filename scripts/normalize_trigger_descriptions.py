@@ -126,7 +126,16 @@ def replace_description(frontmatter: str, description: str) -> str:
     )
 
 
+def load_existing_manifest_metadata() -> dict[str, dict[str, str]]:
+    manifest_path = ROOT / "manifest.json"
+    if not manifest_path.exists():
+        return {}
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8-sig"))
+    return {skill["name"]: skill for skill in manifest.get("skills", [])}
+
+
 def load_skills() -> list[dict[str, str]]:
+    existing_metadata = load_existing_manifest_metadata()
     skills: list[dict[str, str]] = []
     for skill_md in sorted(SKILLS_DIR.glob("*/SKILL.md")):
         text = skill_md.read_text(encoding="utf-8-sig")
@@ -139,15 +148,21 @@ def load_skills() -> list[dict[str, str]]:
                 replace_description(frontmatter, new_description) + body,
                 encoding="utf-8",
             )
-        skills.append(
+        skill = dict(existing_metadata.get(name, {}))
+        skill.update(
             {
                 "name": name,
                 "path": f"skills/{skill_md.parent.name}",
                 "description": new_description,
-                "license": "MIT",
-                "source": "local-codex-user-skill",
             }
         )
+        skill.setdefault("license", "MIT")
+        skill.setdefault("source", "local-codex-user-skill")
+        skill.setdefault("license_evidence", "Root LICENSE applies to local-authored skill")
+        skill.setdefault("origin_url", "")
+        skill.setdefault("origin_ref", "local repository/root MIT license")
+        skill.setdefault("audit_status", "root-mit-local")
+        skills.append(skill)
     return sorted(skills, key=lambda item: item["name"])
 
 
@@ -169,6 +184,9 @@ def write_skills_md(skills: list[dict[str, str]]) -> None:
                 f"{index}. `{skill['name']}`",
                 f"   - Source: {skill['source']}",
                 f"   - License: {skill['license']}",
+                f"   - Evidence: {skill.get('license_evidence', '')}",
+                f"   - Audit status: {skill.get('audit_status', '')}",
+                f"   - Origin: {skill.get('origin_url') or skill.get('origin_ref', '')}",
                 f"   - Description: {skill['description']}",
                 "",
             ]
