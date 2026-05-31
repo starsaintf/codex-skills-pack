@@ -2,7 +2,18 @@
 
 An open-source pack of Codex skills collected from this machine and packaged so other Codex users can install them with one command.
 
-## Install
+## What This Installs
+
+This repository installs ready-to-use Codex skills into your Codex skills directory.
+
+- Skills are copied into `$CODEX_HOME/skills` when `CODEX_HOME` is set.
+- Otherwise, skills are copied into `~/.codex/skills`.
+- Existing skills are skipped by default so local customizations are not overwritten.
+- Restart Codex after installation so new skills are discovered.
+
+Codex system skills are intentionally excluded.
+
+## Quick Install
 
 Users run the installer file for their platform; they do not run individual skill files directly.
 
@@ -23,9 +34,14 @@ irm https://raw.githubusercontent.com/starsaintf/codex-skills-pack/main/install.
 
 The installer opens an interactive terminal selector. Users can review the full skill list, choose specific skills, enter ranges like `1 4 8-12`, or select all.
 
-The installer copies skills into `$CODEX_HOME/skills` when `CODEX_HOME` is set, otherwise into `~/.codex/skills`.
+## Requirements
 
-Restart Codex after installation so the new skills are discovered.
+- Codex with local skill support.
+- Python 3 for `install.py`.
+- PowerShell for `install.ps1` on Windows.
+- Network access when installing directly from GitHub.
+
+No package manager or Python dependency install is required.
 
 ## Included Skills
 
@@ -154,11 +170,13 @@ This pack includes 120 non-system skills:
 
 Codex system skills are intentionally excluded.
 
-See [SKILLS.md](SKILLS.md) for the full source, license, and description inventory that should be reviewed before pushing or publishing.
+See [SKILLS.md](SKILLS.md) for the full source, license, and description inventory.
 
-## Installer Options
+## Local Install And Options
 
-Download and install from GitHub:
+After cloning this repository, run the installer from the repository root.
+
+Interactive install from a local checkout:
 
 ```sh
 python3 install.py
@@ -182,7 +200,7 @@ Preview without writing files:
 python3 install.py --dry-run
 ```
 
-Overwrite existing installed skills:
+Update existing installed skills by replacing matching directories:
 
 ```sh
 python3 install.py --force
@@ -206,7 +224,23 @@ On Windows PowerShell:
 $env:CODEX_HOME = "C:\path\to\.codex"; python .\install.py --source .
 ```
 
-## Publishing
+## Safe Update Workflow
+
+Preview first:
+
+```sh
+python3 install.py --dry-run --all
+```
+
+Then install or update:
+
+```sh
+python3 install.py --all --force
+```
+
+Use `--force` only when you want installed skills with the same names to be replaced.
+
+## Maintainer Publishing
 
 Create a public GitHub repository named `codex-skills-pack` under the `starsaintf` account, then push this folder:
 
