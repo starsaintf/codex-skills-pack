@@ -1,0 +1,10 @@
+upstream_sha=3662d20ac27af34e96d6d7285031d54077a6d755
+clone=success
+apply=success
+format=success
+formatting_check=success
+cargo_check=success
+focused_tests=success
+cache_hint_tests=success
+rmcp_tests=success
+clippy=success
