@@ -1,0 +1,92 @@
+name: Materialize Rust SDK issue 974 files
+
+on:
+  push:
+    branches:
+      - ci/rust-sdk-issue-974-validation
+    paths:
+      - .github/workflows/materialize-rust-sdk-issue-974.yml
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ci/rust-sdk-issue-974-validation
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+
+      - run: rustup toolchain install nightly --component rustfmt
+
+      - name: Clone implementation branch
+        run: |
+          rm -rf /tmp/rust-sdk
+          git clone --branch feat/issue-974-client-response-cache --single-branch \
+            https://github.com/starsaintf/rust-sdk.git /tmp/rust-sdk
+
+      - name: Apply deterministic final patch
+        run: |
+          cp ci/issue_974_final_patch.py /tmp/rust-sdk/issue_974_final_patch.py
+          cd /tmp/rust-sdk
+          python3 issue_974_final_patch.py
+          rm issue_974_final_patch.py
+          cargo +nightly fmt --all
+          cargo +nightly fmt --all -- --check
+          git diff --check
+
+      - name: Run focused validation
+        run: |
+          cd /tmp/rust-sdk
+          cargo test -p rmcp --all-features service::client::tests -- --nocapture
+          cargo test -p rmcp --all-features --test test_tool_disable_notification -- --nocapture
+          cargo test -p rmcp --all-features --test test_cache_hints -- --nocapture
+          cargo clippy --all-targets --all-features -- -D warnings
+          cargo test --all-features
+          FEATURES=$(cargo metadata --no-deps --format-version 1 \
+            | jq -r '[.packages[] | select(.name == "rmcp") | .features | keys[] \
+                      | select(startswith("__") | not) \
+                      | select(. != "local")] | join(",")')
+          cargo test -p rmcp --features "$FEATURES"
+
+      - name: Store validated replacement files
+        run: |
+          rm -rf ci/issue974-output
+          mkdir -p \
+            ci/issue974-output/crates/rmcp/src/service/client \
+            ci/issue974-output/crates/rmcp/src/service \
+            ci/issue974-output/crates/rmcp/tests \
+            ci/issue974-output/docs
+          cp /tmp/rust-sdk/crates/rmcp/src/service/client.rs \
+            ci/issue974-output/crates/rmcp/src/service/client.rs
+          cp /tmp/rust-sdk/crates/rmcp/src/service/client/cache.rs \
+            ci/issue974-output/crates/rmcp/src/service/client/cache.rs
+          cp /tmp/rust-sdk/crates/rmcp/tests/test_tool_disable_notification.rs \
+            ci/issue974-output/crates/rmcp/tests/test_tool_disable_notification.rs
+          cp /tmp/rust-sdk/docs/CLIENT_CACHING.md \
+            ci/issue974-output/docs/CLIENT_CACHING.md
+          {
+            echo "source_branch=feat/issue-974-client-response-cache"
+            echo "source_sha=$(git -C /tmp/rust-sdk rev-parse HEAD)"
+            echo "nightly_format=success"
+            echo "focused_cache_tests=success"
+            echo "notification_integration=success"
+            echo "cache_hint_tests=success"
+            echo "clippy=success"
+            echo "all_feature_tests=success"
+            echo "no_local_tests=success"
+          } > ci/issue974-output/materialization-result.txt
+
+      - name: Commit materialized files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ci/issue974-output
+          git commit -m "ci: materialize final issue 974 files"
+          git push origin HEAD:ci/rust-sdk-issue-974-validation
