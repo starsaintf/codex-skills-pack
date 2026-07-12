@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install this repository's Codex skills into CODEX_HOME."""
+"""Install verified Codex skills from this repository into CODEX_HOME."""
 
 from __future__ import annotations
 
@@ -16,6 +16,7 @@ from pathlib import Path
 
 
 REPO_ZIP_URL = "https://github.com/starsaintf/codex-skills-pack/archive/refs/heads/main.zip"
+VERIFIED_AUDIT_STATUSES = {"license-file-present", "root-mit-local"}
 
 
 def codex_home() -> Path:
@@ -29,7 +30,10 @@ def read_manifest(repo_root: Path) -> dict:
     manifest_path = repo_root / "manifest.json"
     if not manifest_path.exists():
         raise FileNotFoundError(f"manifest.json not found in {repo_root}")
-    return json.loads(manifest_path.read_text(encoding="utf-8-sig"))
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8-sig"))
+    if not isinstance(manifest.get("skills"), list):
+        raise ValueError("manifest.json must contain a skills array")
+    return manifest
 
 
 def download_repo() -> tempfile.TemporaryDirectory[str]:
@@ -63,11 +67,23 @@ def summarize(text: str, width: int = 92) -> str:
     return textwrap.shorten(compact, width=width, placeholder="...")
 
 
+def is_verified_skill(skill: dict) -> bool:
+    return skill.get("audit_status") in VERIFIED_AUDIT_STATUSES
+
+
+def split_by_provenance(skills: list[dict]) -> tuple[list[dict], list[dict]]:
+    verified: list[dict] = []
+    unresolved: list[dict] = []
+    for skill in skills:
+        (verified if is_verified_skill(skill) else unresolved).append(skill)
+    return verified, unresolved
+
+
 def print_skill_list(skills: list[dict], selected: set[int] | None = None) -> None:
     print()
     print("Codex Skills Pack")
     print("=" * 17)
-    print(f"{len(skills)} non-system skills available")
+    print(f"{len(skills)} skills available for this install")
     print()
     for index, skill in enumerate(skills, start=1):
         marker = ""
@@ -75,9 +91,19 @@ def print_skill_list(skills: list[dict], selected: set[int] | None = None) -> No
             marker = "[x]" if index in selected else "[ ]"
             marker += " "
         description = summarize(skill.get("description", ""))
-        print(f"{marker}{index:2}. {skill['name']}")
+        print(f"{marker}{index:3}. {skill['name']}")
         if description:
-            print(f"      {description}")
+            print(f"       {description}")
+    print()
+
+
+def print_provenance_notice(unresolved: list[dict]) -> None:
+    if not unresolved:
+        return
+    print(
+        f"Excluded {len(unresolved)} skill(s) whose licence or upstream provenance is not yet fully verified."
+    )
+    print("Use --include-unverified to inspect or install them explicitly.")
     print()
 
 
@@ -141,7 +167,7 @@ def choose_skills(skills: list[dict]) -> list[dict]:
 
         try:
             toggles = parse_selection(choice, len(visible))
-        except ValueError as exc:
+        except (TypeError, ValueError) as exc:
             print(f"Invalid selection: {exc}")
             continue
 
@@ -178,23 +204,35 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--dest", help="Install into this skills directory instead of CODEX_HOME/skills.")
     parser.add_argument("--force", action="store_true", help="Replace skills that are already installed.")
     parser.add_argument("--dry-run", action="store_true", help="Show what would happen without writing files.")
-    parser.add_argument("--all", action="store_true", help="Install every skill without opening the selector.")
+    parser.add_argument("--all", action="store_true", help="Install every eligible skill without opening the selector.")
     parser.add_argument("--yes", "-y", action="store_true", help="Alias for --all for unattended installs.")
-    parser.add_argument("--list", action="store_true", help="List all available skills and exit.")
+    parser.add_argument("--list", action="store_true", help="List all eligible skills and exit.")
+    parser.add_argument(
+        "--include-unverified",
+        action="store_true",
+        help="Include skills whose licence or upstream provenance is not fully verified.",
+    )
     args = parser.parse_args(argv)
 
     tmp: tempfile.TemporaryDirectory[str] | None = None
     try:
         repo_root, tmp = resolve_repo_root(args.source)
         manifest = read_manifest(repo_root)
-        all_skills = sorted(manifest["skills"], key=lambda skill: skill["name"])
+        catalog = sorted(manifest["skills"], key=lambda skill: skill["name"])
+        verified, unresolved = split_by_provenance(catalog)
+        all_skills = catalog if args.include_unverified else verified
         skills_dir = Path(args.dest).expanduser() if args.dest else codex_home() / "skills"
 
         print(f"Source: {repo_root}")
         print(f"Destination: {skills_dir}")
+        if not args.include_unverified:
+            print_provenance_notice(unresolved)
         print_skill_list(all_skills)
 
         if args.list:
+            return 0
+        if not all_skills:
+            print("No eligible skills found. Nothing to install.")
             return 0
 
         if args.all or args.yes or not sys.stdin.isatty():
