@@ -2,19 +2,24 @@
 
 A cross-platform distribution and maintenance layer for reusable Codex skills.
 
-The repository packages 120 catalogued skills behind one installer, records where every skill came from, and keeps licence evidence beside the code where possible. It is designed for people who want to install a useful set of Codex skills without manually copying directories or silently overwriting local customisations.
+The repository packages 120 catalogued skills behind one installer, records where every skill came from, and keeps licence evidence beside the code. It is designed for people who want to install a useful set of Codex skills without manually copying directories or silently overwriting local customisations.
+
+## Current release
+
+The first audited release is [`v0.1.0`](https://github.com/starsaintf/codex-skills-pack/releases/tag/v0.1.0).
+
+Release assets include the Python installer, PowerShell installer, machine-readable manifest, and SHA-256 checksums.
 
 ## Trust model
 
-Skills with verified licence evidence are installable by default. Entries that still rely on metadata-only provenance remain visible in the catalogue but are excluded unless the user explicitly passes `--include-unverified`.
-
-This is intentional. A large skill collection is not useful if users cannot tell what they are installing or whether it can be redistributed safely.
+Every redistributed skill currently has recorded licence evidence. The catalogue also pins upstream revisions for entries that were recovered from plugin backups.
 
 - Codex system skills are excluded.
 - Restricted or proprietary temporary skills are excluded.
 - Existing local skills are never overwritten unless `--force` is supplied.
 - `--dry-run` previews changes without writing files.
 - `manifest.json` and `SKILLS.md` record source, licence, evidence, origin and audit status.
+- Strict provenance validation must pass before a release can be published.
 
 ## Install
 
@@ -40,40 +45,40 @@ Clone the repository, then run commands from its root:
 # Interactive selection
 python3 install.py --source .
 
-# List verified skills
+# List available skills
 python3 install.py --source . --list
 
 # Preview installation
 python3 install.py --source . --all --dry-run
 
-# Install every verified skill
+# Install every skill
 python3 install.py --source . --all
 
 # Replace matching installed skills
 python3 install.py --source . --all --force
-
-# Include provenance-unresolved entries explicitly
-python3 install.py --source . --list --include-unverified
 ```
 
 Restart Codex after installation so newly installed skills are discovered.
+
+## Help verify the installers
+
+Independent installation reports are the most useful contribution right now.
+
+Follow [`BETA_TESTING.md`](BETA_TESTING.md) to test in a temporary directory, then open an [installation report](https://github.com/starsaintf/codex-skills-pack/issues/new?template=installation-report.yml). The public beta is tracked in [issue #7](https://github.com/starsaintf/codex-skills-pack/issues/7).
+
+After real use, people and projects can add a reviewable entry to [`ADOPTERS.md`](ADOPTERS.md). Supportive or unverified entries are not accepted.
 
 ## Repository validation
 
 The repository ships a validator and tests used by CI on Windows, macOS and Linux.
 
 ```sh
-python3 scripts/validate_repository.py
+python3 scripts/validate_repository.py --strict-provenance
+python3 scripts/resolve_provenance.py --check
 python3 -m unittest discover -s tests -v
 ```
 
-The normal validator reports unresolved provenance as a warning. Maintainers can use strict mode before a release:
-
-```sh
-python3 scripts/validate_repository.py --strict-provenance
-```
-
-Strict mode will continue to fail until every metadata-only entry has a captured upstream source and licence file. That failure is a tracked release-quality signal, not something to hide.
+The release workflow also compiles the Python files, performs an installer dry-run, generates checksums, and refuses to publish when any verification step fails.
 
 ## Catalogue
 
