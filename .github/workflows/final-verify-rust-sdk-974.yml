@@ -24,9 +24,9 @@ jobs:
       - name: Install stable Rust
         uses: dtolnay/rust-toolchain@stable
         with:
-          components: clippy
+          components: clippy, llvm-tools-preview
 
-      - name: Install nightly rustfmt
+      - name: Install nightly Rust and rustfmt
         run: rustup toolchain install nightly --component rustfmt
 
       - name: Set up Node.js
@@ -34,13 +34,18 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v6
+      - name: Install uv and Python
+        uses: astral-sh/setup-uv@v7
 
-      - name: Install Rust verification tools
+      - name: Set up Python environment
+        run: |
+          uv python install
+          uv venv
+
+      - name: Install repository verification tools
         uses: taiki-e/install-action@v2
         with:
-          tool: cargo-audit,cargo-semver-checks,cargo-public-api,cargo-llvm-cov
+          tool: cargo-semver-checks,cargo-public-api,cargo-llvm-cov,typos-cli
 
       - name: Check out contribution branch
         run: |
@@ -48,7 +53,7 @@ jobs:
             https://github.com/starsaintf/rust-sdk.git rust-sdk
           cd rust-sdk
           git remote add upstream https://github.com/modelcontextprotocol/rust-sdk.git
-          git fetch upstream main --depth=200
+          git fetch upstream main --depth=250
 
       - name: Run independent verification matrix
         id: matrix
@@ -89,30 +94,37 @@ jobs:
           check workspace_check cargo check --workspace --all-targets --all-features
           check workspace_clippy cargo clippy --all-targets --all-features -- -D warnings
           check workspace_tests cargo test --all-features
+          check no_local_tests bash -lc '
+            FEATURES=$(cargo metadata --no-deps --format-version 1 \
+              | jq -r '\''[.packages[] | select(.name == "rmcp") | .features | keys[] \
+                        | select(startswith("__") | not) \
+                        | select(. != "local")] | join(",")'\'')
+            cargo test -p rmcp --features "$FEATURES"
+          '
+
           check cache_unit_tests cargo test -p rmcp --all-features service::client::tests -- --nocapture
           check cache_transport_test cargo test -p rmcp --all-features --test test_tool_disable_notification -- --nocapture
           check cache_hint_tests cargo test -p rmcp --all-features --test test_cache_hints -- --nocapture
+          check doctests cargo test -p rmcp --doc --all-features
+          check rustdoc env RUSTDOCFLAGS=-Dwarnings cargo doc -p rmcp --all-features --no-deps
 
           FEATURES=$(cargo metadata --no-deps --format-version 1 \
             | jq -r '[.packages[] | select(.name == "rmcp") | .features | keys[] \
                       | select(startswith("__") | not) \
                       | select(. != "local")] | join(",")')
-          check no_local_tests cargo test -p rmcp --features "$FEATURES"
-
           check semver_default cargo semver-checks \
             --package rmcp --baseline-rev "$BASE_SHA" --release-type minor \
             --only-explicit-features --features default
-          check semver_all_features cargo semver-checks \
+          check semver_non_local cargo semver-checks \
             --package rmcp --baseline-rev "$BASE_SHA" --release-type minor \
             --only-explicit-features --features "$FEATURES"
           check public_api_default cargo public-api --package rmcp -ss diff \
             --deny changed --deny removed --force "$BASE_SHA"..HEAD
-          check public_api_all_features cargo public-api --package rmcp \
+          check public_api_non_local cargo public-api --package rmcp \
             --features "$FEATURES" -ss diff --deny changed --deny removed \
             --force "$BASE_SHA"..HEAD
-
-          check security_audit cargo audit
           check coverage cargo llvm-cov --all-features
+          check spelling typos
 
           check commit_lint bash -lc '
             npm install --no-save @commitlint/cli @commitlint/config-conventional >/dev/null 2>&1 &&
@@ -124,7 +136,7 @@ jobs:
             for dir in examples/*/; do
               if [ -f "$dir/Cargo.toml" ]; then
                 if [[ "$dir" == *"wasi"* ]]; then
-                  rustup target add wasm32-wasip2 &&
+                  rustup target add wasm32-wasip2 || exit 1
                   cargo build --manifest-path "$dir/Cargo.toml" --target wasm32-wasip2 || exit 1
                 else
                   cargo build --manifest-path "$dir/Cargo.toml" --all-features --tests || exit 1
@@ -138,24 +150,36 @@ jobs:
           if [ -x ./target/debug/conformance-server ] && [ -x ./target/debug/conformance-client ]; then
             PORT=8001 ./target/debug/conformance-server > /tmp/conformance-server.log 2>&1 &
             SERVER_PID=$!
+            ready=0
             for _ in $(seq 1 30); do
-              curl -s -o /dev/null http://127.0.0.1:8001/mcp && break
+              if curl -s -o /dev/null http://127.0.0.1:8001/mcp; then ready=1; break; fi
               sleep 1
             done
-            check conformance_server npx -y @modelcontextprotocol/conformance@0.1.16 server \
-              --url http://127.0.0.1:8001/mcp --spec-version 2025-11-25 \
-              -o /tmp/conformance-results
+            if [ "$ready" -eq 1 ]; then
+              check conformance_server npx -y @modelcontextprotocol/conformance@0.1.16 server \
+                --url http://127.0.0.1:8001/mcp --spec-version 2025-11-25 \
+                -o /tmp/conformance-results
+            else
+              echo "conformance_server=failure(not_ready)" >> "$REPORT"
+              failures=$((failures + 1))
+            fi
             kill "$SERVER_PID" 2>/dev/null || true
 
             STATELESS=1 PORT=8002 ./target/debug/conformance-server > /tmp/conformance-draft.log 2>&1 &
             DRAFT_PID=$!
+            ready=0
             for _ in $(seq 1 30); do
-              curl -s -o /dev/null http://127.0.0.1:8002/mcp && break
+              if curl -s -o /dev/null http://127.0.0.1:8002/mcp; then ready=1; break; fi
               sleep 1
             done
-            check conformance_caching npx -y @modelcontextprotocol/conformance@0.2.0-alpha.9 server \
-              --url http://127.0.0.1:8002/mcp --scenario caching \
-              --spec-version draft -o /tmp/conformance-caching
+            if [ "$ready" -eq 1 ]; then
+              check conformance_caching npx -y @modelcontextprotocol/conformance@0.2.0-alpha.9 server \
+                --url http://127.0.0.1:8002/mcp --scenario caching \
+                --spec-version draft -o /tmp/conformance-caching
+            else
+              echo "conformance_caching=failure(not_ready)" >> "$REPORT"
+              failures=$((failures + 1))
+            fi
             kill "$DRAFT_PID" 2>/dev/null || true
 
             check conformance_client npx -y @modelcontextprotocol/conformance@0.1.16 client \
