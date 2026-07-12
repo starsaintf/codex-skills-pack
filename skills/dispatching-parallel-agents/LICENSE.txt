@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) OpenAI and contributors
+Copyright (c) 2025 Jesse Vincent
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,6 +22,6 @@ SOFTWARE.
 
 Upstream provenance
 -------------------
-Skill source: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/skills/yeet
-Pinned revision: bd2122cb92f2ade874d8c2b1d00383976ab9415b
-Licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/.codex-plugin/plugin.json
+Skill source: https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/dispatching-parallel-agents
+Pinned revision: d884ae04edebef577e82ff7c4e143debd0bbec99
+Licence evidence: https://github.com/obra/superpowers/blob/d884ae04edebef577e82ff7c4e143debd0bbec99/LICENSE

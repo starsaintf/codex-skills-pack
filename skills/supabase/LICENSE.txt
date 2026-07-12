@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) OpenAI and contributors
+Copyright (c) 2026 Supabase
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,6 +22,6 @@ SOFTWARE.
 
 Upstream provenance
 -------------------
-Skill source: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/skills/yeet
+Skill source: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/supabase/skills/supabase
 Pinned revision: bd2122cb92f2ade874d8c2b1d00383976ab9415b
-Licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/.codex-plugin/plugin.json
+Licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/supabase/.codex-plugin/plugin.json

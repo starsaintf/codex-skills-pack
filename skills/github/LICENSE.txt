@@ -22,6 +22,6 @@ SOFTWARE.
 
 Upstream provenance
 -------------------
-Skill source: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/skills/yeet
+Skill source: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/skills/github
 Pinned revision: bd2122cb92f2ade874d8c2b1d00383976ab9415b
 Licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/.codex-plugin/plugin.json

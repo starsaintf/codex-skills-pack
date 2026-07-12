@@ -113,23 +113,23 @@
       "name": "android-emulator-qa",
       "path": "skills/android-emulator-qa",
       "description": "Use when validating Android feature flows in an emulator with adb-driven launch, input, UI-tree inspection, screenshots, and logcat capture.",
-      "license": "Apache-2.0, see skills/android-emulator-qa/LICENSE.txt",
+      "license": "MIT, see skills/android-emulator-qa/LICENSE.txt",
       "source": "test-android-apps plugin backup promoted from temp",
       "license_evidence": "Embedded license file: skills/android-emulator-qa/LICENSE.txt",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/test-android-apps/skills/android-emulator-qa",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/test-android-apps/.codex-plugin/plugin.json",
       "audit_status": "license-file-present"
     },
     {
       "name": "android-performance",
       "path": "skills/android-performance",
       "description": "Use when asked to profile an Android app flow, find CPU-heavy functions, diagnose jank, capture startup or frame timing evidence, compare before/after performance, explain what code is taking time, or gather memory/leak profiling artifacts.",
-      "license": "MIT, from test-android-apps plugin metadata",
+      "license": "MIT, see skills/android-performance/LICENSE.txt",
       "source": "test-android-apps plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from test-android-apps plugin metadata",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/android-performance/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/test-android-apps/skills/android-performance",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/test-android-apps/.codex-plugin/plugin.json",
+      "audit_status": "license-file-present"
     },
     {
       "name": "auth",
@@ -157,12 +157,12 @@
       "name": "brainstorming",
       "path": "skills/brainstorming",
       "description": "Use when starting creative or product work such as new features, components, functionality, designs, or behavior changes.",
-      "license": "MIT, from superpowers plugin metadata",
+      "license": "MIT, see skills/brainstorming/LICENSE.txt",
       "source": "superpowers plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/brainstorming/LICENSE.txt",
+      "origin_url": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/brainstorming",
+      "origin_ref": "Pinned to https://github.com/obra/superpowers@d884ae04edebef577e82ff7c4e143debd0bbec99; licence evidence: https://github.com/obra/superpowers/blob/d884ae04edebef577e82ff7c4e143debd0bbec99/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "brand-guidelines",
@@ -179,12 +179,12 @@
       "name": "building-native-ui",
       "path": "skills/building-native-ui",
       "description": "Use when building polished native app interfaces with Expo Router, React Native styling, navigation, animations, or platform UI patterns.",
-      "license": "MIT, from expo plugin metadata",
+      "license": "MIT, see skills/building-native-ui/LICENSE.txt",
       "source": "expo plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from expo plugin metadata",
-      "origin_url": "https://expo.dev",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/building-native-ui/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/building-native-ui",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "canvas-design",
@@ -234,12 +234,12 @@
       "name": "codex-expo-run-actions",
       "path": "skills/codex-expo-run-actions",
       "description": "Use when the user wants the Codex app Run button, build/run actions, action buttons, or a stable Expo start/run workflow from Codex.",
-      "license": "MIT, from expo plugin metadata",
+      "license": "MIT, see skills/codex-expo-run-actions/LICENSE.txt",
       "source": "expo plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from expo plugin metadata",
-      "origin_url": "https://expo.dev",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/codex-expo-run-actions/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/codex-expo-run-actions",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "cron-jobs",
@@ -267,12 +267,12 @@
       "name": "dispatching-parallel-agents",
       "path": "skills/dispatching-parallel-agents",
       "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
-      "license": "MIT, from superpowers plugin metadata",
+      "license": "MIT, see skills/dispatching-parallel-agents/LICENSE.txt",
       "source": "superpowers plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/dispatching-parallel-agents/LICENSE.txt",
+      "origin_url": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/dispatching-parallel-agents",
+      "origin_ref": "Pinned to https://github.com/obra/superpowers@d884ae04edebef577e82ff7c4e143debd0bbec99; licence evidence: https://github.com/obra/superpowers/blob/d884ae04edebef577e82ff7c4e143debd0bbec99/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "email",
@@ -300,100 +300,100 @@
       "name": "executing-plans",
       "path": "skills/executing-plans",
       "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
-      "license": "MIT, from superpowers plugin metadata",
+      "license": "MIT, see skills/executing-plans/LICENSE.txt",
       "source": "superpowers plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/executing-plans/LICENSE.txt",
+      "origin_url": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/executing-plans",
+      "origin_ref": "Pinned to https://github.com/obra/superpowers@d884ae04edebef577e82ff7c4e143debd0bbec99; licence evidence: https://github.com/obra/superpowers/blob/d884ae04edebef577e82ff7c4e143debd0bbec99/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "expo-api-routes",
       "path": "skills/expo-api-routes",
       "description": "Use when working on creating API routes in Expo Router with EAS Hosting",
-      "license": "MIT, from expo plugin metadata",
+      "license": "MIT, see skills/expo-api-routes/LICENSE.txt",
       "source": "expo plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from expo plugin metadata",
-      "origin_url": "https://expo.dev",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/expo-api-routes/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-api-routes",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "expo-cicd-workflows",
       "path": "skills/expo-cicd-workflows",
       "description": "Use when working with expo cicd workflows: Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build pipelines or deployment automation.",
-      "license": "MIT, from expo plugin metadata",
+      "license": "MIT, see skills/expo-cicd-workflows/LICENSE.txt",
       "source": "expo plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from expo plugin metadata",
-      "origin_url": "https://expo.dev",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/expo-cicd-workflows/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-cicd-workflows",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "expo-deployment",
       "path": "skills/expo-deployment",
       "description": "Use when deploying Expo apps to the iOS App Store, Android Play Store, web hosting, or EAS API routes.",
-      "license": "MIT, from expo plugin metadata",
+      "license": "MIT, see skills/expo-deployment/LICENSE.txt",
       "source": "expo plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from expo plugin metadata",
-      "origin_url": "https://expo.dev",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/expo-deployment/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-deployment",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "expo-dev-client",
       "path": "skills/expo-dev-client",
       "description": "Use when building or distributing Expo development clients locally, with EAS, or through TestFlight.",
-      "license": "MIT, from expo plugin metadata",
+      "license": "MIT, see skills/expo-dev-client/LICENSE.txt",
       "source": "expo plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from expo plugin metadata",
-      "origin_url": "https://expo.dev",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/expo-dev-client/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-dev-client",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "expo-module",
       "path": "skills/expo-module",
       "description": "Use when building or modifying native modules for Expo.",
-      "license": "MIT, from expo plugin metadata",
+      "license": "MIT, see skills/expo-module/LICENSE.txt",
       "source": "expo plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from expo plugin metadata",
-      "origin_url": "https://expo.dev",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/expo-module/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-module",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "expo-tailwind-setup",
       "path": "skills/expo-tailwind-setup",
       "description": "Use when setting up tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling",
-      "license": "MIT, from expo plugin metadata",
+      "license": "MIT, see skills/expo-tailwind-setup/LICENSE.txt",
       "source": "expo plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from expo plugin metadata",
-      "origin_url": "https://expo.dev",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/expo-tailwind-setup/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-tailwind-setup",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "expo-ui-jetpack-compose",
       "path": "skills/expo-ui-jetpack-compose",
       "description": "Use when adding Jetpack Compose views or modifiers to Expo apps with @expo/ui/jetpack-compose.",
-      "license": "MIT, from expo plugin metadata",
+      "license": "MIT, see skills/expo-ui-jetpack-compose/LICENSE.txt",
       "source": "expo plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from expo plugin metadata",
-      "origin_url": "https://expo.dev",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/expo-ui-jetpack-compose/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-ui-jetpack-compose",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "expo-ui-swift-ui",
       "path": "skills/expo-ui-swift-ui",
       "description": "Use when adding SwiftUI views or modifiers to Expo apps with @expo/ui/swift-ui.",
-      "license": "MIT, from expo plugin metadata",
+      "license": "MIT, see skills/expo-ui-swift-ui/LICENSE.txt",
       "source": "expo plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from expo plugin metadata",
-      "origin_url": "https://expo.dev",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/expo-ui-swift-ui/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-ui-swift-ui",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "external-design-skill-router",
@@ -410,12 +410,12 @@
       "name": "finishing-a-development-branch",
       "path": "skills/finishing-a-development-branch",
       "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup",
-      "license": "MIT, from superpowers plugin metadata",
+      "license": "MIT, see skills/finishing-a-development-branch/LICENSE.txt",
       "source": "superpowers plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/finishing-a-development-branch/LICENSE.txt",
+      "origin_url": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/finishing-a-development-branch",
+      "origin_ref": "Pinned to https://github.com/obra/superpowers@d884ae04edebef577e82ff7c4e143debd0bbec99; licence evidence: https://github.com/obra/superpowers/blob/d884ae04edebef577e82ff7c4e143debd0bbec99/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "frontend-design",
@@ -454,34 +454,34 @@
       "name": "gh-address-comments",
       "path": "skills/gh-address-comments",
       "description": "Use when the user wants to inspect unresolved review threads, requested changes, or inline review comments on a PR, then implement selected fixes. Use the GitHub app for PR metadata and flat comment reads, and use the bundled GraphQL script via `gh` whenever thread-level state, resolution status, or inline review context matters.",
-      "license": "Apache-2.0, see skills/gh-address-comments/LICENSE.txt",
+      "license": "MIT, see skills/gh-address-comments/LICENSE.txt",
       "source": "github plugin backup promoted from temp",
       "license_evidence": "Embedded license file: skills/gh-address-comments/LICENSE.txt",
-      "origin_url": "https://github.com/openai/plugins",
-      "origin_ref": "local cache openai-curated/github/d947469e; plugin version 0.1.0",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/skills/gh-address-comments",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/.codex-plugin/plugin.json",
       "audit_status": "license-file-present"
     },
     {
       "name": "gh-fix-ci",
       "path": "skills/gh-fix-ci",
       "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions. Use the GitHub app from this plugin for PR metadata and patch context, and use `gh` for Actions check and log inspection before implementing any approved fix.",
-      "license": "Apache-2.0, see skills/gh-fix-ci/LICENSE.txt",
+      "license": "MIT, see skills/gh-fix-ci/LICENSE.txt",
       "source": "github plugin backup promoted from temp",
       "license_evidence": "Embedded license file: skills/gh-fix-ci/LICENSE.txt",
-      "origin_url": "https://github.com/openai/plugins",
-      "origin_ref": "local cache openai-curated/github/d947469e; plugin version 0.1.0",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/skills/gh-fix-ci",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/.codex-plugin/plugin.json",
       "audit_status": "license-file-present"
     },
     {
       "name": "github",
       "path": "skills/github",
       "description": "Use when the user asks for general GitHub help, wants PR or issue summaries, or needs repository context before choosing a more specific GitHub workflow.",
-      "license": "MIT, from github plugin metadata",
+      "license": "MIT, see skills/github/LICENSE.txt",
       "source": "github plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from github plugin metadata",
-      "origin_url": "https://github.com/openai/plugins",
-      "origin_ref": "local cache openai-curated/github/d947469e; plugin version 0.1.0",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/github/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/skills/github",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/.codex-plugin/plugin.json",
+      "audit_status": "license-file-present"
     },
     {
       "name": "internal-comms",
@@ -553,12 +553,12 @@
       "name": "native-data-fetching",
       "path": "skills/native-data-fetching",
       "description": "Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, React Query, SWR, error handling, caching, offline support, and Expo Router data loaders (`useLoaderData`).",
-      "license": "MIT, from expo plugin metadata",
+      "license": "MIT, see skills/native-data-fetching/LICENSE.txt",
       "source": "expo plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from expo plugin metadata",
-      "origin_url": "https://expo.dev",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/native-data-fetching/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/native-data-fetching",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "ncc",
@@ -806,78 +806,78 @@
       "name": "receiving-code-review",
       "path": "skills/receiving-code-review",
       "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation",
-      "license": "MIT, from superpowers plugin metadata",
+      "license": "MIT, see skills/receiving-code-review/LICENSE.txt",
       "source": "superpowers plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/receiving-code-review/LICENSE.txt",
+      "origin_url": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/receiving-code-review",
+      "origin_ref": "Pinned to https://github.com/obra/superpowers@d884ae04edebef577e82ff7c4e143debd0bbec99; licence evidence: https://github.com/obra/superpowers/blob/d884ae04edebef577e82ff7c4e143debd0bbec99/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "render-debug",
       "path": "skills/render-debug",
       "description": "Use when deployments fail, services won't start, or users mention errors, logs, or debugging.",
-      "license": "MIT, from render plugin metadata",
+      "license": "MIT, see skills/render-debug/LICENSE.txt",
       "source": "render plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from render plugin metadata",
-      "origin_url": "https://render.com",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/render-debug/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/render/skills/render-debug",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/render/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "render-deploy",
       "path": "skills/render-deploy",
       "description": "Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.",
-      "license": "MIT, from render plugin metadata",
+      "license": "MIT, see skills/render-deploy/LICENSE.txt",
       "source": "render plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from render plugin metadata",
-      "origin_url": "https://render.com",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/render-deploy/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/render/skills/render-deploy",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/render/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "render-migrate-from-heroku",
       "path": "skills/render-migrate-from-heroku",
       "description": "Use when migrating from Heroku to Render by reading local project files and generating equivalent Render services. Triggers: any mention of migrating from Heroku, moving off Heroku, Heroku to Render migration, or switching from Heroku. Reads Procfile, dependency files, and app config from the local repo. Optionally uses Heroku MCP to enrich with live config vars, add-on details, and dyno sizes. Uses Render MCP or Blueprint YAML to create services",
-      "license": "MIT, from render plugin metadata",
+      "license": "MIT, see skills/render-migrate-from-heroku/LICENSE.txt",
       "source": "render plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from render plugin metadata",
-      "origin_url": "https://render.com",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/render-migrate-from-heroku/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/render/skills/render-migrate-from-heroku",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/render/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "render-monitor",
       "path": "skills/render-monitor",
       "description": "Use when users want to check service status, view metrics, monitor performance, or verify deployments are healthy.",
-      "license": "MIT, from render plugin metadata",
+      "license": "MIT, see skills/render-monitor/LICENSE.txt",
       "source": "render plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from render plugin metadata",
-      "origin_url": "https://render.com",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/render-monitor/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/render/skills/render-monitor",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/render/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "render-workflows",
       "path": "skills/render-workflows",
       "description": "Use when a user wants to set up Render Workflows for the first time, scaffold a workflow service, add or modify workflow tasks, test workflows locally, or deploy workflows to Render.",
-      "license": "MIT, from render plugin metadata",
+      "license": "MIT, see skills/render-workflows/LICENSE.txt",
       "source": "render plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from render plugin metadata",
-      "origin_url": "https://render.com",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/render-workflows/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/render/skills/render-workflows",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/render/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "requesting-code-review",
       "path": "skills/requesting-code-review",
       "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
-      "license": "MIT, from superpowers plugin metadata",
+      "license": "MIT, see skills/requesting-code-review/LICENSE.txt",
       "source": "superpowers plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/requesting-code-review/LICENSE.txt",
+      "origin_url": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/requesting-code-review",
+      "origin_ref": "Pinned to https://github.com/obra/superpowers@d884ae04edebef577e82ff7c4e143debd0bbec99; licence evidence: https://github.com/obra/superpowers/blob/d884ae04edebef577e82ff7c4e143debd0bbec99/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "routing-middleware",
@@ -960,45 +960,45 @@
       "name": "stripe-best-practices",
       "path": "skills/stripe-best-practices",
       "description": "Use when building, modifying, or reviewing any Stripe integration — including accepting payments, building marketplaces, integrating Stripe, processing payments, setting up subscriptions, or creating connected accounts.",
-      "license": "MIT, from stripe plugin metadata",
+      "license": "MIT, see skills/stripe-best-practices/LICENSE.txt",
       "source": "stripe plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from stripe plugin metadata",
-      "origin_url": "https://stripe.com",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/stripe-best-practices/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/stripe/skills/stripe-best-practices",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/stripe/.codex-plugin/plugin.json",
+      "audit_status": "license-file-present"
     },
     {
       "name": "subagent-driven-development",
       "path": "skills/subagent-driven-development",
       "description": "Use when executing implementation plans with independent tasks in the current session",
-      "license": "MIT, from superpowers plugin metadata",
+      "license": "MIT, see skills/subagent-driven-development/LICENSE.txt",
       "source": "superpowers plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/subagent-driven-development/LICENSE.txt",
+      "origin_url": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/subagent-driven-development",
+      "origin_ref": "Pinned to https://github.com/obra/superpowers@d884ae04edebef577e82ff7c4e143debd0bbec99; licence evidence: https://github.com/obra/superpowers/blob/d884ae04edebef577e82ff7c4e143debd0bbec99/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "supabase",
       "path": "skills/supabase",
       "description": "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, @supabase/ssr) in Next.js, React, SvelteKit, Astro, Remix; auth issues (login, logout, sessions, JWT, cookies, getSession, getUser, getClaims, RLS); Supabase CLI or MCP server; schema changes, migrations, security audits, Postgres extensions (pg_graphql, pg_cron, pg_vector).",
-      "license": "MIT, from supabase plugin metadata",
+      "license": "MIT, see skills/supabase/LICENSE.txt",
       "source": "supabase plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from supabase plugin metadata",
-      "origin_url": "https://supabase.com",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/supabase/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/supabase/skills/supabase",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/supabase/.codex-plugin/plugin.json",
+      "audit_status": "license-file-present"
     },
     {
       "name": "supabase-postgres-best-practices",
       "path": "skills/supabase-postgres-best-practices",
       "description": "Use when writing, reviewing, or optimizing Supabase Postgres queries, schemas, indexes, RLS policies, or database performance.",
-      "license": "MIT, from supabase plugin metadata",
+      "license": "MIT, see skills/supabase-postgres-best-practices/LICENSE.txt",
       "source": "supabase plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from supabase plugin metadata",
-      "origin_url": "https://supabase.com",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/supabase-postgres-best-practices/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/supabase/skills/supabase-postgres-best-practices",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/supabase/.codex-plugin/plugin.json",
+      "audit_status": "license-file-present"
     },
     {
       "name": "swr",
@@ -1015,23 +1015,23 @@
       "name": "systematic-debugging",
       "path": "skills/systematic-debugging",
       "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
-      "license": "MIT, from superpowers plugin metadata",
+      "license": "MIT, see skills/systematic-debugging/LICENSE.txt",
       "source": "superpowers plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/systematic-debugging/LICENSE.txt",
+      "origin_url": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/systematic-debugging",
+      "origin_ref": "Pinned to https://github.com/obra/superpowers@d884ae04edebef577e82ff7c4e143debd0bbec99; licence evidence: https://github.com/obra/superpowers/blob/d884ae04edebef577e82ff7c4e143debd0bbec99/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "test-driven-development",
       "path": "skills/test-driven-development",
       "description": "Use when implementing any feature or bugfix, before writing implementation code",
-      "license": "MIT, from superpowers plugin metadata",
+      "license": "MIT, see skills/test-driven-development/LICENSE.txt",
       "source": "superpowers plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/test-driven-development/LICENSE.txt",
+      "origin_url": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/test-driven-development",
+      "origin_ref": "Pinned to https://github.com/obra/superpowers@d884ae04edebef577e82ff7c4e143debd0bbec99; licence evidence: https://github.com/obra/superpowers/blob/d884ae04edebef577e82ff7c4e143debd0bbec99/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "theme-factory",
@@ -1070,56 +1070,56 @@
       "name": "upgrade-stripe",
       "path": "skills/upgrade-stripe",
       "description": "Use when upgrading Stripe API versions, SDK versions, webhook versions, or integration patterns.",
-      "license": "MIT, from stripe plugin metadata",
+      "license": "MIT, see skills/upgrade-stripe/LICENSE.txt",
       "source": "stripe plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from stripe plugin metadata",
-      "origin_url": "https://stripe.com",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/upgrade-stripe/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/stripe/skills/upgrade-stripe",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/stripe/.codex-plugin/plugin.json",
+      "audit_status": "license-file-present"
     },
     {
       "name": "upgrading-expo",
       "path": "skills/upgrading-expo",
       "description": "Use when working on upgrading Expo SDK versions and fixing dependency issues",
-      "license": "MIT, from expo plugin metadata",
+      "license": "MIT, see skills/upgrading-expo/LICENSE.txt",
       "source": "expo plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from expo plugin metadata",
-      "origin_url": "https://expo.dev",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/upgrading-expo/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/upgrading-expo",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "use-dom",
       "path": "skills/use-dom",
       "description": "Use when migrating web code into Expo DOM components, embedding web experiences in native apps, or sharing web UI across native and web.",
-      "license": "MIT, from expo plugin metadata",
+      "license": "MIT, see skills/use-dom/LICENSE.txt",
       "source": "expo plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from expo plugin metadata",
-      "origin_url": "https://expo.dev",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/use-dom/LICENSE.txt",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/use-dom",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "using-git-worktrees",
       "path": "skills/using-git-worktrees",
       "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback",
-      "license": "MIT, from superpowers plugin metadata",
+      "license": "MIT, see skills/using-git-worktrees/LICENSE.txt",
       "source": "superpowers plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/using-git-worktrees/LICENSE.txt",
+      "origin_url": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/using-git-worktrees",
+      "origin_ref": "Pinned to https://github.com/obra/superpowers@d884ae04edebef577e82ff7c4e143debd0bbec99; licence evidence: https://github.com/obra/superpowers/blob/d884ae04edebef577e82ff7c4e143debd0bbec99/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "using-superpowers",
       "path": "skills/using-superpowers",
       "description": "Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions",
-      "license": "MIT, from superpowers plugin metadata",
+      "license": "MIT, see skills/using-superpowers/LICENSE.txt",
       "source": "superpowers plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/using-superpowers/LICENSE.txt",
+      "origin_url": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/using-superpowers",
+      "origin_ref": "Pinned to https://github.com/obra/superpowers@d884ae04edebef577e82ff7c4e143debd0bbec99; licence evidence: https://github.com/obra/superpowers/blob/d884ae04edebef577e82ff7c4e143debd0bbec99/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "v0-dev",
@@ -1257,12 +1257,12 @@
       "name": "verification-before-completion",
       "path": "skills/verification-before-completion",
       "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
-      "license": "MIT, from superpowers plugin metadata",
+      "license": "MIT, see skills/verification-before-completion/LICENSE.txt",
       "source": "superpowers plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/verification-before-completion/LICENSE.txt",
+      "origin_url": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/verification-before-completion",
+      "origin_ref": "Pinned to https://github.com/obra/superpowers@d884ae04edebef577e82ff7c4e143debd0bbec99; licence evidence: https://github.com/obra/superpowers/blob/d884ae04edebef577e82ff7c4e143debd0bbec99/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "web-artifacts-builder",
@@ -1301,33 +1301,33 @@
       "name": "writing-plans",
       "path": "skills/writing-plans",
       "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
-      "license": "MIT, from superpowers plugin metadata",
+      "license": "MIT, see skills/writing-plans/LICENSE.txt",
       "source": "superpowers plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/writing-plans/LICENSE.txt",
+      "origin_url": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/writing-plans",
+      "origin_ref": "Pinned to https://github.com/obra/superpowers@d884ae04edebef577e82ff7c4e143debd0bbec99; licence evidence: https://github.com/obra/superpowers/blob/d884ae04edebef577e82ff7c4e143debd0bbec99/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "writing-skills",
       "path": "skills/writing-skills",
       "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
-      "license": "MIT, from superpowers plugin metadata",
+      "license": "MIT, see skills/writing-skills/LICENSE.txt",
       "source": "superpowers plugin backup promoted from temp",
-      "license_evidence": "Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata",
-      "origin_url": "",
-      "origin_ref": "local plugin-backup temp promotion; original upstream ref not captured",
-      "audit_status": "metadata-only-needs-upstream-license-file"
+      "license_evidence": "Embedded license file: skills/writing-skills/LICENSE.txt",
+      "origin_url": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/writing-skills",
+      "origin_ref": "Pinned to https://github.com/obra/superpowers@d884ae04edebef577e82ff7c4e143debd0bbec99; licence evidence: https://github.com/obra/superpowers/blob/d884ae04edebef577e82ff7c4e143debd0bbec99/LICENSE",
+      "audit_status": "license-file-present"
     },
     {
       "name": "yeet",
       "path": "skills/yeet",
       "description": "Use when publishing local changes to GitHub by checking scope, committing intentionally, pushing a branch, or opening a draft PR.",
-      "license": "Apache-2.0, see skills/yeet/LICENSE.txt",
+      "license": "MIT, see skills/yeet/LICENSE.txt",
       "source": "github plugin backup promoted from temp",
       "license_evidence": "Embedded license file: skills/yeet/LICENSE.txt",
-      "origin_url": "https://github.com/openai/plugins",
-      "origin_ref": "local cache openai-curated/github/d947469e; plugin version 0.1.0",
+      "origin_url": "https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/skills/yeet",
+      "origin_ref": "Pinned to https://github.com/openai/plugins@bd2122cb92f2ade874d8c2b1d00383976ab9415b; licence evidence: https://github.com/openai/plugins/blob/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/.codex-plugin/plugin.json",
       "audit_status": "license-file-present"
     }
   ]
