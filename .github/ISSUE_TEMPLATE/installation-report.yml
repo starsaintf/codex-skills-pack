@@ -1,0 +1,69 @@
+name: Installation report
+description: Report a successful or failed Codex Skills Pack installation
+title: "[Install report]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing the pack outside the maintainer environment. Remove credentials, usernames, and private filesystem paths from logs.
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - Successful installation
+        - Failed installation
+        - Partial installation
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: Windows 11, macOS 15.5, Ubuntu 24.04
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: Python or PowerShell version
+      placeholder: Python 3.12.4 or PowerShell 7.5
+    validations:
+      required: true
+  - type: input
+    id: codex
+    attributes:
+      label: Codex version
+      description: Enter unknown when unavailable.
+      placeholder: codex-cli 0.x or unknown
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command used
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: count
+    attributes:
+      label: Skills installed or previewed
+      placeholder: 120
+    validations:
+      required: true
+  - type: textarea
+    id: observations
+    attributes:
+      label: Observations
+      description: Include preservation of existing files, unexpected output, and reproducible errors.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, private paths, and sensitive output.
+          required: true
