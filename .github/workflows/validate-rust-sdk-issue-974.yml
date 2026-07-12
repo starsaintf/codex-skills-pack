@@ -64,17 +64,31 @@ jobs:
         working-directory: rust-sdk
         run: cargo test --all-features
 
-      - name: Run no-local rmcp feature tests
-        id: no_local_tests
+      - name: Run focused cache tests
+        id: focused
         if: steps.all_feature_tests.outcome == 'success'
         continue-on-error: true
         working-directory: rust-sdk
+        run: cargo test -p rmcp --all-features service::client::tests -- --nocapture
+
+      - name: Run no-local rmcp feature tests
+        id: no_local_tests
+        if: steps.focused.outcome == 'success'
+        continue-on-error: true
+        working-directory: rust-sdk
         run: |
-          FEATURES=$(cargo metadata --no-deps --format-version 1 \
-            | jq -r '[.packages[] | select(.name == "rmcp") | .features | keys[] \
-                      | select(startswith("__") | not) \
-                      | select(. != "local")] | join(",")')
+          FEATURES=$(python - <<'PY'
+          import tomllib
+          with open('crates/rmcp/Cargo.toml', 'rb') as file:
+              features = tomllib.load(file)['features']
+          print(','.join(
+              name for name in features
+              if name != 'local' and not name.startswith('__')
+          ))
+          PY
+          )
           echo "FEATURES=$FEATURES"
+          test -n "$FEATURES"
           cargo test -p rmcp --features "$FEATURES"
 
       - name: Build documentation with warnings denied
@@ -91,13 +105,6 @@ jobs:
         working-directory: rust-sdk
         run: cargo build -p mcp-conformance
 
-      - name: Run focused cache tests
-        id: focused
-        if: steps.conformance.outcome == 'success'
-        continue-on-error: true
-        working-directory: rust-sdk
-        run: cargo test -p rmcp --all-features service::client::tests -- --nocapture
-
       - name: Write validation result
         if: always()
         env:
@@ -106,10 +113,10 @@ jobs:
           CHECK: ${{ steps.check.outcome }}
           CLIPPY: ${{ steps.clippy.outcome }}
           ALL_FEATURE_TESTS: ${{ steps.all_feature_tests.outcome }}
+          FOCUSED: ${{ steps.focused.outcome }}
           NO_LOCAL_TESTS: ${{ steps.no_local_tests.outcome }}
           DOCS: ${{ steps.docs.outcome }}
           CONFORMANCE: ${{ steps.conformance.outcome }}
-          FOCUSED: ${{ steps.focused.outcome }}
         run: |
           branch_sha=unknown
           if [ -f branch-sha.txt ]; then branch_sha=$(cat branch-sha.txt); fi
@@ -120,10 +127,10 @@ jobs:
           rmcp_check=$CHECK
           repository_clippy=$CLIPPY
           all_feature_tests=$ALL_FEATURE_TESTS
+          focused_cache_tests=$FOCUSED
           no_local_tests=$NO_LOCAL_TESTS
           docs=$DOCS
           conformance_build=$CONFORMANCE
-          focused_cache_tests=$FOCUSED
           EOF
 
       - name: Commit validation result
@@ -145,17 +152,17 @@ jobs:
           CHECK: ${{ steps.check.outcome }}
           CLIPPY: ${{ steps.clippy.outcome }}
           ALL_FEATURE_TESTS: ${{ steps.all_feature_tests.outcome }}
+          FOCUSED: ${{ steps.focused.outcome }}
           NO_LOCAL_TESTS: ${{ steps.no_local_tests.outcome }}
           DOCS: ${{ steps.docs.outcome }}
           CONFORMANCE: ${{ steps.conformance.outcome }}
-          FOCUSED: ${{ steps.focused.outcome }}
         run: |
           test "$CLONE" = success
           test "$FORMATTING" = success
           test "$CHECK" = success
           test "$CLIPPY" = success
           test "$ALL_FEATURE_TESTS" = success
+          test "$FOCUSED" = success
           test "$NO_LOCAL_TESTS" = success
           test "$DOCS" = success
           test "$CONFORMANCE" = success
-          test "$FOCUSED" = success
