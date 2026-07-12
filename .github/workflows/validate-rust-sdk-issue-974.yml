@@ -1,11 +1,10 @@
-name: Validate Rust SDK issue 974
+name: Validate hardened Rust SDK issue 974
 
 on:
   push:
     branches:
       - ci/rust-sdk-issue-974-validation
     paths:
-      - ci/rust-sdk-issue-974-cache-draft.patch
       - .github/workflows/validate-rust-sdk-issue-974.yml
 
 permissions:
@@ -14,7 +13,7 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
 
     steps:
       - name: Check out validation harness
@@ -22,144 +21,141 @@ jobs:
         with:
           ref: ci/rust-sdk-issue-974-validation
 
-      - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          components: rustfmt, clippy
+      - name: Install Rust toolchains
+        run: |
+          rustup toolchain install stable --component clippy
+          rustup toolchain install nightly --component rustfmt
 
-      - name: Check out current upstream main
+      - name: Check out hardened branch
         id: clone
         continue-on-error: true
-        run: git clone --depth 1 https://github.com/modelcontextprotocol/rust-sdk.git rust-sdk
+        run: |
+          git clone --depth 1 --branch feat/issue-974-client-response-cache \
+            https://github.com/starsaintf/rust-sdk.git rust-sdk
+          git -C rust-sdk rev-parse HEAD > branch-sha.txt
 
-      - name: Record upstream commit
+      - name: Nightly formatting and whitespace
+        id: formatting
         if: steps.clone.outcome == 'success'
-        run: git -C rust-sdk rev-parse HEAD > upstream-sha.txt
-
-      - name: Apply implementation patch
-        id: apply
-        if: steps.clone.outcome == 'success'
-        continue-on-error: true
-        working-directory: rust-sdk
-        run: git apply --check ../ci/rust-sdk-issue-974-cache-draft.patch && git apply ../ci/rust-sdk-issue-974-cache-draft.patch
-
-      - name: Format implementation
-        id: format
-        if: steps.apply.outcome == 'success'
-        continue-on-error: true
-        working-directory: rust-sdk
-        run: cargo fmt --all
-
-      - name: Verify formatting and whitespace
-        id: formatting_check
-        if: steps.format.outcome == 'success'
         continue-on-error: true
         working-directory: rust-sdk
         run: |
-          cargo fmt --all -- --check
+          cargo +nightly fmt --all -- --check
           git diff --check
 
-      - name: Save current-main formatted patch
-        if: steps.format.outcome == 'success'
-        working-directory: rust-sdk
-        run: git diff --binary > ../ci/rust-sdk-issue-974-current-main.patch
-
-      - name: Check all rmcp features
+      - name: Check rmcp targets and features
         id: check
-        if: steps.formatting_check.outcome == 'success'
+        if: steps.formatting.outcome == 'success'
         continue-on-error: true
         working-directory: rust-sdk
-        run: cargo check -p rmcp --all-features
+        run: cargo check -p rmcp --all-targets --all-features
 
-      - name: Run focused cache tests
-        id: focused_tests
+      - name: Run repository Clippy command
+        id: clippy
         if: steps.check.outcome == 'success'
         continue-on-error: true
         working-directory: rust-sdk
+        run: cargo clippy --all-targets --all-features -- -D warnings
+
+      - name: Run repository all-feature tests
+        id: all_feature_tests
+        if: steps.clippy.outcome == 'success'
+        continue-on-error: true
+        working-directory: rust-sdk
+        run: cargo test --all-features
+
+      - name: Run no-local rmcp feature tests
+        id: no_local_tests
+        if: steps.all_feature_tests.outcome == 'success'
+        continue-on-error: true
+        working-directory: rust-sdk
+        run: |
+          FEATURES=$(cargo metadata --no-deps --format-version 1 \
+            | jq -r '[.packages[] | select(.name == "rmcp") | .features | keys[] \
+                      | select(startswith("__") | not) \
+                      | select(. != "local")] | join(",")')
+          echo "FEATURES=$FEATURES"
+          cargo test -p rmcp --features "$FEATURES"
+
+      - name: Build documentation with warnings denied
+        id: docs
+        if: steps.no_local_tests.outcome == 'success'
+        continue-on-error: true
+        working-directory: rust-sdk
+        run: RUSTDOCFLAGS=-Dwarnings cargo doc -p rmcp --all-features --no-deps
+
+      - name: Build conformance binaries
+        id: conformance
+        if: steps.docs.outcome == 'success'
+        continue-on-error: true
+        working-directory: rust-sdk
+        run: cargo build -p mcp-conformance
+
+      - name: Run focused cache tests
+        id: focused
+        if: steps.conformance.outcome == 'success'
+        continue-on-error: true
+        working-directory: rust-sdk
         run: cargo test -p rmcp --all-features service::client::tests -- --nocapture
-
-      - name: Run cache-hint integration tests
-        id: cache_hint_tests
-        if: steps.focused_tests.outcome == 'success'
-        continue-on-error: true
-        working-directory: rust-sdk
-        run: cargo test -p rmcp --all-features --test test_cache_hints -- --nocapture
-
-      - name: Run rmcp test suite
-        id: rmcp_tests
-        if: steps.cache_hint_tests.outcome == 'success'
-        continue-on-error: true
-        working-directory: rust-sdk
-        run: cargo test -p rmcp --all-features
-
-      - name: Run clippy
-        id: clippy
-        if: steps.rmcp_tests.outcome == 'success'
-        continue-on-error: true
-        working-directory: rust-sdk
-        run: cargo clippy -p rmcp --all-targets --all-features -- -D warnings
 
       - name: Write validation result
         if: always()
         env:
           CLONE: ${{ steps.clone.outcome }}
-          APPLY: ${{ steps.apply.outcome }}
-          FORMAT: ${{ steps.format.outcome }}
-          FORMATTING_CHECK: ${{ steps.formatting_check.outcome }}
+          FORMATTING: ${{ steps.formatting.outcome }}
           CHECK: ${{ steps.check.outcome }}
-          FOCUSED_TESTS: ${{ steps.focused_tests.outcome }}
-          CACHE_HINT_TESTS: ${{ steps.cache_hint_tests.outcome }}
-          RMCP_TESTS: ${{ steps.rmcp_tests.outcome }}
           CLIPPY: ${{ steps.clippy.outcome }}
+          ALL_FEATURE_TESTS: ${{ steps.all_feature_tests.outcome }}
+          NO_LOCAL_TESTS: ${{ steps.no_local_tests.outcome }}
+          DOCS: ${{ steps.docs.outcome }}
+          CONFORMANCE: ${{ steps.conformance.outcome }}
+          FOCUSED: ${{ steps.focused.outcome }}
         run: |
-          upstream_sha="unknown"
-          if [ -f upstream-sha.txt ]; then upstream_sha="$(cat upstream-sha.txt)"; fi
-          cat > ci/rust-sdk-issue-974-validation-result.txt <<EOF
-          upstream_sha=$upstream_sha
+          branch_sha=unknown
+          if [ -f branch-sha.txt ]; then branch_sha=$(cat branch-sha.txt); fi
+          cat > ci/rust-sdk-issue-974-hardened-validation.txt <<EOF
+          branch_sha=$branch_sha
           clone=$CLONE
-          apply=$APPLY
-          format=$FORMAT
-          formatting_check=$FORMATTING_CHECK
-          cargo_check=$CHECK
-          focused_tests=$FOCUSED_TESTS
-          cache_hint_tests=$CACHE_HINT_TESTS
-          rmcp_tests=$RMCP_TESTS
-          clippy=$CLIPPY
+          nightly_formatting=$FORMATTING
+          rmcp_check=$CHECK
+          repository_clippy=$CLIPPY
+          all_feature_tests=$ALL_FEATURE_TESTS
+          no_local_tests=$NO_LOCAL_TESTS
+          docs=$DOCS
+          conformance_build=$CONFORMANCE
+          focused_cache_tests=$FOCUSED
           EOF
 
-      - name: Commit validation outputs
+      - name: Commit validation result
         if: always()
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add ci/rust-sdk-issue-974-validation-result.txt
-          if [ -f ci/rust-sdk-issue-974-current-main.patch ]; then
-            git add ci/rust-sdk-issue-974-current-main.patch
-          fi
+          git add ci/rust-sdk-issue-974-hardened-validation.txt
           if ! git diff --cached --quiet; then
-            git commit -m "Record Rust SDK issue 974 validation"
+            git commit -m "test: record hardened issue 974 validation"
             git push origin HEAD:ci/rust-sdk-issue-974-validation
           fi
 
-      - name: Fail when validation is incomplete
+      - name: Require all checks
         if: always()
         env:
           CLONE: ${{ steps.clone.outcome }}
-          APPLY: ${{ steps.apply.outcome }}
-          FORMAT: ${{ steps.format.outcome }}
-          FORMATTING_CHECK: ${{ steps.formatting_check.outcome }}
+          FORMATTING: ${{ steps.formatting.outcome }}
           CHECK: ${{ steps.check.outcome }}
-          FOCUSED_TESTS: ${{ steps.focused_tests.outcome }}
-          CACHE_HINT_TESTS: ${{ steps.cache_hint_tests.outcome }}
-          RMCP_TESTS: ${{ steps.rmcp_tests.outcome }}
           CLIPPY: ${{ steps.clippy.outcome }}
+          ALL_FEATURE_TESTS: ${{ steps.all_feature_tests.outcome }}
+          NO_LOCAL_TESTS: ${{ steps.no_local_tests.outcome }}
+          DOCS: ${{ steps.docs.outcome }}
+          CONFORMANCE: ${{ steps.conformance.outcome }}
+          FOCUSED: ${{ steps.focused.outcome }}
         run: |
           test "$CLONE" = success
-          test "$APPLY" = success
-          test "$FORMAT" = success
-          test "$FORMATTING_CHECK" = success
+          test "$FORMATTING" = success
           test "$CHECK" = success
-          test "$FOCUSED_TESTS" = success
-          test "$CACHE_HINT_TESTS" = success
-          test "$RMCP_TESTS" = success
           test "$CLIPPY" = success
+          test "$ALL_FEATURE_TESTS" = success
+          test "$NO_LOCAL_TESTS" = success
+          test "$DOCS" = success
+          test "$CONFORMANCE" = success
+          test "$FOCUSED" = success
