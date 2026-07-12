@@ -1,0 +1,75 @@
+name: Validate Rust SDK issue 974
+
+on:
+  push:
+    branches:
+      - ci/rust-sdk-issue-974-validation
+    paths:
+      - ci/rust-sdk-issue-974-cache-draft.patch
+      - .github/workflows/validate-rust-sdk-issue-974.yml
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out validation harness
+        uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - name: Check out current upstream main
+        run: git clone --depth 1 https://github.com/modelcontextprotocol/rust-sdk.git rust-sdk
+
+      - name: Apply implementation patch
+        working-directory: rust-sdk
+        run: git apply --check ../ci/rust-sdk-issue-974-cache-draft.patch && git apply ../ci/rust-sdk-issue-974-cache-draft.patch
+
+      - name: Format implementation
+        working-directory: rust-sdk
+        run: cargo fmt --all
+
+      - name: Verify formatting and whitespace
+        working-directory: rust-sdk
+        run: |
+          cargo fmt --all -- --check
+          git diff --check
+
+      - name: Save current-main formatted patch
+        working-directory: rust-sdk
+        run: git diff --binary > ../rust-sdk-issue-974-current-main.patch
+
+      - name: Check all rmcp features
+        working-directory: rust-sdk
+        run: cargo check -p rmcp --all-features
+
+      - name: Run focused cache tests
+        working-directory: rust-sdk
+        run: cargo test -p rmcp --all-features service::client::tests -- --nocapture
+
+      - name: Run cache-hint integration tests
+        working-directory: rust-sdk
+        run: cargo test -p rmcp --all-features --test test_cache_hints -- --nocapture
+
+      - name: Run rmcp test suite
+        working-directory: rust-sdk
+        run: cargo test -p rmcp --all-features
+
+      - name: Run clippy
+        working-directory: rust-sdk
+        run: cargo clippy -p rmcp --all-targets --all-features -- -D warnings
+
+      - name: Upload formatted implementation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rust-sdk-issue-974-current-main
+          path: rust-sdk-issue-974-current-main.patch
+          if-no-files-found: ignore
