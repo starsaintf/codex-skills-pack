@@ -1,0 +1,48 @@
+name: Resolve pinned provenance
+
+on:
+  push:
+    branches:
+      - provenance/resolve-upstream-licenses
+
+permissions:
+  contents: write
+
+concurrency:
+  group: resolve-provenance
+  cancel-in-progress: false
+
+jobs:
+  resolve:
+    if: ${{ !contains(github.event.head_commit.message, '[provenance-bot]') }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Resolve pinned upstream licences
+        run: python scripts/resolve_provenance.py
+
+      - name: Verify strict provenance
+        run: python scripts/validate_repository.py --strict-provenance
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Commit generated provenance files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add manifest.json SKILLS.md skills provenance scripts tests
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+            exit 0
+          fi
+          git commit -m "[provenance-bot] Resolve pinned upstream licences"
+          git push
