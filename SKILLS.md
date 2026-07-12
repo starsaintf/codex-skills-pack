@@ -1,5 +1,7 @@
 # Skills
 
+This inventory is generated from `manifest.json`. Each redistributed skill records a pinned upstream source and licence evidence.
+
 1. `actionable-pushback`
    - Source: local-codex-user-skill
    - License: MIT
@@ -82,10 +84,10 @@
 
 11. `android-performance`
    - Source: test-android-apps plugin backup promoted from temp
-   - License: MIT, from test-android-apps plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from test-android-apps plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: local plugin-backup temp promotion; original upstream ref not captured
+   - License: MIT, see skills/android-performance/LICENSE.txt
+   - Evidence: Embedded license file: skills/android-performance/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/test-android-apps/skills/android-performance
    - Description: Use when asked to profile an Android app flow, find CPU-heavy functions, diagnose jank, capture startup or frame timing evidence, compare before/after performance, explain what code is taking time, or gather memory/leak profiling artifacts.
 
 12. `auth`
@@ -106,10 +108,10 @@
 
 14. `brainstorming`
    - Source: superpowers plugin backup promoted from temp
-   - License: MIT, from superpowers plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: local plugin-backup temp promotion; original upstream ref not captured
+   - License: MIT, see skills/brainstorming/LICENSE.txt
+   - Evidence: Embedded license file: skills/brainstorming/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/brainstorming
    - Description: Use when starting creative or product work such as new features, components, functionality, designs, or behavior changes.
 
 15. `brand-guidelines`
@@ -122,10 +124,10 @@
 
 16. `building-native-ui`
    - Source: expo plugin backup promoted from temp
-   - License: MIT, from expo plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from expo plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://expo.dev
+   - License: MIT, see skills/building-native-ui/LICENSE.txt
+   - Evidence: Embedded license file: skills/building-native-ui/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/building-native-ui
    - Description: Use when building polished native app interfaces with Expo Router, React Native styling, navigation, animations, or platform UI patterns.
 
 17. `canvas-design`
@@ -162,10 +164,10 @@
 
 21. `codex-expo-run-actions`
    - Source: expo plugin backup promoted from temp
-   - License: MIT, from expo plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from expo plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://expo.dev
+   - License: MIT, see skills/codex-expo-run-actions/LICENSE.txt
+   - Evidence: Embedded license file: skills/codex-expo-run-actions/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/codex-expo-run-actions
    - Description: Use when the user wants the Codex app Run button, build/run actions, action buttons, or a stable Expo start/run workflow from Codex.
 
 22. `cron-jobs`
@@ -186,10 +188,10 @@
 
 24. `dispatching-parallel-agents`
    - Source: superpowers plugin backup promoted from temp
-   - License: MIT, from superpowers plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: local plugin-backup temp promotion; original upstream ref not captured
+   - License: MIT, see skills/dispatching-parallel-agents/LICENSE.txt
+   - Evidence: Embedded license file: skills/dispatching-parallel-agents/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/dispatching-parallel-agents
    - Description: Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies
 
 25. `email`
@@ -210,74 +212,74 @@
 
 27. `executing-plans`
    - Source: superpowers plugin backup promoted from temp
-   - License: MIT, from superpowers plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: local plugin-backup temp promotion; original upstream ref not captured
+   - License: MIT, see skills/executing-plans/LICENSE.txt
+   - Evidence: Embedded license file: skills/executing-plans/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/executing-plans
    - Description: Use when you have a written implementation plan to execute in a separate session with review checkpoints
 
 28. `expo-api-routes`
    - Source: expo plugin backup promoted from temp
-   - License: MIT, from expo plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from expo plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://expo.dev
+   - License: MIT, see skills/expo-api-routes/LICENSE.txt
+   - Evidence: Embedded license file: skills/expo-api-routes/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-api-routes
    - Description: Use when working on creating API routes in Expo Router with EAS Hosting
 
 29. `expo-cicd-workflows`
    - Source: expo plugin backup promoted from temp
-   - License: MIT, from expo plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from expo plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://expo.dev
+   - License: MIT, see skills/expo-cicd-workflows/LICENSE.txt
+   - Evidence: Embedded license file: skills/expo-cicd-workflows/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-cicd-workflows
    - Description: Use when working with expo cicd workflows: Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build pipelines or deployment automation.
 
 30. `expo-deployment`
    - Source: expo plugin backup promoted from temp
-   - License: MIT, from expo plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from expo plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://expo.dev
+   - License: MIT, see skills/expo-deployment/LICENSE.txt
+   - Evidence: Embedded license file: skills/expo-deployment/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-deployment
    - Description: Use when deploying Expo apps to the iOS App Store, Android Play Store, web hosting, or EAS API routes.
 
 31. `expo-dev-client`
    - Source: expo plugin backup promoted from temp
-   - License: MIT, from expo plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from expo plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://expo.dev
+   - License: MIT, see skills/expo-dev-client/LICENSE.txt
+   - Evidence: Embedded license file: skills/expo-dev-client/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-dev-client
    - Description: Use when building or distributing Expo development clients locally, with EAS, or through TestFlight.
 
 32. `expo-module`
    - Source: expo plugin backup promoted from temp
-   - License: MIT, from expo plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from expo plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://expo.dev
+   - License: MIT, see skills/expo-module/LICENSE.txt
+   - Evidence: Embedded license file: skills/expo-module/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-module
    - Description: Use when building or modifying native modules for Expo.
 
 33. `expo-tailwind-setup`
    - Source: expo plugin backup promoted from temp
-   - License: MIT, from expo plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from expo plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://expo.dev
+   - License: MIT, see skills/expo-tailwind-setup/LICENSE.txt
+   - Evidence: Embedded license file: skills/expo-tailwind-setup/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-tailwind-setup
    - Description: Use when setting up tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling
 
 34. `expo-ui-jetpack-compose`
    - Source: expo plugin backup promoted from temp
-   - License: MIT, from expo plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from expo plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://expo.dev
+   - License: MIT, see skills/expo-ui-jetpack-compose/LICENSE.txt
+   - Evidence: Embedded license file: skills/expo-ui-jetpack-compose/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-ui-jetpack-compose
    - Description: Use when adding Jetpack Compose views or modifiers to Expo apps with @expo/ui/jetpack-compose.
 
 35. `expo-ui-swift-ui`
    - Source: expo plugin backup promoted from temp
-   - License: MIT, from expo plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from expo plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://expo.dev
+   - License: MIT, see skills/expo-ui-swift-ui/LICENSE.txt
+   - Evidence: Embedded license file: skills/expo-ui-swift-ui/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/expo-ui-swift-ui
    - Description: Use when adding SwiftUI views or modifiers to Expo apps with @expo/ui/swift-ui.
 
 36. `external-design-skill-router`
@@ -290,10 +292,10 @@
 
 37. `finishing-a-development-branch`
    - Source: superpowers plugin backup promoted from temp
-   - License: MIT, from superpowers plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: local plugin-backup temp promotion; original upstream ref not captured
+   - License: MIT, see skills/finishing-a-development-branch/LICENSE.txt
+   - Evidence: Embedded license file: skills/finishing-a-development-branch/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/finishing-a-development-branch
    - Description: Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup
 
 38. `frontend-design`
@@ -338,10 +340,10 @@
 
 43. `github`
    - Source: github plugin backup promoted from temp
-   - License: MIT, from github plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from github plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://github.com/openai/plugins
+   - License: MIT, see skills/github/LICENSE.txt
+   - Evidence: Embedded license file: skills/github/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/github/skills/github
    - Description: Use when the user asks for general GitHub help, wants PR or issue summaries, or needs repository context before choosing a more specific GitHub workflow.
 
 44. `internal-comms`
@@ -394,10 +396,10 @@
 
 50. `native-data-fetching`
    - Source: expo plugin backup promoted from temp
-   - License: MIT, from expo plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from expo plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://expo.dev
+   - License: MIT, see skills/native-data-fetching/LICENSE.txt
+   - Evidence: Embedded license file: skills/native-data-fetching/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/native-data-fetching
    - Description: Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, React Query, SWR, error handling, caching, offline support, and Expo Router data loaders (`useLoaderData`).
 
 51. `ncc`
@@ -578,58 +580,58 @@
 
 73. `receiving-code-review`
    - Source: superpowers plugin backup promoted from temp
-   - License: MIT, from superpowers plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: local plugin-backup temp promotion; original upstream ref not captured
+   - License: MIT, see skills/receiving-code-review/LICENSE.txt
+   - Evidence: Embedded license file: skills/receiving-code-review/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/receiving-code-review
    - Description: Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation
 
 74. `render-debug`
    - Source: render plugin backup promoted from temp
-   - License: MIT, from render plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from render plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://render.com
+   - License: MIT, see skills/render-debug/LICENSE.txt
+   - Evidence: Embedded license file: skills/render-debug/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/render/skills/render-debug
    - Description: Use when deployments fail, services won't start, or users mention errors, logs, or debugging.
 
 75. `render-deploy`
    - Source: render plugin backup promoted from temp
-   - License: MIT, from render plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from render plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://render.com
+   - License: MIT, see skills/render-deploy/LICENSE.txt
+   - Evidence: Embedded license file: skills/render-deploy/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/render/skills/render-deploy
    - Description: Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.
 
 76. `render-migrate-from-heroku`
    - Source: render plugin backup promoted from temp
-   - License: MIT, from render plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from render plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://render.com
+   - License: MIT, see skills/render-migrate-from-heroku/LICENSE.txt
+   - Evidence: Embedded license file: skills/render-migrate-from-heroku/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/render/skills/render-migrate-from-heroku
    - Description: Use when migrating from Heroku to Render by reading local project files and generating equivalent Render services. Triggers: any mention of migrating from Heroku, moving off Heroku, Heroku to Render migration, or switching from Heroku. Reads Procfile, dependency files, and app config from the local repo. Optionally uses Heroku MCP to enrich with live config vars, add-on details, and dyno sizes. Uses Render MCP or Blueprint YAML to create services
 
 77. `render-monitor`
    - Source: render plugin backup promoted from temp
-   - License: MIT, from render plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from render plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://render.com
+   - License: MIT, see skills/render-monitor/LICENSE.txt
+   - Evidence: Embedded license file: skills/render-monitor/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/render/skills/render-monitor
    - Description: Use when users want to check service status, view metrics, monitor performance, or verify deployments are healthy.
 
 78. `render-workflows`
    - Source: render plugin backup promoted from temp
-   - License: MIT, from render plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from render plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://render.com
+   - License: MIT, see skills/render-workflows/LICENSE.txt
+   - Evidence: Embedded license file: skills/render-workflows/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/render/skills/render-workflows
    - Description: Use when a user wants to set up Render Workflows for the first time, scaffold a workflow service, add or modify workflow tasks, test workflows locally, or deploy workflows to Render.
 
 79. `requesting-code-review`
    - Source: superpowers plugin backup promoted from temp
-   - License: MIT, from superpowers plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: local plugin-backup temp promotion; original upstream ref not captured
+   - License: MIT, see skills/requesting-code-review/LICENSE.txt
+   - Evidence: Embedded license file: skills/requesting-code-review/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/requesting-code-review
    - Description: Use when completing tasks, implementing major features, or before merging to verify work meets requirements
 
 80. `routing-middleware`
@@ -690,34 +692,34 @@
 
 87. `stripe-best-practices`
    - Source: stripe plugin backup promoted from temp
-   - License: MIT, from stripe plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from stripe plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://stripe.com
+   - License: MIT, see skills/stripe-best-practices/LICENSE.txt
+   - Evidence: Embedded license file: skills/stripe-best-practices/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/stripe/skills/stripe-best-practices
    - Description: Use when building, modifying, or reviewing any Stripe integration — including accepting payments, building marketplaces, integrating Stripe, processing payments, setting up subscriptions, or creating connected accounts.
 
 88. `subagent-driven-development`
    - Source: superpowers plugin backup promoted from temp
-   - License: MIT, from superpowers plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: local plugin-backup temp promotion; original upstream ref not captured
+   - License: MIT, see skills/subagent-driven-development/LICENSE.txt
+   - Evidence: Embedded license file: skills/subagent-driven-development/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/subagent-driven-development
    - Description: Use when executing implementation plans with independent tasks in the current session
 
 89. `supabase`
    - Source: supabase plugin backup promoted from temp
-   - License: MIT, from supabase plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from supabase plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://supabase.com
+   - License: MIT, see skills/supabase/LICENSE.txt
+   - Evidence: Embedded license file: skills/supabase/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/supabase/skills/supabase
    - Description: Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, @supabase/ssr) in Next.js, React, SvelteKit, Astro, Remix; auth issues (login, logout, sessions, JWT, cookies, getSession, getUser, getClaims, RLS); Supabase CLI or MCP server; schema changes, migrations, security audits, Postgres extensions (pg_graphql, pg_cron, pg_vector).
 
 90. `supabase-postgres-best-practices`
    - Source: supabase plugin backup promoted from temp
-   - License: MIT, from supabase plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from supabase plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://supabase.com
+   - License: MIT, see skills/supabase-postgres-best-practices/LICENSE.txt
+   - Evidence: Embedded license file: skills/supabase-postgres-best-practices/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/supabase/skills/supabase-postgres-best-practices
    - Description: Use when writing, reviewing, or optimizing Supabase Postgres queries, schemas, indexes, RLS policies, or database performance.
 
 91. `swr`
@@ -730,18 +732,18 @@
 
 92. `systematic-debugging`
    - Source: superpowers plugin backup promoted from temp
-   - License: MIT, from superpowers plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: local plugin-backup temp promotion; original upstream ref not captured
+   - License: MIT, see skills/systematic-debugging/LICENSE.txt
+   - Evidence: Embedded license file: skills/systematic-debugging/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/systematic-debugging
    - Description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
 
 93. `test-driven-development`
    - Source: superpowers plugin backup promoted from temp
-   - License: MIT, from superpowers plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: local plugin-backup temp promotion; original upstream ref not captured
+   - License: MIT, see skills/test-driven-development/LICENSE.txt
+   - Evidence: Embedded license file: skills/test-driven-development/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/test-driven-development
    - Description: Use when implementing any feature or bugfix, before writing implementation code
 
 94. `theme-factory`
@@ -770,42 +772,42 @@
 
 97. `upgrade-stripe`
    - Source: stripe plugin backup promoted from temp
-   - License: MIT, from stripe plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from stripe plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://stripe.com
+   - License: MIT, see skills/upgrade-stripe/LICENSE.txt
+   - Evidence: Embedded license file: skills/upgrade-stripe/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/stripe/skills/upgrade-stripe
    - Description: Use when upgrading Stripe API versions, SDK versions, webhook versions, or integration patterns.
 
 98. `upgrading-expo`
    - Source: expo plugin backup promoted from temp
-   - License: MIT, from expo plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from expo plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://expo.dev
+   - License: MIT, see skills/upgrading-expo/LICENSE.txt
+   - Evidence: Embedded license file: skills/upgrading-expo/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/upgrading-expo
    - Description: Use when working on upgrading Expo SDK versions and fixing dependency issues
 
 99. `use-dom`
    - Source: expo plugin backup promoted from temp
-   - License: MIT, from expo plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from expo plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: https://expo.dev
+   - License: MIT, see skills/use-dom/LICENSE.txt
+   - Evidence: Embedded license file: skills/use-dom/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/openai/plugins/tree/bd2122cb92f2ade874d8c2b1d00383976ab9415b/plugins/expo/skills/use-dom
    - Description: Use when migrating web code into Expo DOM components, embedding web experiences in native apps, or sharing web UI across native and web.
 
 100. `using-git-worktrees`
    - Source: superpowers plugin backup promoted from temp
-   - License: MIT, from superpowers plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: local plugin-backup temp promotion; original upstream ref not captured
+   - License: MIT, see skills/using-git-worktrees/LICENSE.txt
+   - Evidence: Embedded license file: skills/using-git-worktrees/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/using-git-worktrees
    - Description: Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback
 
 101. `using-superpowers`
    - Source: superpowers plugin backup promoted from temp
-   - License: MIT, from superpowers plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: local plugin-backup temp promotion; original upstream ref not captured
+   - License: MIT, see skills/using-superpowers/LICENSE.txt
+   - Evidence: Embedded license file: skills/using-superpowers/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/using-superpowers
    - Description: Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions
 
 102. `v0-dev`
@@ -906,10 +908,10 @@
 
 114. `verification-before-completion`
    - Source: superpowers plugin backup promoted from temp
-   - License: MIT, from superpowers plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: local plugin-backup temp promotion; original upstream ref not captured
+   - License: MIT, see skills/verification-before-completion/LICENSE.txt
+   - Evidence: Embedded license file: skills/verification-before-completion/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/verification-before-completion
    - Description: Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
 
 115. `web-artifacts-builder`
@@ -938,18 +940,18 @@
 
 118. `writing-plans`
    - Source: superpowers plugin backup promoted from temp
-   - License: MIT, from superpowers plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: local plugin-backup temp promotion; original upstream ref not captured
+   - License: MIT, see skills/writing-plans/LICENSE.txt
+   - Evidence: Embedded license file: skills/writing-plans/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/writing-plans
    - Description: Use when you have a spec or requirements for a multi-step task, before touching code
 
 119. `writing-skills`
    - Source: superpowers plugin backup promoted from temp
-   - License: MIT, from superpowers plugin metadata
-   - Evidence: Metadata only from prior manifest/source audit: MIT, from superpowers plugin metadata
-   - Audit status: metadata-only-needs-upstream-license-file
-   - Origin: local plugin-backup temp promotion; original upstream ref not captured
+   - License: MIT, see skills/writing-skills/LICENSE.txt
+   - Evidence: Embedded license file: skills/writing-skills/LICENSE.txt
+   - Audit status: license-file-present
+   - Origin: https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/writing-skills
    - Description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
 
 120. `yeet`
