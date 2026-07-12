@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-test:
+    name: ${{ matrix.os }} / Python ${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: ["3.10", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Compile Python files
+        run: python -m compileall -q install.py scripts tests
+      - name: Validate repository structure and licence evidence
+        run: python scripts/validate_repository.py
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Dry-run verified skill installation
+        shell: bash
+        run: |
+          destination="${RUNNER_TEMP}/codex-skills"
+          python install.py --source . --dest "$destination" --all --dry-run
