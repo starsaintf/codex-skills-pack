@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Resolve metadata-only skill provenance from pinned upstream sources.
+"""Resolve and verify skill provenance from pinned upstream sources.
 
 This script is intentionally network-free. The upstream repositories, revisions,
 skill paths, licence declarations, and copyright notices are recorded in
@@ -40,21 +40,38 @@ def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
-def license_text(source: dict[str, str], skill_name: str) -> str:
-    upstream_skill = (
+def upstream_skill_url(source: dict[str, str], skill_name: str) -> str:
+    return (
         f"{source['repository']}/tree/{source['revision']}/"
         f"{source['skill_base'].strip('/')}/{skill_name}"
     )
+
+
+def license_text(source: dict[str, str], skill_name: str) -> str:
     return (
         "MIT License\n\n"
         f"{source['copyright']}\n\n"
         f"{MIT_TERMS}\n"
         "Upstream provenance\n"
         "-------------------\n"
-        f"Skill source: {upstream_skill}\n"
+        f"Skill source: {upstream_skill_url(source, skill_name)}\n"
         f"Pinned revision: {source['revision']}\n"
         f"Licence evidence: {source['license_evidence_url']}\n"
     )
+
+
+def expected_fields(skill: dict[str, Any], source: dict[str, str]) -> dict[str, str]:
+    relative_license = (Path(skill["path"]) / "LICENSE.txt").as_posix()
+    return {
+        "license": f"{source['license_name']}, see {relative_license}",
+        "license_evidence": f"Embedded license file: {relative_license}",
+        "origin_url": upstream_skill_url(source, skill["name"]),
+        "origin_ref": (
+            f"Pinned to {source['repository']}@{source['revision']}; "
+            f"licence evidence: {source['license_evidence_url']}"
+        ),
+        "audit_status": RESOLVED_STATUS,
+    }
 
 
 def render_skills_md(skills: list[dict[str, Any]]) -> str:
@@ -87,66 +104,57 @@ def resolve(repo_root: Path, check: bool = False) -> tuple[int, list[str]]:
     sources: dict[str, dict[str, str]] = load_json(sources_path)
 
     changed = 0
-    unresolved_sources: list[str] = []
+    errors: list[str] = []
     skills: list[dict[str, Any]] = manifest["skills"]
 
     for skill in skills:
-        if skill.get("audit_status") != UNRESOLVED_STATUS:
-            continue
-
-        source_key = skill.get("source", "")
+        source_key = str(skill.get("source", ""))
         source = sources.get(source_key)
+
+        if skill.get("audit_status") == UNRESOLVED_STATUS and source is None:
+            errors.append(f"{skill['name']}: no pinned source mapping for {source_key!r}")
+            continue
         if source is None:
-            unresolved_sources.append(f"{skill['name']}: {source_key}")
             continue
 
-        skill_name = skill["name"]
-        relative_license = Path(skill["path"]) / "LICENSE.txt"
-        license_path = repo_root / relative_license
-        expected_license = license_text(source, skill_name)
-
-        origin_url = (
-            f"{source['repository']}/tree/{source['revision']}/"
-            f"{source['skill_base'].strip('/')}/{skill_name}"
+        expected = expected_fields(skill, source)
+        expected_license = license_text(source, skill["name"])
+        license_path = repo_root / skill["path"] / "LICENSE.txt"
+        fields_match = all(skill.get(key) == value for key, value in expected.items())
+        license_matches = (
+            license_path.is_file()
+            and license_path.read_text(encoding="utf-8") == expected_license
         )
-        updated = {
-            "license": f"{source['license_name']}, see {relative_license.as_posix()}",
-            "license_evidence": f"Embedded license file: {relative_license.as_posix()}",
-            "origin_url": origin_url,
-            "origin_ref": (
-                f"Pinned to {source['repository']}@{source['revision']}; "
-                f"licence evidence: {source['license_evidence_url']}"
-            ),
-            "audit_status": RESOLVED_STATUS,
-        }
-
-        if any(skill.get(key) != value for key, value in updated.items()):
-            changed += 1
-        skill.update(updated)
 
         if check:
-            if not license_path.is_file() or license_path.read_text(encoding="utf-8") != expected_license:
-                unresolved_sources.append(f"{skill_name}: generated LICENSE.txt is missing or stale")
-        else:
-            license_path.write_text(expected_license, encoding="utf-8")
+            if not fields_match:
+                errors.append(f"{skill['name']}: provenance fields are unresolved or stale")
+            if not license_matches:
+                errors.append(f"{skill['name']}: generated LICENSE.txt is missing or stale")
+            continue
 
-    if unresolved_sources:
-        return changed, unresolved_sources
+        if not fields_match or not license_matches:
+            changed += 1
+        skill.update(expected)
+        license_path.write_text(expected_license, encoding="utf-8")
+
+    if errors:
+        return changed, errors
 
     expected_manifest = json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
     expected_inventory = render_skills_md(skills)
 
     if check:
         if manifest_path.read_text(encoding="utf-8-sig") != expected_manifest:
-            unresolved_sources.append("manifest.json has unresolved or non-canonical provenance data")
+            errors.append("manifest.json is not in canonical generated form")
         inventory_path = repo_root / "SKILLS.md"
         if not inventory_path.is_file() or inventory_path.read_text(encoding="utf-8") != expected_inventory:
-            unresolved_sources.append("SKILLS.md is stale")
+            errors.append("SKILLS.md is stale")
     else:
         manifest_path.write_text(expected_manifest, encoding="utf-8")
         (repo_root / "SKILLS.md").write_text(expected_inventory, encoding="utf-8")
 
-    return changed, unresolved_sources
+    return changed, errors
 
 
 def main(argv: list[str] | None = None) -> int:
