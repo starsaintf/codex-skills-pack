@@ -1,0 +1,110 @@
+name: Verify rust-sdk PR 975
+
+on:
+  push:
+    branches:
+      - ci/rust-sdk-pr-975-verification
+    paths:
+      - .github/workflows/verify-rust-sdk-pr-975.yml
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Check out verification harness
+        uses: actions/checkout@v4
+        with:
+          ref: ci/rust-sdk-pr-975-verification
+          path: harness
+
+      - name: Check out current PR branch
+        uses: actions/checkout@v4
+        with:
+          repository: starsaintf/rust-sdk
+          ref: feat/issue-974-client-response-cache
+          fetch-depth: 0
+          path: rust-sdk
+
+      - name: Install Rust toolchains
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+
+      - name: Install nightly rustfmt and WASI target
+        run: |
+          rustup toolchain install nightly --component rustfmt
+          rustup target add wasm32-wasip2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install verification tools
+        run: |
+          cargo install cargo-semver-checks --locked
+          cargo install cargo-public-api --locked
+          cargo install cargo-audit --locked
+          cargo install typos-cli --locked
+
+      - name: Run repository and protocol verification
+        id: checks
+        shell: bash
+        run: |
+          set +e
+          REPORT="$GITHUB_WORKSPACE/harness/ci/rust-sdk-pr-975-verification-result.txt"
+          mkdir -p "$(dirname "$REPORT")"
+          : > "$REPORT"
+          failures=0
+
+          run_check() {
+            name="$1"
+            shift
+            echo "===== $name =====" | tee -a "$REPORT"
+            (cd "$GITHUB_WORKSPACE/rust-sdk" && "$@") >> "$REPORT" 2>&1
+            status=$?
+            if [ $status -eq 0 ]; then
+              echo "PASS: $name" | tee -a "$REPORT"
+            else
+              echo "FAIL($status): $name" | tee -a "$REPORT"
+              failures=$((failures + 1))
+            fi
+            echo | tee -a "$REPORT"
+          }
+
+          run_check "commitlint" bash -lc 'npm install --no-save @commitlint/cli @commitlint/config-conventional >/dev/null 2>&1 && echo "module.exports = {extends: [\"@commitlint/config-conventional\"]}" > commitlint.config.js && npx commitlint --from 3662d20ac27af34e96d6d7285031d54077a6d755 --to HEAD --verbose; status=$?; rm -f commitlint.config.js package.json package-lock.json; exit $status'
+          run_check "nightly rustfmt" cargo +nightly fmt --all -- --check
+          run_check "workspace clippy" cargo clippy --all-targets --all-features -- -D warnings
+          run_check "workspace tests all features" bash -lc 'uv python install && uv venv && cargo test --all-features'
+          run_check "rmcp tests without local" bash -lc 'FEATURES=$(cargo metadata --no-deps --format-version 1 | jq -r '\''[.packages[] | select(.name == "rmcp") | .features | keys[] | select(startswith("__") | not) | select(. != "local")] | join(",")'\'') && cargo test -p rmcp --features "$FEATURES"'
+          run_check "semver default" cargo semver-checks --package rmcp --baseline-rev 3662d20ac27af34e96d6d7285031d54077a6d755 --release-type minor --only-explicit-features --features default
+          run_check "semver all non-local" bash -lc 'FEATURES=$(cargo metadata --no-deps --format-version 1 | jq -r '\''[.packages[] | select(.name == "rmcp") | .features | keys[] | select(startswith("__") | not) | select(. != "local")] | join(",")'\'') && cargo semver-checks --package rmcp --baseline-rev 3662d20ac27af34e96d6d7285031d54077a6d755 --release-type minor --only-explicit-features --features "$FEATURES"'
+          run_check "public API default" cargo public-api --package rmcp -ss diff --deny changed --deny removed --force 3662d20ac27af34e96d6d7285031d54077a6d755..HEAD
+          run_check "spelling" typos
+          run_check "security audit" cargo audit
+          run_check "examples build and tests" bash -lc 'for dir in examples/*/; do if [ -f "$dir/Cargo.toml" ]; then if [[ "$dir" == *"wasi"* ]]; then cargo build --manifest-path "$dir/Cargo.toml" --target wasm32-wasip2 || exit 1; else cargo build --manifest-path "$dir/Cargo.toml" --all-features --tests || exit 1; cargo test --manifest-path "$dir/Cargo.toml" --all-features --all-targets || exit 1; fi; fi; done'
+          run_check "build conformance binaries" cargo build -p mcp-conformance
+          run_check "client conformance 2025-11-25" bash -lc 'npx -y @modelcontextprotocol/conformance@0.1.16 client --command "$(pwd)/target/debug/conformance-client" --suite all --spec-version 2025-11-25 -o /tmp/conformance-client-full'
+          run_check "client MRTR conformance" bash -lc 'npx -y @modelcontextprotocol/conformance@0.2.0-alpha.9 client --command "$(pwd)/target/debug/conformance-client" --scenario sep-2322-client-request-state -o /tmp/conformance-client-mrtr'
+
+          echo "HEAD: $(cd "$GITHUB_WORKSPACE/rust-sdk" && git rev-parse HEAD)" | tee -a "$REPORT"
+          echo "FAILURES: $failures" | tee -a "$REPORT"
+          echo "$failures" > "$GITHUB_WORKSPACE/harness/ci/rust-sdk-pr-975-failure-count.txt"
+          exit 0
+
+      - name: Commit verification report
+        working-directory: harness
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ci/rust-sdk-pr-975-verification-result.txt ci/rust-sdk-pr-975-failure-count.txt
+          git commit -m "test: record rust sdk PR 975 verification"
+          git push origin HEAD:ci/rust-sdk-pr-975-verification
