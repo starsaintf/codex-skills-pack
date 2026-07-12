@@ -3,7 +3,7 @@ name: Resolve pinned provenance
 on:
   push:
     branches:
-      - provenance/resolve-upstream-licenses
+      - "provenance/**"
 
 permissions:
   contents: write
