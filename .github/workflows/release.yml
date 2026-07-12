@@ -1,0 +1,68 @@
+name: Publish release
+
+on:
+  push:
+    branches:
+      - "release/v*"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Read version
+        id: version
+        shell: bash
+        run: |
+          version="$(tr -d '[:space:]' < VERSION)"
+          test -n "$version"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "tag=v$version" >> "$GITHUB_OUTPUT"
+
+      - name: Verify branch matches version
+        shell: bash
+        run: |
+          expected="refs/heads/release/v${{ steps.version.outputs.version }}"
+          test "$GITHUB_REF" = "$expected"
+
+      - name: Verify repository
+        run: |
+          python -m compileall -q install.py scripts tests
+          python scripts/validate_repository.py --strict-provenance
+          python scripts/resolve_provenance.py --check
+          python -m unittest discover -s tests -v
+          python install.py --source . --dest "${RUNNER_TEMP}/codex-skills" --all --dry-run
+
+      - name: Build checksums
+        shell: bash
+        run: sha256sum install.py install.ps1 manifest.json > SHA256SUMS
+
+      - name: Publish GitHub release
+        shell: bash
+        run: |
+          if gh release view "${{ steps.version.outputs.tag }}" >/dev/null 2>&1; then
+            echo "Release already exists: ${{ steps.version.outputs.tag }}"
+            exit 1
+          fi
+          gh release create "${{ steps.version.outputs.tag }}" \
+            --target main \
+            --title "Codex Skills Pack ${{ steps.version.outputs.tag }}" \
+            --notes-file CHANGELOG.md \
+            install.py install.ps1 manifest.json SHA256SUMS
