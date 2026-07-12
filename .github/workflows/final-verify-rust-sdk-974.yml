@@ -1,0 +1,189 @@
+name: Final verify Rust SDK issue 974
+
+on:
+  push:
+    branches:
+      - ci/rust-sdk-issue-974-validation
+    paths:
+      - ci/run-final-verify-974.txt
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - name: Check out validation harness
+        uses: actions/checkout@v4
+        with:
+          ref: ci/rust-sdk-issue-974-validation
+
+      - name: Install stable Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+
+      - name: Install nightly rustfmt
+        run: rustup toolchain install nightly --component rustfmt
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Install Rust verification tools
+        uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-audit,cargo-semver-checks,cargo-public-api,cargo-llvm-cov
+
+      - name: Check out contribution branch
+        run: |
+          git clone --branch feat/issue-974-client-response-cache --single-branch \
+            https://github.com/starsaintf/rust-sdk.git rust-sdk
+          cd rust-sdk
+          git remote add upstream https://github.com/modelcontextprotocol/rust-sdk.git
+          git fetch upstream main --depth=200
+
+      - name: Run independent verification matrix
+        id: matrix
+        shell: bash
+        run: |
+          set +e
+          REPORT="$GITHUB_WORKSPACE/ci/final-verify-974-result.txt"
+          : > "$REPORT"
+          cd rust-sdk
+          HEAD_SHA=$(git rev-parse HEAD)
+          BASE_SHA=$(git merge-base HEAD upstream/main)
+          UPSTREAM_SHA=$(git rev-parse upstream/main)
+          {
+            echo "head_sha=$HEAD_SHA"
+            echo "merge_base_sha=$BASE_SHA"
+            echo "upstream_main_sha=$UPSTREAM_SHA"
+          } >> "$REPORT"
+
+          failures=0
+          check() {
+            name="$1"
+            shift
+            echo "::group::$name"
+            "$@"
+            rc=$?
+            echo "::endgroup::"
+            if [ "$rc" -eq 0 ]; then
+              echo "$name=success" >> "$REPORT"
+            else
+              echo "$name=failure($rc)" >> "$REPORT"
+              failures=$((failures + 1))
+            fi
+          }
+
+          check upstream_alignment test "$BASE_SHA" = "$UPSTREAM_SHA"
+          check nightly_format cargo +nightly fmt --all -- --check
+          check whitespace git diff --check upstream/main...HEAD
+          check workspace_check cargo check --workspace --all-targets --all-features
+          check workspace_clippy cargo clippy --all-targets --all-features -- -D warnings
+          check workspace_tests cargo test --all-features
+          check cache_unit_tests cargo test -p rmcp --all-features service::client::tests -- --nocapture
+          check cache_transport_test cargo test -p rmcp --all-features --test test_tool_disable_notification -- --nocapture
+          check cache_hint_tests cargo test -p rmcp --all-features --test test_cache_hints -- --nocapture
+
+          FEATURES=$(cargo metadata --no-deps --format-version 1 \
+            | jq -r '[.packages[] | select(.name == "rmcp") | .features | keys[] \
+                      | select(startswith("__") | not) \
+                      | select(. != "local")] | join(",")')
+          check no_local_tests cargo test -p rmcp --features "$FEATURES"
+
+          check semver_default cargo semver-checks \
+            --package rmcp --baseline-rev "$BASE_SHA" --release-type minor \
+            --only-explicit-features --features default
+          check semver_all_features cargo semver-checks \
+            --package rmcp --baseline-rev "$BASE_SHA" --release-type minor \
+            --only-explicit-features --features "$FEATURES"
+          check public_api_default cargo public-api --package rmcp -ss diff \
+            --deny changed --deny removed --force "$BASE_SHA"..HEAD
+          check public_api_all_features cargo public-api --package rmcp \
+            --features "$FEATURES" -ss diff --deny changed --deny removed \
+            --force "$BASE_SHA"..HEAD
+
+          check security_audit cargo audit
+          check coverage cargo llvm-cov --all-features
+
+          check commit_lint bash -lc '
+            npm install --no-save @commitlint/cli @commitlint/config-conventional >/dev/null 2>&1 &&
+            printf "module.exports = {extends: [\"@commitlint/config-conventional\"]};\n" > commitlint.config.js &&
+            npx commitlint --from "'$BASE_SHA'" --to HEAD --verbose
+          '
+
+          check examples bash -lc '
+            for dir in examples/*/; do
+              if [ -f "$dir/Cargo.toml" ]; then
+                if [[ "$dir" == *"wasi"* ]]; then
+                  rustup target add wasm32-wasip2 &&
+                  cargo build --manifest-path "$dir/Cargo.toml" --target wasm32-wasip2 || exit 1
+                else
+                  cargo build --manifest-path "$dir/Cargo.toml" --all-features --tests || exit 1
+                  cargo test --manifest-path "$dir/Cargo.toml" --all-features --all-targets || exit 1
+                fi
+              fi
+            done
+          '
+
+          check conformance_build cargo build -p mcp-conformance
+          if [ -x ./target/debug/conformance-server ] && [ -x ./target/debug/conformance-client ]; then
+            PORT=8001 ./target/debug/conformance-server > /tmp/conformance-server.log 2>&1 &
+            SERVER_PID=$!
+            for _ in $(seq 1 30); do
+              curl -s -o /dev/null http://127.0.0.1:8001/mcp && break
+              sleep 1
+            done
+            check conformance_server npx -y @modelcontextprotocol/conformance@0.1.16 server \
+              --url http://127.0.0.1:8001/mcp --spec-version 2025-11-25 \
+              -o /tmp/conformance-results
+            kill "$SERVER_PID" 2>/dev/null || true
+
+            STATELESS=1 PORT=8002 ./target/debug/conformance-server > /tmp/conformance-draft.log 2>&1 &
+            DRAFT_PID=$!
+            for _ in $(seq 1 30); do
+              curl -s -o /dev/null http://127.0.0.1:8002/mcp && break
+              sleep 1
+            done
+            check conformance_caching npx -y @modelcontextprotocol/conformance@0.2.0-alpha.9 server \
+              --url http://127.0.0.1:8002/mcp --scenario caching \
+              --spec-version draft -o /tmp/conformance-caching
+            kill "$DRAFT_PID" 2>/dev/null || true
+
+            check conformance_client npx -y @modelcontextprotocol/conformance@0.1.16 client \
+              --command "$PWD/target/debug/conformance-client" --suite all \
+              --spec-version 2025-11-25 -o /tmp/conformance-client
+          else
+            echo "conformance_runtime=failure(binaries_missing)" >> "$REPORT"
+            failures=$((failures + 1))
+          fi
+
+          echo "failure_count=$failures" >> "$REPORT"
+          if [ "$failures" -eq 0 ]; then
+            echo "overall=success" >> "$REPORT"
+          else
+            echo "overall=failure" >> "$REPORT"
+          fi
+          echo "failures=$failures" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Commit verification report
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ci/final-verify-974-result.txt
+          git commit -m "ci: record final issue 974 verification" || true
+          git push origin HEAD:ci/rust-sdk-issue-974-validation
+
+      - name: Fail if any verification failed
+        if: steps.matrix.outputs.failures != '0'
+        run: exit 1
