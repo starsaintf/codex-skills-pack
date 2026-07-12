@@ -1,0 +1,10 @@
+branch_sha=abd8f466ff35d429b0be3f81ee1bd97198dbd342
+clone=success
+nightly_formatting=success
+rmcp_check=success
+repository_clippy=success
+all_feature_tests=success
+focused_cache_tests=success
+no_local_tests=failure
+docs=skipped
+conformance_build=skipped
