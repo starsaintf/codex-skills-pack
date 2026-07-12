@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Resolve and verify skill provenance from pinned upstream sources.
 
-This script is intentionally network-free. The upstream repositories, revisions,
-skill paths, licence declarations, and copyright notices are recorded in
-provenance/upstream_sources.json after manual verification.
+This script is intentionally network-free. The exact affected skills, upstream
+repositories, revisions, paths, licence declarations, and copyright notices are
+recorded in provenance/upstream_sources.json after manual verification.
 """
 
 from __future__ import annotations
@@ -40,14 +40,14 @@ def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
-def upstream_skill_url(source: dict[str, str], skill_name: str) -> str:
+def upstream_skill_url(source: dict[str, Any], skill_name: str) -> str:
     return (
         f"{source['repository']}/tree/{source['revision']}/"
         f"{source['skill_base'].strip('/')}/{skill_name}"
     )
 
 
-def license_text(source: dict[str, str], skill_name: str) -> str:
+def license_text(source: dict[str, Any], skill_name: str) -> str:
     return (
         "MIT License\n\n"
         f"{source['copyright']}\n\n"
@@ -60,7 +60,7 @@ def license_text(source: dict[str, str], skill_name: str) -> str:
     )
 
 
-def expected_fields(skill: dict[str, Any], source: dict[str, str]) -> dict[str, str]:
+def expected_fields(skill: dict[str, Any], source: dict[str, Any]) -> dict[str, str]:
     relative_license = (Path(skill["path"]) / "LICENSE.txt").as_posix()
     return {
         "license": f"{source['license_name']}, see {relative_license}",
@@ -97,28 +97,56 @@ def render_skills_md(skills: list[dict[str, Any]]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+def build_targets(sources: dict[str, dict[str, Any]]) -> tuple[dict[str, tuple[str, dict[str, Any]]], list[str]]:
+    targets: dict[str, tuple[str, dict[str, Any]]] = {}
+    errors: list[str] = []
+    for source_key, source in sources.items():
+        names = source.get("skills")
+        if not isinstance(names, list) or not names:
+            errors.append(f"{source_key}: skills must be a non-empty list")
+            continue
+        for name in names:
+            if not isinstance(name, str) or not name:
+                errors.append(f"{source_key}: contains an invalid skill name")
+            elif name in targets:
+                errors.append(f"{name}: appears in more than one provenance source")
+            else:
+                targets[name] = (source_key, source)
+    return targets, errors
+
+
 def resolve(repo_root: Path, check: bool = False) -> tuple[int, list[str]]:
     manifest_path = repo_root / "manifest.json"
     sources_path = repo_root / "provenance" / "upstream_sources.json"
     manifest = load_json(manifest_path)
-    sources: dict[str, dict[str, str]] = load_json(sources_path)
+    sources: dict[str, dict[str, Any]] = load_json(sources_path)
+    targets, errors = build_targets(sources)
 
     changed = 0
-    errors: list[str] = []
     skills: list[dict[str, Any]] = manifest["skills"]
+    manifest_names = {skill.get("name") for skill in skills}
+    for missing in sorted(set(targets) - manifest_names):
+        errors.append(f"{missing}: mapped skill is missing from manifest.json")
 
     for skill in skills:
-        source_key = str(skill.get("source", ""))
-        source = sources.get(source_key)
+        name = str(skill.get("name", ""))
+        target = targets.get(name)
 
-        if skill.get("audit_status") == UNRESOLVED_STATUS and source is None:
-            errors.append(f"{skill['name']}: no pinned source mapping for {source_key!r}")
+        if skill.get("audit_status") == UNRESOLVED_STATUS and target is None:
+            errors.append(f"{name}: unresolved skill has no exact pinned source mapping")
             continue
-        if source is None:
+        if target is None:
+            continue
+
+        expected_source_key, source = target
+        if skill.get("source") != expected_source_key:
+            errors.append(
+                f"{name}: source {skill.get('source')!r} does not match mapped source {expected_source_key!r}"
+            )
             continue
 
         expected = expected_fields(skill, source)
-        expected_license = license_text(source, skill["name"])
+        expected_license = license_text(source, name)
         license_path = repo_root / skill["path"] / "LICENSE.txt"
         fields_match = all(skill.get(key) == value for key, value in expected.items())
         license_matches = (
@@ -128,9 +156,9 @@ def resolve(repo_root: Path, check: bool = False) -> tuple[int, list[str]]:
 
         if check:
             if not fields_match:
-                errors.append(f"{skill['name']}: provenance fields are unresolved or stale")
+                errors.append(f"{name}: provenance fields are unresolved or stale")
             if not license_matches:
-                errors.append(f"{skill['name']}: generated LICENSE.txt is missing or stale")
+                errors.append(f"{name}: generated LICENSE.txt is missing or stale")
             continue
 
         if not fields_match or not license_matches:
